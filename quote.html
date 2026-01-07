@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get a free quote for your printing project from PrintMaster Pro. Fast turnaround, competitive pricing, and exceptional quality guaranteed.">
+    <meta name="keywords" content="printing quote, printing estimate, commercial printing pricing, get quote">
+    <meta name="author" content="PrintMaster Pro">
+    <title>Get a Quote - PrintMaster Pro | Free Printing Estimates</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">PrintMaster Pro</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="departments.html" class="nav-link">Departments</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="quote.html" class="btn btn-primary btn-small">Get a Quote</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1>Get Your Quote in Minutes, Not Hours</h1>
+            <p>💬 Chat with us on WhatsApp for instant quotes • Or fill the form below for detailed estimates • Same-day
+                response guaranteed</p>
+        </div>
+    </section>
+
+    <!-- WHATSAPP PRIORITY SECTION -->
+    <section class="section section-light">
+        <div class="container" style="max-width: 900px;">
+            <div class="card"
+                style="padding: var(--space-12); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); color: white; text-align: center;">
+                <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-4); color: white;">⚡ Fastest Way: Get
+                    Instant Quote on WhatsApp</h2>
+                <p style="font-size: var(--text-xl); margin-bottom: var(--space-8); opacity: 0.95;">
+                    Skip the form! Chat with our team now and get your quote in minutes. Share photos, ask questions,
+                    and get personalized recommendations instantly.
+                </p>
+                <a href="whatsapp://" data-message="Hi! I need a quote for a printing project. Can you help me?"
+                    class="btn btn-large"
+                    style="background: white; color: var(--color-primary); font-size: var(--text-xl); padding: 1.25rem 3rem; margin-bottom: var(--space-6);">
+                    💬 Start WhatsApp Chat Now
+                </a>
+                <div
+                    style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: var(--space-6); font-size: var(--text-sm);">
+                    <span>✓ Instant Response</span>
+                    <span>✓ Share Photos Easily</span>
+                    <span>✓ Real-Time Answers</span>
+                    <span>✓ No Forms to Fill</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE FORM -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: var(--space-10);">
+                <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">Or Fill Out Our Detailed Quote
+                    Form</h2>
+                <p style="color: var(--color-gray-600);">Prefer a form? No problem! Fill this out and we'll email you a
+                    detailed quote within 24 hours.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-12);">
+                <form id="quoteForm">
+                    <!-- Contact Information -->
+                    <h3 style="margin-bottom: var(--space-6); color: var(--color-accent);">Contact Information</h3>
+
+                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" class="form-label">Company Name (Optional)</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+
+                    <!-- Project Details -->
+                    <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-6); color: var(--color-accent);">
+                        Project Details</h3>
+
+                    <div class="form-group">
+                        <label for="jobType" class="form-label">Type of Printing Job *</label>
+                        <select id="jobType" name="jobType" class="form-select" required>
+                            <option value="">-- Select Job Type --</option>
+                            <option value="digital">Digital Printing</option>
+                            <option value="offset">Offset Printing</option>
+                            <option value="large-format">Large Format Printing</option>
+                            <option value="binding">Binding & Finishing</option>
+                            <option value="packaging">Packaging & Labels</option>
+                            <option value="corporate">Corporate Materials</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                        <div class="form-group">
+                            <label for="quantity" class="form-label">Quantity *</label>
+                            <input type="number" id="quantity" name="quantity" class="form-input" min="1"
+                                placeholder="e.g., 500" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deadline" class="form-label">Deadline / Needed By *</label>
+                            <input type="date" id="deadline" name="deadline" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specifications" class="form-label">Project Specifications</label>
+                        <textarea id="specifications" name="specifications" class="form-textarea"
+                            placeholder="Please provide details such as:&#10;- Size (e.g., 8.5&quot; x 11&quot;)&#10;- Color (full color, black & white)&#10;- Paper type/weight&#10;- Finishing requirements&#10;- Any special requests"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalInfo" class="form-label">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-textarea"
+                            placeholder="Any other details we should know about your project?"></textarea>
+                    </div>
+
+                    <!-- File Upload Note -->
+                    <div
+                        style="background-color: var(--color-gray-100); padding: var(--space-6); border-radius: var(--radius-md); margin-bottom: var(--space-8);">
+                        <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">📎 Have Files to Share?
+                        </h4>
+                        <p style="margin: 0; color: var(--color-gray-700);">
+                            After submitting this form, you can email your design files to
+                            <strong>quotes@printmasterpro.com</strong> with your name in the subject line. We accept
+                            PDF, AI, EPS, and other common formats. <strong>Or send them directly via WhatsApp for
+                                faster processing!</strong>
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                        Submit Quote Request
+                    </button>
+
+                    <p
+                        style="text-align: center; margin-top: var(--space-6); color: var(--color-gray-600); font-size: var(--text-sm);">
+                        * Required fields. We'll respond to your quote request within 24 hours.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY GET A QUOTE -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Get Your Quote From Us?</h2>
+                <p class="section-subtitle">We make the quoting process fast, transparent, and hassle-free.</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card scroll-reveal" style="text-align: center;">
+                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">⚡</div>
+                    <h4 style="margin-bottom: var(--space-3);">Lightning Fast</h4>
+                    <p style="margin: 0;">WhatsApp quotes in minutes, email quotes within 24 hours</p>
+                </div>
+
+                <div class="card scroll-reveal" style="text-align: center;">
+                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">💰</div>
+                    <h4 style="margin-bottom: var(--space-3);">Best Prices Guaranteed</h4>
+                    <p style="margin: 0;">Premium quality at competitive rates with volume discounts</p>
+                </div>
+
+                <div class="card scroll-reveal" style="text-align: center;">
+                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🎯</div>
+                    <h4 style="margin-bottom: var(--space-3);">Zero Obligation</h4>
+                    <p style="margin: 0;">Free quotes with no pressure to commit or hidden fees</p>
+                </div>
+
+                <div class="card scroll-reveal" style="text-align: center;">
+                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🤝</div>
+                    <h4 style="margin-bottom: var(--space-3);">Expert Consultation</h4>
+                    <p style="margin: 0;">Professional advice to optimize quality and reduce costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALTERNATIVE CONTACT -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: var(--space-6);">Still Have Questions?</h2>
+            <p
+                style="font-size: var(--text-lg); max-width: 600px; margin: 0 auto var(--space-8); color: var(--color-gray-700);">
+                Our team is standing by to discuss your project, answer questions, and provide expert recommendations.
+            </p>
+            <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap;">
+                <a href="whatsapp://" data-message="Hi! I have questions about printing services. Can we chat?"
+                    class="btn btn-primary btn-large">💬 Chat on WhatsApp</a>
+                <a href="tel:+15551234567" class="btn btn-secondary btn-large">📞 Call: (555) 123-4567</a>
+                <a href="contact.html" class="btn btn-secondary btn-large">📧 Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>PrintMaster Pro</h4>
+                <p>Your trusted partner in commercial printing excellence. Delivering quality, precision, and
+                    professionalism since 1999.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="quote.html">Get a Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="departments.html#digital">Digital Printing</a></li>
+                    <li><a href="departments.html#offset">Offset Printing</a></li>
+                    <li><a href="departments.html#large-format">Large Format</a></li>
+                    <li><a href="departments.html#binding">Binding & Finishing</a></li>
+                    <li><a href="departments.html#packaging">Packaging & Labels</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Industrial Avenue<br>Business District, City 12345</p>
+                <p>📞 Phone: +1 (555) 123-4567</p>
+                <p>📧 Email: info@printmasterpro.com</p>
+                <p>🕒 Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PrintMaster Pro. All rights reserved. | Premium Commercial Printing Services</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT BUTTON -->
+    <a href="#" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.407 1.407-5.247-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM21.305 18.694c-0.372-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.186-0.837 0.186s-0.962 1.208-1.179 1.456c-0.217 0.248-0.434 0.279-0.806 0.093-0.372-0.186-1.571-0.579-2.991-1.846-1.106-0.986-1.853-2.204-2.070-2.576-0.217-0.372-0.023-0.573 0.163-0.759 0.167-0.166 0.372-0.434 0.558-0.651 0.186-0.217 0.248-0.372 0.372-0.62 0.124-0.248 0.062-0.465-0.031-0.651-0.093-0.186-0.837-2.015-1.147-2.759-0.303-0.724-0.611-0.627-0.837-0.638-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.301 1.270-1.301 3.099s1.332 3.594 1.518 3.842c0.186 0.248 2.625 4.007 6.359 5.619 0.888 0.383 1.582 0.612 2.122 0.783 0.892 0.283 1.704 0.243 2.347 0.147 0.716-0.107 2.197-0.898 2.507-1.766 0.31-0.868 0.31-1.613 0.217-1.766-0.093-0.153-0.341-0.248-0.713-0.434z" />
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
