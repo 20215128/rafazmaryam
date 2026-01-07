@@ -198,29 +198,41 @@
           </div>
         </div>
 
+        <!-- Specialty Equipment Card with Image -->
         <div class="card scroll-reveal"
-          style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer;"
+          style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer; padding: 0; overflow: hidden;"
           onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,255,255,0.5)'"
           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.2)'">
-          <div style="text-align: center;">
-            <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🎨</div>
-            <h3 style="color: white; margin-bottom: var(--space-4); font-size: var(--text-2xl);">Specialty Equipment
-            </h3>
-            <ul
-              style="text-align: left; color: rgba(255,255,255,0.9); line-height: 2; margin-bottom: var(--space-6); list-style: none; padding: 0;">
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Flex
-                  Machines</strong> - Banner & signage printing</li>
-              <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>DTF
-                  Machines</strong> - Direct-to-film printing</li>
-              <li style="padding: 0.5rem 0;">✓ <strong>Heat Press</strong> - Transfer applications</li>
-            </ul>
-            <p
-              style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin-bottom: var(--space-6); font-style: italic;">
-              Perfect for
-              custom apparel & merchandise</p>
-            <a href="products.html#specialty-equipment" class="btn btn-large"
-              style="background: white; color: var(--color-primary); width: 100%; font-weight: 700;">View Our Products
-              →</a>
+          <div style="display: flex; align-items: stretch; height: 100%;">
+            <!-- Image on Left -->
+            <div
+              style="flex: 0 0 45%; background: #F5F5F5; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+              <img src="images/products/dtf-machine.png" alt="DTF Printing Machine"
+                style="width: 100%; height: auto; object-fit: contain; max-height: 300px;">
+            </div>
+            <!-- Content on Right -->
+            <div
+              style="flex: 1; padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="color: white; margin-bottom: var(--space-4); font-size: var(--text-2xl);">Specialty Equipment
+                </h3>
+                <ul
+                  style="text-align: left; color: rgba(255,255,255,0.9); line-height: 2; margin-bottom: var(--space-4); list-style: none; padding: 0;">
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Flex
+                      Machines</strong> - Banner & signage printing</li>
+                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>DTF
+                      Machines</strong> - Direct-to-film printing</li>
+                  <li style="padding: 0.5rem 0;">✓ <strong>Heat Press</strong> - Transfer applications</li>
+                </ul>
+                <p
+                  style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin-bottom: var(--space-4); font-style: italic;">
+                  Perfect for custom apparel & merchandise
+                </p>
+              </div>
+              <a href="products.html#specialty-equipment" class="btn btn-large"
+                style="background: white; color: var(--color-primary); width: 100%; font-weight: 700;">View Our Products
+                →</a>
+            </div>
           </div>
         </div>
 
