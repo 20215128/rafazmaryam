@@ -1,4 +1,4 @@
-# PrintMaster Pro - Commercial Printing Website
+# RAFAZ - Commercial Printing Website
 
 A premium, conversion-optimized website for a commercial printing press featuring 7 specialized departments and comprehensive WhatsApp integration.
 
@@ -113,7 +113,7 @@ All content can be edited directly in the HTML files. Key sections to customize:
 
 ## License
 
-© 2026 PrintMaster Pro. All rights reserved.
+© 2026 RAFAZ. All rights reserved.
 
 ## Support
 
