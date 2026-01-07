@@ -1,0 +1,154 @@
+#!/bin/bash
+# This script will be used to create the products.html page
+
+cat > /Users/mac/Desktop/rafazmaryam/printing-press/products.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse RAFAZ's premium printing equipment and supplies. Kyocera, Bizhub, Xerox printers, DTF machines, flex machines, and consumables.">
+  <title>Products - RAFAZ | Printing Equipment & Supplies</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">RAFAZ</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="departments.html" class="nav-link">Departments</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="quote.html" class="btn btn-primary btn-small">Get a Quote</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero" style="min-height: 50vh;">
+    <div class="hero-content">
+      <h1>Premium Printing Equipment & Supplies</h1>
+      <p>Professional-grade machines and consumables from leading brands</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS COMING SOON -->
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <div style="font-size: 5rem; margin-bottom: var(--space-6);">🚧</div>
+      <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">Product Gallery Coming Soon</h2>
+      <p style="font-size: var(--text-xl); color: var(--color-gray-700); margin-bottom: var(--space-8);">
+        We're currently building our comprehensive product catalog. In the meantime, contact us directly for equipment inquiries and pricing.
+      </p>
+      <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap;">
+        <a href="whatsapp://" data-message="Hi! I'd like to inquire about your printing equipment and supplies." class="btn btn-primary btn-large">💬 Chat on WhatsApp</a>
+        <a href="contact.html" class="btn btn-secondary btn-large">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATEGORIES PREVIEW -->
+  <section class="section section-light">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--space-12);">What We Offer</h2>
+      
+      <div class="grid grid-3">
+        <div class="card" id="commercial-printers">
+          <h3 style="color: var(--color-primary);">Commercial Printers</h3>
+          <ul style="line-height: 2;">
+            <li>Kyocera Multifunction Printers</li>
+            <li>Konica Minolta Bizhub Series</li>
+            <li>Xerox Enterprise Systems</li>
+            <li>New & Certified Pre-owned</li>
+          </ul>
+        </div>
+
+        <div class="card" id="specialty-equipment">
+          <h3 style="color: var(--color-primary);">Specialty Equipment</h3>
+          <ul style="line-height: 2;">
+            <li>Flex Printing Machines</li>
+            <li>DTF (Direct-to-Film) Printers</li>
+            <li>Heat Press Machines</li>
+            <li>Vinyl Cutters</li>
+          </ul>
+        </div>
+
+        <div class="card" id="consumables">
+          <h3 style="color: var(--color-primary);">Consumables & Supplies</h3>
+          <ul style="line-height: 2;">
+            <li>OEM & Compatible Toners</li>
+            <li>Printing Inks (All Types)</li>
+            <li>Papers & Media</li>
+            <li>Maintenance Kits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>RAFAZ</h4>
+        <p>Your trusted partner in commercial printing excellence. Delivering quality, precision, and professionalism since 1999.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="departments.html">Departments</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="departments.html#digital">Digital Printing</a></li>
+          <li><a href="departments.html#offset">Offset Printing</a></li>
+          <li><a href="departments.html#large-format">Large Format</a></li>
+          <li><a href="departments.html#binding">Binding & Finishing</a></li>
+          <li><a href="departments.html#packaging">Packaging & Labels</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>📍 123 Industrial Avenue<br>Business District, City 12345</p>
+        <p>📞 Phone: +1 (555) 123-4567</p>
+        <p>📧 Email: info@rafaz.com</p>
+        <p>🕒 Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 RAFAZ. All rights reserved. | Premium Commercial Printing Services</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <a href="#" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.407 1.407-5.247-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM21.305 18.694c-0.372-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.186-0.837 0.186s-0.962 1.208-1.179 1.456c-0.217 0.248-0.434 0.279-0.806 0.093-0.372-0.186-1.571-0.579-2.991-1.846-1.106-0.986-1.853-2.204-2.070-2.576-0.217-0.372-0.023-0.573 0.163-0.759 0.167-0.166 0.372-0.434 0.558-0.651 0.186-0.217 0.248-0.372 0.372-0.62 0.124-0.248 0.062-0.465-0.031-0.651-0.093-0.186-0.837-2.015-1.147-2.759-0.303-0.724-0.611-0.627-0.837-0.638-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.301 1.270-1.301 3.099s1.332 3.594 1.518 3.842c0.186 0.248 2.625 4.007 6.359 5.619 0.888 0.383 1.582 0.612 2.122 0.783 0.892 0.283 1.704 0.243 2.347 0.147 0.716-0.107 2.197-0.898 2.507-1.766 0.31-0.868 0.31-1.613 0.217-1.766-0.093-0.153-0.341-0.248-0.713-0.434z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+HTMLEOF
+
+echo "products.html created successfully"
