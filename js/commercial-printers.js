@@ -39,17 +39,20 @@ const printers = [
     { id: 30, brand: 'xerox', name: 'AltaLink C8045', desc: 'High-volume color printing solution', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
 ];
 
-// Horizontal Scroll Functionality
+// Horizontal Scroll Functionality with Performance Optimization
 function initHorizontalScroll() {
     const section = document.getElementById('brandScrollSection');
     const track = document.getElementById('brandScrollTrack');
 
     if (!section || !track) return;
 
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+    let lastScrollY = 0;
+
+    function updateHorizontalScroll() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        const scrollY = window.scrollY;
+        const scrollY = lastScrollY;
 
         // Calculate scroll progress within the section
         const scrollProgress = (scrollY - sectionTop) / (sectionHeight - window.innerHeight);
@@ -58,8 +61,24 @@ function initHorizontalScroll() {
         // Move horizontally based on scroll progress
         // 3 panels = 200vw total movement to show all panels (0vw -> -100vw -> -200vw)
         const translateX = clampedProgress * -200;
-        track.style.transform = `translateX(${translateX}vw)`;
-    });
+
+        // Use translate3d for GPU acceleration
+        track.style.transform = `translate3d(${translateX}vw, 0, 0)`;
+
+        ticking = false;
+    }
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+
+        if (!ticking) {
+            requestAnimationFrame(updateHorizontalScroll);
+            ticking = true;
+        }
+    }
+
+    // Use passive listener for better scroll performance
+    window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 // Product Card Creation
@@ -84,44 +103,76 @@ function createProductCard(printer) {
     return card;
 }
 
-// Render Products
+// Render Products with Performance Optimization
 function renderProducts(filteredPrinters = printers) {
     const grid = document.getElementById('product-grid');
     if (!grid) return;
 
-    grid.innerHTML = '';
+    // Fade out current products
+    grid.style.opacity = '0';
+    grid.style.transform = 'translateY(20px)';
 
-    if (filteredPrinters.length === 0) {
-        grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #718096;">No printers match your filters. Please adjust your selection.</p>';
-        return;
-    }
+    setTimeout(() => {
+        grid.innerHTML = '';
 
-    filteredPrinters.forEach(printer => {
-        grid.appendChild(createProductCard(printer));
-    });
+        if (filteredPrinters.length === 0) {
+            grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #718096; font-size: 1.125rem;">No printers match your filters. Please adjust your selection.</p>';
+            grid.style.opacity = '1';
+            grid.style.transform = 'translateY(0)';
+            return;
+        }
+
+        // Use DocumentFragment for better performance
+        const fragment = document.createDocumentFragment();
+
+        filteredPrinters.forEach((printer, index) => {
+            const card = createProductCard(printer);
+            // Stagger animation
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s forwards`;
+            fragment.appendChild(card);
+        });
+
+        grid.appendChild(fragment);
+
+        // Fade in grid
+        requestAnimationFrame(() => {
+            grid.style.opacity = '1';
+            grid.style.transform = 'translateY(0)';
+        });
+    }, 200);
 }
 
-// Filter Functionality
+// Filter Functionality with Debouncing
 function initFilters() {
     const brandFilter = document.getElementById('filter-brand');
     const typeFilter = document.getElementById('filter-type');
     const sizeFilter = document.getElementById('filter-size');
     const functionFilter = document.getElementById('filter-function');
 
+    let filterTimeout;
+
     function applyFilters() {
-        const brand = brandFilter.value;
-        const type = typeFilter.value;
-        const size = sizeFilter.value;
-        const func = functionFilter.value;
+        // Clear previous timeout
+        clearTimeout(filterTimeout);
 
-        const filtered = printers.filter(printer => {
-            return (brand === 'all' || printer.brand === brand) &&
-                (type === 'all' || printer.type === type) &&
-                (size === 'all' || printer.size === size) &&
-                (func === 'all' || printer.function === func);
-        });
+        // Debounce filter application
+        filterTimeout = setTimeout(() => {
+            const brand = brandFilter.value;
+            const type = typeFilter.value;
+            const size = sizeFilter.value;
+            const func = functionFilter.value;
 
-        renderProducts(filtered);
+            const filtered = printers.filter(printer => {
+                return (brand === 'all' || printer.brand === brand) &&
+                    (type === 'all' || printer.type === type) &&
+                    (size === 'all' || printer.size === size) &&
+                    (func === 'all' || printer.function === func);
+            });
+
+            renderProducts(filtered);
+        }, 150);
     }
 
     brandFilter.addEventListener('change', applyFilters);
