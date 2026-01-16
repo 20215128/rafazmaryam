@@ -17,7 +17,7 @@ function toggleFilters() {
 // Product Data - 30+ printer models
 const printers = [
     // Konica Minolta Bizhub (7 models - arranged by size)
-    { id: 1, brand: 'bizhub', name: 'Bizhub C224', desc: 'Compact 22ppm color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
+    { id: 1, brand: 'bizhub', name: 'Bizhub C224', desc: 'Compact 22ppm color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-c224.png' },
     { id: 2, brand: 'bizhub', name: 'Bizhub C284', desc: 'Versatile 28ppm color multifunction printer', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
     { id: 3, brand: 'bizhub', name: 'Bizhub C364', desc: 'Professional 36ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
     { id: 4, brand: 'bizhub', name: 'Bizhub C3351', desc: 'Advanced 33ppm color MFP with mobile printing', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
