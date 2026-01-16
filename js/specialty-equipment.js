@@ -21,10 +21,8 @@ const specialtyEquipment = [
     // Heat Press (1 model)
     { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-industrial.png' },
 
-    // UV Printers (3 models)
-    { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop UV printer for small items', size: 'small', function: 'promotional', image: 'images/equipment/uv-flatbed-a3.png' },
-    { id: 17, type: 'uv', name: 'UV Flatbed A1', desc: 'Large format UV flatbed printer', size: 'medium', function: 'promotional', image: 'images/equipment/uv-flatbed-a1.png' },
-    { id: 18, type: 'uv', name: 'UV Industrial 2x3m', desc: 'Industrial UV printing system', size: 'industrial', function: 'promotional', image: 'images/equipment/uv-industrial.png' },
+    // UV Printer (1 model)
+    { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop A3 UV flatbed printer for small items', size: 'small', function: 'promotional', image: 'images/equipment/uv-flatbed-a3.png' },
 
     // Sublimation (3 models)
     { id: 19, type: 'sublimation', name: 'Sublimation Pro A3', desc: 'Professional sublimation printer', size: 'small', function: 'apparel', image: 'images/equipment/sublimation-pro-a3.png' },
