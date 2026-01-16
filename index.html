@@ -406,7 +406,45 @@
     </div>
   </section>
 
+
   <style>
+    /* Simplified Department Cards */
+    .modern-dept-card {
+      padding: 1.5rem !important;
+      border-radius: 12px !important;
+    }
+
+    .modern-dept-card>div:first-child {
+      display: none !important;
+      /* Hide background gradient overlay */
+    }
+
+    .modern-dept-card>div:nth-child(2) {
+      width: 50px !important;
+      height: 50px !important;
+      margin-bottom: 1rem !important;
+      border-radius: 12px !important;
+    }
+
+    .modern-dept-card>div:nth-child(2) svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+
+    .modern-dept-card h3 {
+      font-size: 1.125rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .modern-dept-card p {
+      display: none !important;
+      /* Hide descriptions */
+    }
+
+    .modern-dept-card a {
+      font-size: 0.875rem !important;
+    }
+
     .modern-dept-card a:hover span {
       transform: translateX(5px);
     }
