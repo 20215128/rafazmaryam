@@ -4,167 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Specialty Equipment - RAFAZ Printing Press</title>
+    <meta name="description"
+        content="Specialty printing equipment including DTF machines, flex printers, heat press, UV printers, and sublimation systems.">
+    <title>Specialty Equipment - RAFAZ</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
     <!-- NAVIGATION -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="RAFAZ Logo" style="height: 50px;">
-                </a>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="departments.html">Departments</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="quote.html" class="btn btn-primary">Get a Quote</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RAFAZ</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="departments.html" class="nav-link">Departments</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="quote.html" class="btn btn-primary btn-small">Get a Quote</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero-small"
-        style="background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%); padding: 6rem 0 4rem;">
-        <div class="container">
-            <div style="text-align: center; color: white;">
-                <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 700;">Specialty Equipment</h1>
-                <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">
-                    DTF machines, flex printers, heat press, and more. Perfect for custom apparel and merchandise
-                    production.
-                </p>
-            </div>
+    <!-- HERO BANNER -->
+    <section class="hero-commercial">
+        <div class="hero-commercial-content">
+            <h1>Specialty Equipment</h1>
+            <p>Professional equipment for custom apparel, signage, and promotional products</p>
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section class="section">
+    <!-- FILTER BAR -->
+    <section class="filter-section">
         <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                <h2 class="section-title">Our Specialty Equipment Range</h2>
-                <p class="section-subtitle">Advanced printing solutions for custom apparel, signage, and promotional
-                    products</p>
-            </div>
-
-            <!-- Product Grid - To be populated with actual products -->
-            <div
-                style="text-align: center; padding: 4rem 2rem; background: #f8f9fa; border-radius: 16px; border: 2px dashed #cbd5e0;">
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#cbd5e0" stroke-width="1.5"
-                        style="margin-bottom: 2rem;">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                        <polyline points="14 2 14 8 20 8" />
-                        <path d="M8 13h2" />
-                        <path d="M8 17h2" />
-                        <path d="M14 13h2" />
-                        <path d="M14 17h2" />
-                    </svg>
-                    <h3 style="font-size: 1.8rem; color: #2d3748; margin-bottom: 1rem;">Products Coming Soon</h3>
-                    <p style="font-size: 1.1rem; color: #718096; margin-bottom: 2rem;">
-                        We're currently updating our product catalog. Check back soon or contact us directly for our
-                        current inventory.
-                    </p>
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem;">Contact Us for
-                            Details</a>
-                        <a href="index.html" class="btn btn-secondary" style="font-size: 1.1rem;">Back to Home</a>
-                    </div>
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label>Equipment Type</label>
+                    <select id="filter-type" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="dtf">DTF Machines</option>
+                        <option value="flex">Flex Printers</option>
+                        <option value="heatpress">Heat Press</option>
+                        <option value="uv">UV Printers</option>
+                        <option value="sublimation">Sublimation</option>
+                    </select>
                 </div>
-            </div>
-
-            <!-- Equipment Types Section -->
-            <div style="margin-top: 4rem;">
-                <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem; color: #2d3748;">Equipment
-                    Categories</h3>
-                <div class="grid grid-3" style="gap: 2rem;">
-                    <div class="card" style="text-align: center; padding: 2rem;">
-                        <h4 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;">Flex Machines
-                        </h4>
-                        <p style="color: #4a5568;">Wide format printers for banners, signage, and large-scale displays.
-                        </p>
-                    </div>
-                    <div class="card" style="text-align: center; padding: 2rem;">
-                        <h4 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;">DTF Machines
-                        </h4>
-                        <p style="color: #4a5568;">Direct-to-film printing for vibrant, durable custom apparel designs.
-                        </p>
-                    </div>
-                    <div class="card" style="text-align: center; padding: 2rem;">
-                        <h4 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 1rem;">Heat Press</h4>
-                        <p style="color: #4a5568;">Professional heat transfer equipment for textiles and promotional
-                            items.</p>
-                    </div>
+                <div class="filter-group">
+                    <label>Size</label>
+                    <select id="filter-size" class="filter-select">
+                        <option value="all">All Sizes</option>
+                        <option value="small">Small/Desktop</option>
+                        <option value="medium">Medium</option>
+                        <option value="industrial">Industrial</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Application</label>
+                    <select id="filter-function" class="filter-select">
+                        <option value="all">All Applications</option>
+                        <option value="apparel">Apparel</option>
+                        <option value="signage">Signage</option>
+                        <option value="promotional">Promotional Items</option>
+                    </select>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="section" style="background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%); color: white;">
+    <!-- PRODUCT CATALOG GRID -->
+    <section class="section product-catalog-section">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to Start Your Custom Business?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Our specialty equipment experts can guide you through equipment selection, setup, and training.
-                </p>
-                <a href="whatsapp://"
-                    data-message="Hi! I'm interested in specialty printing equipment. Can you help me?"
-                    class="btn btn-large" style="background: white; color: var(--color-primary); font-size: 1.1rem;">
-                    💬 Chat with Our Specialists
-                </a>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-commercial">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start your custom printing business?</h2>
+                <a href="quote.html" class="btn btn-primary btn-large">Request Equipment Quote</a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>RAFAZ Printing Press</h3>
-                    <p>Your trusted partner for all printing needs. Quality, reliability, and excellence since day one.
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="departments.html">Departments</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>Email: info@rafazprinting.com</li>
-                        <li>Phone: +1 (555) 123-4567</li>
-                        <li><a href="contact.html">Contact Form</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RAFAZ</h4>
+                <p>Your trusted partner in commercial printing excellence. Delivering quality, precision, and
+                    professionalism since 1999.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 RAFAZ Printing Press. All rights reserved.</p>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="quote.html">Get a Quote</a></li>
+                </ul>
             </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="departments.html#digital">Digital Printing</a></li>
+                    <li><a href="departments.html#offset">Offset Printing</a></li>
+                    <li><a href="departments.html#large-format">Large Format</a></li>
+                    <li><a href="specialty-equipment.html">Specialty Equipment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Industrial Avenue<br>Business District, City 12345</p>
+                <p>📞 Phone: +1 (555) 123-4567</p>
+                <p>📧 Email: info@rafaz.com</p>
+                <p>🕒 Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 RAFAZ. All rights reserved. | Premium Commercial Printing Services</p>
         </div>
     </footer>
 
+    <!-- WHATSAPP FLOAT BUTTON -->
+    <a href="#" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.407 1.407-5.247-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM21.305 18.694c-0.372-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.186-0.837 0.186s-0.962 1.208-1.179 1.456c-0.217 0.248-0.434 0.279-0.806 0.093-0.372-0.186-1.571-0.579-2.991-1.846-1.106-0.986-1.853-2.204-2.070-2.576-0.217-0.372-0.023-0.573 0.163-0.759 0.167-0.166 0.372-0.434 0.558-0.651 0.186-0.217 0.248-0.372 0.372-0.62 0.124-0.248 0.062-0.465-0.031-0.651-0.093-0.186-0.837-2.015-1.147-2.759-0.303-0.724-0.611-0.627-0.837-0.638-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.301 1.270-1.301 3.099s1.332 3.594 1.518 3.842c0.186 0.248 2.625 4.007 6.359 5.619 0.888 0.383 1.582 0.612 2.122 0.783 0.892 0.283 1.704 0.243 2.347 0.147 0.716-0.107 2.197-0.898 2.507-1.766 0.31-0.868 0.31-1.613 0.217-1.766-0.093-0.153-0.341-0.248-0.713-0.434z" />
+        </svg>
+    </a>
+
     <script src="js/main.js"></script>
+    <script src="js/specialty-equipment.js"></script>
 </body>
 
 </html>

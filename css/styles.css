@@ -2118,6 +2118,44 @@ a:hover {
   background: #374151;
 }
 
+/* Equipment Type Badges */
+.brand-badge.dtf {
+  background: #7c3aed;
+}
+
+.brand-badge.flex {
+  background: #059669;
+}
+
+.brand-badge.heatpress {
+  background: #dc2626;
+}
+
+.brand-badge.uv {
+  background: #2563eb;
+}
+
+.brand-badge.sublimation {
+  background: #d97706;
+}
+
+/* Consumable Type Badges */
+.brand-badge.toner {
+  background: #1e40af;
+}
+
+.brand-badge.ink {
+  background: #be123c;
+}
+
+.brand-badge.paper {
+  background: #047857;
+}
+
+.brand-badge.maintenance {
+  background: #92400e;
+}
+
 .product-card h3 {
   font-size: 1.25rem;
   font-weight: 700;

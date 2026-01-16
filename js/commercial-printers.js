@@ -2,19 +2,14 @@
 
 // Product Data - 30+ printer models
 const printers = [
-    // Konica Minolta Bizhub (12 models)
-    { id: 1, brand: 'bizhub', name: 'Bizhub C3351', desc: 'Compact color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 2, brand: 'bizhub', name: 'Bizhub C4050i', desc: 'Mid-range color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
-    { id: 3, brand: 'bizhub', name: 'Bizhub C554e', desc: 'High-volume color production system', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 4, brand: 'bizhub', name: 'Bizhub C659', desc: 'Enterprise-grade color multifunction device', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
-    { id: 5, brand: 'bizhub', name: 'Bizhub C759', desc: 'Premium color production printer', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 6, brand: 'bizhub', name: 'Bizhub C308', desc: 'Versatile color office printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
-    { id: 7, brand: 'bizhub', name: 'Bizhub C368', desc: 'Professional color multifunction system', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 8, brand: 'bizhub', name: 'Bizhub C458', desc: 'Advanced color printing solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
-    { id: 9, brand: 'bizhub', name: 'Bizhub C558', desc: 'High-performance color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 10, brand: 'bizhub', name: 'Bizhub C658', desc: 'Enterprise color printing powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
-    { id: 11, brand: 'bizhub', name: 'Bizhub C754e', desc: 'Production-level color system', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
-    { id: 12, brand: 'bizhub', name: 'Bizhub 284e', desc: 'Reliable monochrome office printer', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
+    // Konica Minolta Bizhub (7 models - arranged by size)
+    { id: 1, brand: 'bizhub', name: 'Bizhub C224', desc: 'Compact 22ppm color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
+    { id: 2, brand: 'bizhub', name: 'Bizhub C284', desc: 'Versatile 28ppm color multifunction printer', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
+    { id: 3, brand: 'bizhub', name: 'Bizhub C364', desc: 'Professional 36ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
+    { id: 4, brand: 'bizhub', name: 'Bizhub C3351', desc: 'Advanced 33ppm color MFP with mobile printing', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
+    { id: 5, brand: 'bizhub', name: 'Bizhub C454', desc: 'High-performance 45ppm color multifunction system', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
+    { id: 6, brand: 'bizhub', name: 'Bizhub C458', desc: 'Enterprise 45ppm color MFP with advanced features', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
+    { id: 7, brand: 'bizhub', name: 'Bizhub C558', desc: 'Production-level 55ppm color printing powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
 
     // Kyocera (10 models)
     { id: 13, brand: 'kyocera', name: 'TASKalfa 3252ci', desc: 'Efficient color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
@@ -28,15 +23,11 @@ const printers = [
     { id: 21, brand: 'kyocera', name: 'TASKalfa 5003i', desc: 'Enterprise monochrome system', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
     { id: 22, brand: 'kyocera', name: 'TASKalfa 6003i', desc: 'Production monochrome printer', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
 
-    // Xerox (8 models)
-    { id: 23, brand: 'xerox', name: 'VersaLink C7000', desc: 'Professional color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
-    { id: 24, brand: 'xerox', name: 'VersaLink C8000', desc: 'High-performance color system', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
-    { id: 25, brand: 'xerox', name: 'VersaLink B7025', desc: 'Monochrome office workhorse', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
-    { id: 26, brand: 'xerox', name: 'VersaLink B7030', desc: 'High-speed monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
-    { id: 27, brand: 'xerox', name: 'VersaLink B7035', desc: 'Enterprise monochrome printer', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
-    { id: 28, brand: 'xerox', name: 'AltaLink C8030', desc: 'Advanced color multifunction system', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
-    { id: 29, brand: 'xerox', name: 'AltaLink C8035', desc: 'Premium color production device', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
-    { id: 30, brand: 'xerox', name: 'AltaLink C8045', desc: 'High-volume color printing solution', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
+    // Xerox AltaLink (4 models - arranged by size)
+    { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
+    { id: 24, brand: 'xerox', name: 'AltaLink C8045', desc: 'Professional 45ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
+    { id: 25, brand: 'xerox', name: 'AltaLink C8055', desc: 'High-performance 55ppm color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
+    { id: 26, brand: 'xerox', name: 'AltaLink C8070', desc: 'Production-level 70ppm color powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
 ];
 
 // Horizontal Scroll Functionality with Performance Optimization
