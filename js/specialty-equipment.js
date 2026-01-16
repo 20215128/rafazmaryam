@@ -2,26 +2,24 @@
 
 // Product Data - 20+ specialty equipment items
 const specialtyEquipment = [
-    // DTF Machines (6 models)
-    { id: 1, type: 'dtf', name: 'DTF Pro 600', desc: 'Entry-level DTF printer for small businesses', size: 'small', function: 'apparel', image: 'images/equipment/dtf-pro-600.png' },
-    { id: 2, type: 'dtf', name: 'DTF Industrial 1200', desc: 'High-volume DTF printing system', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-industrial-1200.png' },
-    { id: 3, type: 'dtf', name: 'DTF Compact 400', desc: 'Space-saving DTF solution', size: 'small', function: 'apparel', image: 'images/equipment/dtf-compact-400.png' },
-    { id: 4, type: 'dtf', name: 'DTF Pro Max 800', desc: 'Professional DTF printer with dual heads', size: 'medium', function: 'apparel', image: 'images/equipment/dtf-pro-max-800.png' },
-    { id: 5, type: 'dtf', name: 'DTF Enterprise 1600', desc: 'Enterprise-grade DTF production system', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-enterprise-1600.png' },
-    { id: 6, type: 'dtf', name: 'DTF Studio 500', desc: 'Perfect for design studios and startups', size: 'small', function: 'apparel', image: 'images/equipment/dtf-studio-500.png' },
+    // Yinghe DTF Machines (6 models)
+    { id: 1, type: 'dtf', name: 'Yinghe A3 DTF Printer', desc: 'Compact A3 DTF printer with XP600 printhead', size: 'small', function: 'apparel', image: 'images/equipment/dtf-pro-600.png' },
+    { id: 2, type: 'dtf', name: 'Yinghe 60cm DTF (XP600)', desc: 'A2 DTF printer with 2x Epson XP600 printheads', size: 'medium', function: 'apparel', image: 'images/equipment/dtf-industrial-1200.png' },
+    { id: 3, type: 'dtf', name: 'Yinghe 60cm DTF (4720)', desc: 'Professional A2 DTF with 4720 printhead', size: 'medium', function: 'apparel', image: 'images/equipment/dtf-compact-400.png' },
+    { id: 4, type: 'dtf', name: 'Yinghe 60cm DTF (i3200)', desc: 'Advanced A2 DTF with i3200 printhead upgrade', size: 'medium', function: 'apparel', image: 'images/equipment/dtf-pro-max-800.png' },
+    { id: 5, type: 'dtf', name: 'Yinghe A2 DTF Machine', desc: 'High-speed 40m/h DTF system with powder shaker', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-enterprise-1600.png' },
+    { id: 6, type: 'dtf', name: 'Yinghe YH-700DTF', desc: 'Industrial 60cm DTF printer, 12sqm/h speed', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-studio-500.png' },
 
-    // Flex Printers (5 models)
-    { id: 7, type: 'flex', name: 'Flex Banner Pro 1.6m', desc: 'Wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/equipment/flex-banner-pro.png' },
-    { id: 8, type: 'flex', name: 'Flex Industrial 3.2m', desc: 'Large format flex printing system', size: 'industrial', function: 'signage', image: 'images/equipment/flex-industrial.png' },
-    { id: 9, type: 'flex', name: 'Flex Compact 1.2m', desc: 'Compact flex printer for small shops', size: 'small', function: 'signage', image: 'images/equipment/flex-compact.png' },
-    { id: 10, type: 'flex', name: 'Flex Pro 2.0m', desc: 'Professional flex printing solution', size: 'medium', function: 'signage', image: 'images/equipment/flex-pro.png' },
-    { id: 11, type: 'flex', name: 'Flex Max 2.5m', desc: 'High-speed flex banner printer', size: 'medium', function: 'signage', image: 'images/equipment/flex-max.png' },
+    // Flex Printers (2 models)
+    { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/equipment/flex-banner-pro.png' },
+    { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/equipment/flex-industrial.png' },
 
-    // Heat Press (4 models)
-    { id: 12, type: 'heatpress', name: 'Heat Press Standard 40x50', desc: 'Standard heat press for t-shirts', size: 'small', function: 'apparel', image: 'images/equipment/heat-press-standard.png' },
-    { id: 13, type: 'heatpress', name: 'Heat Press Pro 40x60', desc: 'Professional heat transfer press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-pro.png' },
-    { id: 14, type: 'heatpress', name: 'Heat Press Auto 50x70', desc: 'Automatic pneumatic heat press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-auto.png' },
-    { id: 15, type: 'heatpress', name: 'Heat Press Industrial 60x80', desc: 'Heavy-duty industrial heat press', size: 'industrial', function: 'apparel', image: 'images/equipment/heat-press-industrial.png' },
+    // Cutting Plotters (2 models)
+    { id: 9, type: 'cutter', name: 'Cutting Plotter 2ft', desc: 'Compact 2-foot vinyl cutting plotter', size: 'small', function: 'signage', image: 'images/equipment/cutter-2ft.png' },
+    { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/equipment/cutter-4ft.png' },
+
+    // Heat Press (1 model)
+    { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-industrial.png' },
 
     // UV Printers (3 models)
     { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop UV printer for small items', size: 'small', function: 'promotional', image: 'images/equipment/uv-flatbed-a3.png' },
@@ -87,6 +85,7 @@ function createProductCard(equipment) {
     const typeName = {
         'dtf': 'DTF',
         'flex': 'Flex',
+        'cutter': 'Cutter',
         'heatpress': 'Heat Press',
         'uv': 'UV Printer',
         'sublimation': 'Sublimation'

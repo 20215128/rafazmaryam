@@ -11,17 +11,34 @@ const printers = [
     { id: 6, brand: 'bizhub', name: 'Bizhub C458', desc: 'Enterprise 45ppm color MFP with advanced features', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-hero-2.png' },
     { id: 7, brand: 'bizhub', name: 'Bizhub C558', desc: 'Production-level 55ppm color printing powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-hero-1.png' },
 
-    // Kyocera (10 models)
-    { id: 13, brand: 'kyocera', name: 'TASKalfa 3252ci', desc: 'Efficient color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
-    { id: 14, brand: 'kyocera', name: 'TASKalfa 4052ci', desc: 'Professional color document system', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
-    { id: 15, brand: 'kyocera', name: 'TASKalfa 5052ci', desc: 'High-speed color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
-    { id: 16, brand: 'kyocera', name: 'TASKalfa 6052ci', desc: 'Enterprise color printing solution', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
-    { id: 17, brand: 'kyocera', name: 'TASKalfa 7052ci', desc: 'Premium color production printer', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
-    { id: 18, brand: 'kyocera', name: 'TASKalfa 2552ci', desc: 'Compact color office MFP', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
-    { id: 19, brand: 'kyocera', name: 'TASKalfa 3011i', desc: 'Monochrome business printer', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
-    { id: 20, brand: 'kyocera', name: 'TASKalfa 4012i', desc: 'High-volume monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
-    { id: 21, brand: 'kyocera', name: 'TASKalfa 5003i', desc: 'Enterprise monochrome system', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
-    { id: 22, brand: 'kyocera', name: 'TASKalfa 6003i', desc: 'Production monochrome printer', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    // Kyocera (20 models - organized by series)
+    // FS Series - Monochrome
+    { id: 8, brand: 'kyocera', name: 'Kyocera FS-1350', desc: 'Compact monochrome laser printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 9, brand: 'kyocera', name: 'Kyocera FS-1370', desc: 'Fast monochrome office printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 10, brand: 'kyocera', name: 'Kyocera FS-3140', desc: 'Professional monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 11, brand: 'kyocera', name: 'Kyocera FS-3640', desc: 'High-speed monochrome multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 12, brand: 'kyocera', name: 'Kyocera FS-4030i', desc: 'Enterprise monochrome printer with network', type: 'mono', size: 'medium', function: 'printer', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 13, brand: 'kyocera', name: 'Kyocera FS-4035i', desc: 'Advanced monochrome MFP solution', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+
+    // Numeric Series - Small Office
+    { id: 14, brand: 'kyocera', name: 'Kyocera 420i', desc: 'Compact multifunction copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 15, brand: 'kyocera', name: 'Kyocera 520i', desc: 'Versatile office MFP', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 16, brand: 'kyocera', name: 'Kyocera 2040', desc: 'Reliable 20ppm monochrome copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 17, brand: 'kyocera', name: 'Kyocera 2140', desc: 'Efficient 21ppm office system', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+
+    // Numeric Series - Medium Office
+    { id: 18, brand: 'kyocera', name: 'Kyocera 3050', desc: 'Professional 30ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 19, brand: 'kyocera', name: 'Kyocera 3055', desc: 'Advanced 30ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 20, brand: 'kyocera', name: 'Kyocera 3060', desc: 'High-performance 30ppm system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 21, brand: 'kyocera', name: 'Kyocera 3160', desc: 'Versatile 31ppm multifunction device', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 22, brand: 'kyocera', name: 'Kyocera 3920', desc: 'Robust 39ppm office workhorse', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 23, brand: 'kyocera', name: 'Kyocera 4050', desc: 'Professional 40ppm multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 24, brand: 'kyocera', name: 'Kyocera 4200', desc: 'High-speed 42ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 25, brand: 'kyocera', name: 'Kyocera 4300', desc: 'Enterprise 43ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+
+    // Numeric Series - Industrial
+    { id: 26, brand: 'kyocera', name: 'Kyocera 6025', desc: 'Production-level 60ppm MFP', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
 
     // Xerox AltaLink (4 models - arranged by size)
     { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },

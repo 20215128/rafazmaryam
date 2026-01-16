@@ -2139,6 +2139,10 @@ a:hover {
   background: #d97706;
 }
 
+.brand-badge.cutter {
+  background: #0891b2;
+}
+
 /* Consumable Type Badges */
 .brand-badge.toner {
   background: #1e40af;
