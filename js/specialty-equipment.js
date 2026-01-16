@@ -1,5 +1,19 @@
 // Specialty Equipment Page JavaScript
 
+// Toggle Filters Function
+function toggleFilters() {
+    const filterBar = document.getElementById('filterBar');
+    const arrow = document.querySelector('.filter-arrow');
+
+    if (filterBar.style.display === 'none' || filterBar.style.display === '') {
+        filterBar.style.display = 'flex';
+        arrow.textContent = '▲';
+    } else {
+        filterBar.style.display = 'none';
+        arrow.textContent = '▼';
+    }
+}
+
 // Product Data - 20+ specialty equipment items
 const specialtyEquipment = [
     // Yinghe DTF Machines (6 models)

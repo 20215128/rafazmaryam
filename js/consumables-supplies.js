@@ -1,5 +1,19 @@
 // Consumables & Supplies Page JavaScript
 
+// Toggle Filters Function
+function toggleFilters() {
+    const filterBar = document.getElementById('filterBar');
+    const arrow = document.querySelector('.filter-arrow');
+
+    if (filterBar.style.display === 'none' || filterBar.style.display === '') {
+        filterBar.style.display = 'flex';
+        arrow.textContent = '▲';
+    } else {
+        filterBar.style.display = 'none';
+        arrow.textContent = '▼';
+    }
+}
+
 // Product Data - 25+ consumable items
 const consumables = [
     // Toner Cartridges (8 models)
