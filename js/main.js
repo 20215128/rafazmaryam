@@ -383,3 +383,71 @@ if (counters.length > 0) {
 
   counters.forEach(counter => counterObserver.observe(counter));
 }
+
+// === EXPANDABLE SECTIONS ===
+function toggleExpand(trigger) {
+  const content = trigger.nextElementSibling;
+  const icon = trigger.querySelector('.expand-icon');
+
+  trigger.classList.toggle('active');
+  content.classList.toggle('active');
+
+  if (content.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  } else {
+    content.style.maxHeight = '0';
+  }
+}
+
+// === STAT COUNTER ANIMATION ===
+document.addEventListener('DOMContentLoaded', function () {
+  const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        const target = parseFloat(entry.target.getAttribute('data-count'));
+        const isDecimal = target % 1 !== 0;
+        animateStatCounter(entry.target, target, isDecimal);
+        entry.target.classList.add('counted');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statNumbers.forEach(stat => statObserver.observe(stat));
+});
+
+function animateStatCounter(element, target, isDecimal = false) {
+  let start = 0;
+  const duration = 2000;
+  const increment = target / (duration / 16);
+
+  const timer = setInterval(() => {
+    start += increment;
+    if (start >= target) {
+      element.textContent = isDecimal ? target.toFixed(1) : Math.floor(target).toLocaleString();
+      clearInterval(timer);
+    } else {
+      element.textContent = isDecimal ? start.toFixed(1) : Math.floor(start).toLocaleString();
+    }
+  }, 16);
+}
+
+// === SMOOTH SCROLL FOR DEPT PILLS ===
+document.addEventListener('DOMContentLoaded', function () {
+  const deptPills = document.querySelectorAll('.dept-pill');
+  deptPills.forEach(pill => {
+    pill.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 100;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});

@@ -36,10 +36,61 @@
     </nav>
 
     <!-- PAGE HEADER -->
-    <section class="hero" style="min-height: 50vh;">
+    <section class="hero" style="min-height: 60vh; position: relative;">
+        <div class="particles-bg">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+            <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+        </div>
         <div class="hero-content">
-            <h1>Our Departments</h1>
+            <h1 class="gradient-text-animated">Our Departments</h1>
             <p>Eleven specialized departments delivering comprehensive printing solutions</p>
+
+            <!-- Department Navigation Pills -->
+            <div class="dept-nav-pills">
+                <a href="#digital" class="dept-pill">D.I</a>
+                <a href="#offset" class="dept-pill">Offset</a>
+                <a href="#large-format" class="dept-pill">Large Format</a>
+                <a href="#dtf" class="dept-pill">DTF</a>
+                <a href="#uv" class="dept-pill">UV</a>
+                <a href="#a1" class="dept-pill">A1</a>
+                <a href="#sublimation" class="dept-pill">Sublimation</a>
+                <a href="#design" class="dept-pill">Design</a>
+                <a href="#cards" class="dept-pill">Business Cards</a>
+                <a href="#monograms" class="dept-pill">Monograms</a>
+                <a href="#servicing" class="dept-pill">Servicing</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-count="11">0</div>
+                    <div class="stat-label">Specialized Departments</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-count="50000">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number" data-count="99.8">0</div>
+                    <div class="stat-label">Quality Rate %</div>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -47,16 +98,32 @@
     <section id="digital" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/digital-printing.jpg" alt="Digital Printing Department"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/direct-imaging.png" alt="Direct Imaging Department">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Advanced Direct Imaging Technology</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">🖨️ Digital Printing</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">🖨️</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Direct Imaging (D.I)</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
-                        Our digital printing department features the latest high-speed digital presses capable of
-                        producing stunning, full-color prints with exceptional quality and consistency.
+                        Our Direct Imaging (D.I) department features state-of-the-art digital imaging technology,
+                        delivering exceptional print quality with precision and consistency for all your printing needs.
                     </p>
+
+                    <!-- Capability Badges -->
+                    <div class="capability-badges">
+                        <span class="badge">Fast Turnaround</span>
+                        <span class="badge badge-success">Eco-Friendly</span>
+                        <span class="badge badge-info">Variable Data</span>
+                        <span class="badge badge-warning">Same-Day Available</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Short to medium run printing (1-10,000 copies)</li>
@@ -66,13 +133,25 @@
                         <li>✓ Various paper stocks and finishes</li>
                         <li>✓ Up to 13" x 19" sheet size</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Marketing materials and flyers</li>
-                        <li>• Direct mail campaigns</li>
-                        <li>• Personalized invitations</li>
-                        <li>• Small batch publications</li>
-                    </ul>
+
+                    <!-- Expandable Section -->
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Marketing materials and flyers</li>
+                                <li>• Direct mail campaigns</li>
+                                <li>• Personalized invitations</li>
+                                <li>• Small batch publications</li>
+                                <li>• Business presentations</li>
+                                <li>• Event materials</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
             </div>
@@ -83,12 +162,21 @@
     <section id="offset" class="section section-light">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">⚙️ Offset Printing</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">⚙️</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Offset Printing</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Our offset printing department houses multiple multi-color presses, delivering superior quality
                         for high-volume projects with unmatched color accuracy and consistency.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">High Volume</span>
+                        <span class="badge badge-success">Superior Quality</span>
+                        <span class="badge badge-info">Pantone Matching</span>
+                        <span class="badge badge-warning">8-Color Press</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ High-volume runs (5,000+ copies)</li>
@@ -98,18 +186,35 @@
                         <li>✓ UV and aqueous coatings</li>
                         <li>✓ Premium paper stocks</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Magazines and catalogs</li>
-                        <li>• Books and manuals</li>
-                        <li>• Annual reports</li>
-                        <li>• High-volume brochures</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Magazines and catalogs</li>
+                                <li>• Books and manuals</li>
+                                <li>• Annual reports</li>
+                                <li>• High-volume brochures</li>
+                                <li>• Corporate publications</li>
+                                <li>• Marketing collateral</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/departments/offset-printing.jpg" alt="Offset Printing Department"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/offset-printing.jpg" alt="Offset Printing Department">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Multi-Color Press Excellence</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,33 +224,58 @@
     <section id="large-format" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/large-format.jpg" alt="Large Format Printing Department"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/large-format.jpg" alt="Large Format Printing Department">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Up to 10 Feet Wide</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">📐 Large Format Printing
-                    </h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">📐</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Large Format Printing</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Make a big impression with our wide format printing capabilities. From banners to building
                         wraps, we handle projects of any size with vibrant colors and exceptional detail.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">10 Feet Wide</span>
+                        <span class="badge badge-success">UV Resistant</span>
+                        <span class="badge badge-info">Indoor/Outdoor</span>
+                        <span class="badge badge-warning">Vehicle Wraps</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
-                        <li>✓ Widths up to 16 feet</li>
+                        <li>✓ Widths up to 10 feet</li>
                         <li>✓ Unlimited length capabilities</li>
                         <li>✓ Indoor and outdoor materials</li>
                         <li>✓ UV-resistant inks</li>
                         <li>✓ Vinyl, canvas, fabric, and more</li>
                         <li>✓ Mounting and lamination services</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Trade show displays</li>
-                        <li>• Outdoor banners and signage</li>
-                        <li>• Vehicle wraps</li>
-                        <li>• Wall murals and graphics</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Trade show displays</li>
+                                <li>• Outdoor banners and signage</li>
+                                <li>• Vehicle wraps</li>
+                                <li>• Wall murals and graphics</li>
+                                <li>• Retail displays</li>
+                                <li>• Event backdrops</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
             </div>
@@ -156,12 +286,21 @@
     <section id="dtf" class="section section-light">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">🎨 DTF Printing</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">🎨</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">DTF Printing</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Direct-to-Film printing technology for vibrant, durable custom apparel and textiles. Perfect for
                         small batches and complex designs with exceptional color accuracy.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">No Minimums</span>
+                        <span class="badge badge-success">Wash Resistant</span>
+                        <span class="badge badge-info">Any Fabric</span>
+                        <span class="badge badge-warning">Full Color</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Full-color CMYK + white ink</li>
@@ -171,18 +310,35 @@
                         <li>✓ No minimum order quantity</li>
                         <li>✓ Quick turnaround times</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Custom t-shirts and apparel</li>
-                        <li>• Sports team uniforms</li>
-                        <li>• Promotional merchandise</li>
-                        <li>• Fashion and streetwear</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Custom t-shirts and apparel</li>
+                                <li>• Sports team uniforms</li>
+                                <li>• Promotional merchandise</li>
+                                <li>• Fashion and streetwear</li>
+                                <li>• Event apparel</li>
+                                <li>• Corporate uniforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/products/dtf-machine.png" alt="DTF Printing Equipment"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/products/dtf-machine.png" alt="DTF Printing Equipment">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Advanced DTF Technology</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,16 +348,31 @@
     <section id="uv" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/digital-printing.jpg" alt="UV Printing"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/uv-printing.png" alt="UV Printing">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Instant UV Curing Technology</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">✨ UV Printing</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">✨</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">UV Printing</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Advanced UV printing technology for promotional items, signage, and rigid materials. Instant
                         curing delivers vibrant, scratch-resistant prints on virtually any surface.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">Instant Cure</span>
+                        <span class="badge badge-success">Scratch Resistant</span>
+                        <span class="badge badge-info">Any Surface</span>
+                        <span class="badge badge-warning">Raised Texture</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Print on wood, metal, glass, acrylic</li>
@@ -211,13 +382,24 @@
                         <li>✓ Raised texture effects</li>
                         <li>✓ Indoor and outdoor durability</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Promotional products</li>
-                        <li>• Rigid signage</li>
-                        <li>• Custom awards and plaques</li>
-                        <li>• Point-of-sale displays</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Promotional products</li>
+                                <li>• Rigid signage</li>
+                                <li>• Custom awards and plaques</li>
+                                <li>• Point-of-sale displays</li>
+                                <li>• Specialty packaging</li>
+                                <li>• Decorative items</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
             </div>
@@ -228,12 +410,21 @@
     <section id="a1" class="section section-light">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">📐 A1 Printing</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">📐</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">A1 Printing</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Specialized large format A1 printing for architects, engineers, and designers. Technical
                         drawings, blueprints, and plans with precision detail and accuracy.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">A1 Size</span>
+                        <span class="badge badge-success">CAD Compatible</span>
+                        <span class="badge badge-info">High Resolution</span>
+                        <span class="badge badge-warning">Same-Day Service</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ A1 size (594 x 841mm)</li>
@@ -243,18 +434,35 @@
                         <li>✓ Black & white or full color</li>
                         <li>✓ Same-day service available</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Architectural plans</li>
-                        <li>• Engineering drawings</li>
-                        <li>• Construction blueprints</li>
-                        <li>• Design presentations</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Architectural plans</li>
+                                <li>• Engineering drawings</li>
+                                <li>• Construction blueprints</li>
+                                <li>• Design presentations</li>
+                                <li>• Technical specifications</li>
+                                <li>• Site plans</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/departments/large-format.jpg" alt="A1 Technical Printing"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/large-format.jpg" alt="A1 Technical Printing">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Precision Technical Printing</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,16 +472,31 @@
     <section id="sublimation" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/digital-printing.jpg" alt="Sublimation Printing"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/digital-printing.jpg" alt="Sublimation Printing">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Permanent Full-Color Designs</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">🌈 Sublimation</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">🌈</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Sublimation</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Dye sublimation printing for textiles, mugs, and promotional products. Permanent, full-color
                         designs that become part of the material - won't fade, crack, or peel.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">No Minimums</span>
+                        <span class="badge badge-success">Permanent Design</span>
+                        <span class="badge badge-info">Photo Quality</span>
+                        <span class="badge badge-warning">Dishwasher Safe</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Polyester fabrics and coated items</li>
@@ -283,13 +506,24 @@
                         <li>✓ Dishwasher safe on mugs</li>
                         <li>✓ No minimum quantities</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Custom mugs and drinkware</li>
-                        <li>• Polyester apparel</li>
-                        <li>• Mouse pads and coasters</li>
-                        <li>• Promotional gifts</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Custom mugs and drinkware</li>
+                                <li>• Polyester apparel</li>
+                                <li>• Mouse pads and coasters</li>
+                                <li>• Promotional gifts</li>
+                                <li>• Phone cases</li>
+                                <li>• Ceramic tiles</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
             </div>
@@ -300,12 +534,21 @@
     <section id="design" class="section section-light">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">🎨 Graphic Design</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">🎨</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Graphic Design</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Professional graphic design services for all your branding and marketing needs. From logos to
                         complete brand identities, our creative team brings your vision to life.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">Logo Design</span>
+                        <span class="badge badge-success">Brand Identity</span>
+                        <span class="badge badge-info">Print Ready</span>
+                        <span class="badge badge-warning">Fast Delivery</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Services:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Logo design and branding</li>
@@ -315,18 +558,35 @@
                         <li>✓ Print-ready file preparation</li>
                         <li>✓ Brand style guides</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• New businesses and startups</li>
-                        <li>• Brand refreshes</li>
-                        <li>• Marketing campaigns</li>
-                        <li>• Product launches</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• New businesses and startups</li>
+                                <li>• Brand refreshes</li>
+                                <li>• Marketing campaigns</li>
+                                <li>• Product launches</li>
+                                <li>• Corporate rebranding</li>
+                                <li>• Event materials</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/departments/digital-printing.jpg" alt="Graphic Design Services"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/digital-printing.jpg" alt="Graphic Design Services">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Creative Design Solutions</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -336,16 +596,31 @@
     <section id="cards" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/corporate-printing.jpg" alt="Business Cards Printing"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/corporate-printing.jpg" alt="Business Cards Printing">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Premium Business Cards</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">💳 Business Cards</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">💳</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Business Cards</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Make a lasting first impression with premium business cards. From standard to luxury finishes,
                         we offer a wide range of options to represent your brand professionally.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">Premium Stock</span>
+                        <span class="badge badge-success">Spot UV</span>
+                        <span class="badge badge-info">Foil Stamping</span>
+                        <span class="badge badge-warning">Quick Turnaround</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Options:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Standard and premium card stocks</li>
@@ -355,13 +630,24 @@
                         <li>✓ Die-cut custom shapes</li>
                         <li>✓ Quick turnaround available</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Professionals and executives</li>
-                        <li>• Sales teams</li>
-                        <li>• Networking events</li>
-                        <li>• Corporate identity packages</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Professionals and executives</li>
+                                <li>• Sales teams</li>
+                                <li>• Networking events</li>
+                                <li>• Corporate identity packages</li>
+                                <li>• Trade shows</li>
+                                <li>• Client meetings</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
             </div>
@@ -372,12 +658,22 @@
     <section id="monograms" class="section section-light">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">✍️ Monograms</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">✍️</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Monograms</h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
-                        Custom monogram design and printing for personalized branding. Elegant, unique designs that add
+                        Custom monogram design and embroidery for personalized branding. Elegant, unique designs that
+                        add
                         a touch of sophistication to premium products and gifts.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">Custom Design</span>
+                        <span class="badge badge-success">Embroidery</span>
+                        <span class="badge badge-info">Premium Quality</span>
+                        <span class="badge badge-warning">Brand Integration</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Services:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Custom monogram design</li>
@@ -387,18 +683,35 @@
                         <li>✓ Digital and embroidery files</li>
                         <li>✓ Brand integration</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Ideal For:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Luxury products</li>
-                        <li>• Wedding stationery</li>
-                        <li>• Corporate gifts</li>
-                        <li>• Premium packaging</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Ideal Applications</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Luxury products</li>
+                                <li>• Wedding stationery</li>
+                                <li>• Corporate gifts</li>
+                                <li>• Premium packaging</li>
+                                <li>• Apparel branding</li>
+                                <li>• Custom textiles</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="quote.html" class="btn btn-primary" style="margin-top: var(--space-6);">Request Quote</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/departments/corporate-printing.jpg" alt="Monogram Design"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/monogram-embroidery.png" alt="Monogram Design">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Professional Embroidery</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -408,17 +721,32 @@
     <section id="servicing" class="section">
         <div class="container">
             <div class="grid grid-2" style="align-items: center; gap: var(--space-16);">
-                <div class="scroll-reveal">
-                    <img src="images/departments/machine-servicing.jpg" alt="Machine Servicing Department"
-                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
+                <div class="scroll-reveal dept-card-3d">
+                    <div class="card-inner">
+                        <div class="dept-image-container">
+                            <img src="images/departments/machine-servicing.jpg" alt="Machine Servicing Department">
+                            <div class="dept-image-overlay">
+                                <span class="overlay-text">Expert Equipment Maintenance</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scroll-reveal">
-                    <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">🔧 Machine Servicing &
-                        Maintenance</h2>
+                <div class="scroll-reveal dept-card-premium">
+                    <div class="dept-icon-animated">🔧</div>
+                    <h2 class="gradient-text" style="margin-bottom: var(--space-4);">Machine Servicing & Maintenance
+                    </h2>
                     <p style="font-size: var(--text-lg); line-height: 1.8; margin-bottom: var(--space-4);">
                         Keep your printing equipment running at peak performance with our expert servicing and
                         maintenance team. We service all major brands and models of commercial printing equipment.
                     </p>
+
+                    <div class="capability-badges">
+                        <span class="badge">24/7 Support</span>
+                        <span class="badge badge-success">Certified Techs</span>
+                        <span class="badge badge-info">All Brands</span>
+                        <span class="badge badge-warning">Emergency Service</span>
+                    </div>
+
                     <h4 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Capabilities:</h4>
                     <ul style="line-height: 2; color: var(--color-gray-700); margin-bottom: var(--space-6);">
                         <li>✓ Preventive maintenance programs</li>
@@ -428,13 +756,24 @@
                         <li>✓ Equipment installation</li>
                         <li>✓ Operator training</li>
                     </ul>
-                    <h4 style="margin-bottom: var(--space-3);">Equipment We Service:</h4>
-                    <ul style="line-height: 2; color: var(--color-gray-700);">
-                        <li>• Offset printing presses</li>
-                        <li>• Digital printing systems</li>
-                        <li>• Large format printers</li>
-                        <li>• Binding and finishing equipment</li>
-                    </ul>
+
+                    <div class="expandable-section">
+                        <div class="expand-trigger" onclick="toggleExpand(this)">
+                            <h5>Equipment We Service</h5>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="expand-content">
+                            <ul style="line-height: 2; color: var(--color-gray-700);">
+                                <li>• Offset printing presses</li>
+                                <li>• Digital printing systems</li>
+                                <li>• Large format printers</li>
+                                <li>• Binding and finishing equipment</li>
+                                <li>• DTF and UV printers</li>
+                                <li>• Embroidery machines</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-6);">Contact Service
                         Team</a>
                 </div>
@@ -480,7 +819,7 @@
             <div class="footer-section">
                 <h4>Services</h4>
                 <ul class="footer-links">
-                    <li><a href="departments.html#digital">Digital Printing</a></li>
+                    <li><a href="departments.html#digital">Direct Imaging (D.I)</a></li>
                     <li><a href="departments.html#offset">Offset Printing</a></li>
                     <li><a href="departments.html#large-format">Large Format</a></li>
                     <li><a href="departments.html#dtf">DTF Printing</a></li>

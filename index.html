@@ -36,15 +36,32 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero hero-explosion">
+    <!-- Animated Color Particles -->
+    <div class="color-particles">
+      <div class="particle particle-cyan"></div>
+      <div class="particle particle-magenta"></div>
+      <div class="particle particle-yellow"></div>
+      <div class="particle particle-cyan-2"></div>
+      <div class="particle particle-magenta-2"></div>
+      <div class="particle particle-yellow-2"></div>
+    </div>
+
+    <!-- Color Explosion Background -->
+    <div class="hero-explosion-bg"></div>
+
+    <!-- Ink Splash Accent -->
+    <div class="ink-splash-accent"></div>
+
     <div class="hero-content">
-      <h1>RAFAZ - Where Quality Meets Precision in Every Print</h1>
-      <p>Professional printing solutions for businesses that demand excellence. Get instant quotes via WhatsApp and
+      <h1 class="hero-title-gradient">RAFAZ - Where Quality Meets Precision in Every Print</h1>
+      <p class="hero-subtitle">Professional printing solutions for businesses that demand excellence. Get instant quotes
+        via WhatsApp and
         experience 37 years of trusted expertise.</p>
       <div class="hero-cta">
         <a href="whatsapp://" data-message="Hi! I need a quote for printing services. Can you help me?"
-          class="btn btn-primary btn-large">💬 Get Instant Quote on WhatsApp</a>
-        <a href="departments.html" class="btn btn-secondary btn-large">View Our Services</a>
+          class="btn btn-primary btn-large btn-pulse">💬 Get Instant Quote on WhatsApp</a>
+        <a href="departments.html" class="btn btn-secondary btn-large btn-glow">View Our Services</a>
       </div>
     </div>
   </section>
@@ -78,260 +95,537 @@
   </section>
 
   <!-- SERVICES OVERVIEW -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Complete Printing Solutions Under One Roof</h2>
-        <p class="section-subtitle">From DTF and UV printing to architectural plans and custom designs - our 11
+  <section class="section"
+    style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%); position: relative; overflow: hidden;">
+    <!-- Subtle Background Pattern -->
+    <div
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.03; background-image: radial-gradient(circle, #0a2463 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <h2 class="section-title"
+          style="font-size: 3rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #0a2463, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Complete Printing Solutions Under One Roof</h2>
+        <p class="section-subtitle" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: #4a5568;">From
+          DTF and UV printing to architectural plans and custom designs - our 11
           specialized departments deliver cutting-edge printing solutions for every need.</p>
       </div>
 
-      <div class="grid grid-3">
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">🖨️</div>
-          <h3 class="card-title">Digital Printing</h3>
-          <p class="card-text">High-speed digital printing for short runs and variable data projects. Perfect for
-            personalized marketing materials and quick turnarounds.</p>
-          <a href="departments.html#digital" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+      <div class="grid grid-3" style="gap: 2rem;">
+        <!-- Direct Imaging (D.I) -->
+        <div class="modern-dept-card scroll-reveal" data-color="cyan"
+          style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 212, 255, 0.25)'; this.style.borderColor='rgba(0, 212, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #00d4ff, #0099cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8" />
+              <path d="M12 17v4" />
+              <path d="m6 8 4 4 4-4" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Direct Imaging (D.I)
+          </h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">State-of-the-art digital imaging
+            technology for exceptional print quality with precision and consistency.</p>
+          <a href="departments.html#digital"
+            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore D.I <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">⚙️</div>
-          <h3 class="card-title">Offset Printing</h3>
-          <p class="card-text">Large-scale offset printing for high-volume projects. Superior quality and
-            cost-effectiveness for magazines, catalogs, and books.</p>
-          <a href="departments.html#offset" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Offset Printing -->
+        <div class="modern-dept-card scroll-reveal" data-color="magenta"
+          style="background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 0, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 0, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 0, 255, 0.25)'; this.style.borderColor='rgba(255, 0, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 0, 255, 0.1)'; this.style.borderColor='rgba(255, 0, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 0, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ff00ff, #cc00cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Offset Printing</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Large-scale offset printing for
+            high-volume projects. Superior quality and cost-effectiveness for magazines, catalogs, and books.</p>
+          <a href="departments.html#offset"
+            style="display: inline-flex; align-items: center; color: #ff00ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Offset <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">📐</div>
-          <h3 class="card-title">Large Format Printing</h3>
-          <p class="card-text">Wide format printing for banners, posters, signage, and displays. Vibrant colors and
-            durable materials for indoor and outdoor use.</p>
-          <a href="departments.html#large-format" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Large Format -->
+        <div class="modern-dept-card scroll-reveal" data-color="yellow"
+          style="background: linear-gradient(135deg, rgba(255, 237, 0, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 237, 0, 0.3); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 237, 0, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 237, 0, 0.25)'; this.style.borderColor='rgba(255, 237, 0, 0.8)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 237, 0, 0.1)'; this.style.borderColor='rgba(255, 237, 0, 0.3)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 237, 0, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ffed00, #ccbe00); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 237, 0, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Large Format</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Wide format printing for banners, posters,
+            signage, and displays. Vibrant colors and durable materials for indoor and outdoor use.</p>
+          <a href="departments.html#large-format"
+            style="display: inline-flex; align-items: center; color: #d4a900; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Large Format <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">🎨</div>
-          <h3 class="card-title">DTF Printing</h3>
-          <p class="card-text">Direct-to-Film printing for custom apparel and textiles. High-quality, vibrant prints on
-            any fabric with exceptional durability.</p>
-          <a href="departments.html#dtf" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- DTF Printing -->
+        <div class="modern-dept-card scroll-reveal" data-color="cyan"
+          style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 212, 255, 0.25)'; this.style.borderColor='rgba(0, 212, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #00d4ff, #0099cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+              <polyline points="14 2 14 8 20 8" />
+              <path d="M8 13h2" />
+              <path d="M8 17h2" />
+              <path d="M14 13h2" />
+              <path d="M14 17h2" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">DTF Printing</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Direct-to-Film printing for custom apparel
+            and textiles. High-quality, vibrant prints on any fabric with exceptional durability.</p>
+          <a href="departments.html#dtf"
+            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore DTF <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">✨</div>
-          <h3 class="card-title">UV Printing</h3>
-          <p class="card-text">Advanced UV printing for promotional items, signage, and rigid materials. Instant curing
-            for vibrant, scratch-resistant results.</p>
-          <a href="departments.html#uv" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- UV Printing -->
+        <div class="modern-dept-card scroll-reveal" data-color="magenta"
+          style="background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 0, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 0, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 0, 255, 0.25)'; this.style.borderColor='rgba(255, 0, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 0, 255, 0.1)'; this.style.borderColor='rgba(255, 0, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 0, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ff00ff, #cc00cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">UV Printing</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Advanced UV printing for promotional
+            items, signage, and rigid materials. Instant curing for vibrant, scratch-resistant results.</p>
+          <a href="departments.html#uv"
+            style="display: inline-flex; align-items: center; color: #ff00ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore UV <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">📐</div>
-          <h3 class="card-title">A1 Printing</h3>
-          <p class="card-text">Large format A1 printing for architects, engineers, and designers. Technical drawings,
-            blueprints, and plans with precision detail.</p>
-          <a href="departments.html#a1" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- A1 Printing -->
+        <div class="modern-dept-card scroll-reveal" data-color="yellow"
+          style="background: linear-gradient(135deg, rgba(255, 237, 0, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 237, 0, 0.3); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 237, 0, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 237, 0, 0.25)'; this.style.borderColor='rgba(255, 237, 0, 0.8)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 237, 0, 0.1)'; this.style.borderColor='rgba(255, 237, 0, 0.3)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 237, 0, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ffed00, #ccbe00); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 237, 0, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">A1 Printing</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Large format A1 printing for architects,
+            engineers, and designers. Technical drawings, blueprints, and plans with precision detail.</p>
+          <a href="departments.html#a1"
+            style="display: inline-flex; align-items: center; color: #d4a900; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore A1 <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">🌈</div>
-          <h3 class="card-title">Sublimation</h3>
-          <p class="card-text">Dye sublimation printing for textiles, mugs, and promotional products. Permanent,
-            full-color designs that won't fade or crack.</p>
-          <a href="departments.html#sublimation" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Sublimation -->
+        <div class="modern-dept-card scroll-reveal" data-color="cyan"
+          style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 212, 255, 0.25)'; this.style.borderColor='rgba(0, 212, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #00d4ff, #0099cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+              <line x1="7" y1="7" x2="7.01" y2="7" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Sublimation</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Dye sublimation printing for textiles,
+            mugs, and promotional products. Permanent, full-color designs that won't fade or crack.</p>
+          <a href="departments.html#sublimation"
+            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Sublimation <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">🎨</div>
-          <h3 class="card-title">Graphic Design</h3>
-          <p class="card-text">Professional graphic design services for all your branding needs. From logos to complete
-            marketing materials.</p>
-          <a href="departments.html#design" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Graphic Design -->
+        <div class="modern-dept-card scroll-reveal" data-color="magenta"
+          style="background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 0, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 0, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 0, 255, 0.25)'; this.style.borderColor='rgba(255, 0, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 0, 255, 0.1)'; this.style.borderColor='rgba(255, 0, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 0, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ff00ff, #cc00cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Graphic Design</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Professional graphic design services for
+            all your branding needs. From logos to complete marketing materials.</p>
+          <a href="departments.html#design"
+            style="display: inline-flex; align-items: center; color: #ff00ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Design <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">💳</div>
-          <h3 class="card-title">Business Cards</h3>
-          <p class="card-text">Premium business cards and corporate stationery. Make a lasting first impression with
-            professionally designed and printed cards.</p>
-          <a href="departments.html#cards" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Business Cards -->
+        <div class="modern-dept-card scroll-reveal" data-color="yellow"
+          style="background: linear-gradient(135deg, rgba(255, 237, 0, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 237, 0, 0.3); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 237, 0, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 237, 0, 0.25)'; this.style.borderColor='rgba(255, 237, 0, 0.8)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 237, 0, 0.1)'; this.style.borderColor='rgba(255, 237, 0, 0.3)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 237, 0, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ffed00, #ccbe00); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 237, 0, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Business Cards</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Premium business cards and corporate
+            stationery. Make a lasting first impression with professionally designed and printed cards.</p>
+          <a href="departments.html#cards"
+            style="display: inline-flex; align-items: center; color: #d4a900; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Cards <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">✍️</div>
-          <h3 class="card-title">Monograms</h3>
-          <p class="card-text">Custom monogram design and printing for personalized branding. Elegant, unique designs
-            for premium products and gifts.</p>
-          <a href="departments.html#monograms" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Monograms -->
+        <div class="modern-dept-card scroll-reveal" data-color="cyan"
+          style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 212, 255, 0.25)'; this.style.borderColor='rgba(0, 212, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #00d4ff, #0099cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Monograms</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Custom monogram design and embroidery for
+            personalized branding. Elegant, unique designs for premium products and gifts.</p>
+          <a href="departments.html#monograms"
+            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Monograms <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
 
-        <div class="department-card card scroll-reveal">
-          <div class="department-icon">🔧</div>
-          <h3 class="card-title">Machine Servicing</h3>
-          <p class="card-text">Expert maintenance and servicing for printing equipment. Keep your machines running at
-            peak performance with our technical team.</p>
-          <a href="departments.html#servicing" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+        <!-- Machine Servicing -->
+        <div class="modern-dept-card scroll-reveal" data-color="magenta"
+          style="background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(255, 0, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(255, 0, 255, 0.1);"
+          onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(255, 0, 255, 0.25)'; this.style.borderColor='rgba(255, 0, 255, 0.6)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255, 0, 255, 0.1)'; this.style.borderColor='rgba(255, 0, 255, 0.2)'">
+          <div
+            style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255, 0, 255, 0.1), transparent); pointer-events: none;">
+          </div>
+          <div
+            style="width: 70px; height: 70px; background: linear-gradient(135deg, #ff00ff, #cc00cc); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 0, 255, 0.3); position: relative; z-index: 1;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-bottom: 1rem;">Machine Servicing</h3>
+          <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">Expert maintenance and servicing for
+            printing equipment. Keep your machines running at peak performance with our technical team.</p>
+          <a href="departments.html#servicing"
+            style="display: inline-flex; align-items: center; color: #ff00ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            Explore Servicing <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <style>
+    .modern-dept-card a:hover span {
+      transform: translateX(5px);
+    }
+  </style>
   <!-- EQUIPMENT SALES SECTION -->
-  <section class="section"
-    style="background: linear-gradient(135deg, #0A2463 0%, #1E3A8A 100%) !important; color: white !important;">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" style="color: white;">Premium Printing Equipment & Supplies</h2>
-        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Beyond printing services, we supply top-tier
-          printing machines and consumables from
-          leading brands. Upgrade your in-house capabilities with professional-grade equipment.</p>
+  <section class="section equipment-professional"
+    style="background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%); color: white; position: relative; overflow: hidden; padding: 5rem 0;">
+
+    <!-- Subtle Grid Pattern -->
+    <div
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.03; background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;">
+    </div>
+
+    <div class="container" style="position: relative; z-index: 1; max-width: 1400px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <h2 class="section-title" style="color: white; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+          Premium Printing Equipment & Supplies</h2>
+        <p class="section-subtitle"
+          style="color: rgba(255,255,255,0.85); font-size: 1.15rem; max-width: 700px; margin: 0 auto;">Beyond printing
+          services, we supply top-tier printing machines and consumables from leading brands.</p>
       </div>
 
-      <div class="grid grid-3">
-        <!-- Commercial Printers Card with Image -->
-        <div class="card scroll-reveal"
-          style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer; padding: 0; overflow: hidden;"
-          onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,255,255,0.5)'"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.2)'">
-          <div style="display: flex; align-items: stretch; height: 100%;">
-            <!-- Image on Left -->
+      <!-- Cards Container -->
+      <div style="display: flex; flex-direction: column; gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+
+        <!-- Commercial Printers Card -->
+        <div class="professional-card scroll-reveal"
+          style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; transition: all 0.3s ease; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);"
+          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 48px rgba(0, 0, 0, 0.4)'; this.style.borderColor='rgba(100, 150, 255, 0.4)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.15)'">
+
+          <div style="display: grid; grid-template-columns: 350px 1fr; align-items: center; min-height: 320px;">
+            <!-- Image Section -->
             <div
-              style="flex: 0 0 45%; background: #F5F5F5; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+              style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; display: flex; align-items: center; justify-content: center; height: 100%; border-right: 1px solid rgba(255, 255, 255, 0.1);">
               <img src="images/products/bizhub-c3351.png" alt="Konica Minolta Bizhub C3351"
-                style="width: 100%; height: auto; object-fit: contain; max-height: 300px;">
+                style="width: 100%; height: auto; object-fit: contain; max-height: 260px; border-radius: 8px; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15)); transition: transform 0.3s ease;">
             </div>
-            <!-- Content on Right -->
-            <div
-              style="flex: 1; padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="color: white; margin-bottom: var(--space-4); font-size: var(--text-2xl);">Commercial Printers
-                </h3>
-                <ul
-                  style="text-align: left; color: rgba(255,255,255,0.9); line-height: 2; margin-bottom: var(--space-4); list-style: none; padding: 0;">
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓
-                    <strong>Kyocera</strong> - Reliable multifunction printers
-                  </li>
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Konica
-                      Minolta Bizhub</strong> - High-volume solutions</li>
-                  <li style="padding: 0.5rem 0;">✓ <strong>Xerox</strong> - Enterprise-grade systems</li>
-                </ul>
-                <p
-                  style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin-bottom: var(--space-4); font-style: italic;">
-                  New & certified pre-owned options available
-                </p>
+
+            <!-- Content Section -->
+            <div style="padding: 2.5rem 3rem;">
+              <h3 style="color: #ffffff; margin-bottom: 1.25rem; font-size: 1.75rem; font-weight: 700;">Commercial
+                Printers</h3>
+              <ul
+                style="color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem; list-style: none; padding: 0;">
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Kyocera</strong> <span style="color: rgba(255,255,255,0.7);">-
+                      Reliable multifunction printers</span></div>
+                </li>
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Konica Minolta Bizhub</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- High-volume solutions</span></div>
+                </li>
+                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Xerox</strong> <span style="color: rgba(255,255,255,0.7);">-
+                      Enterprise-grade systems</span></div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 2rem;">
+                <a href="commercial-printers.html" class="btn"
+                  style="background: linear-gradient(135deg, #6495ed, #4169e1); color: white; padding: 0.75rem 2rem; font-weight: 600; border: none; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; display: inline-block;">View
+                  Products →</a>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6); font-style: italic;">New & certified
+                  pre-owned available</span>
               </div>
-              <a href="products.html#commercial-printers" class="btn btn-large"
-                style="background: white; color: var(--color-primary); width: 100%; font-weight: 700;">View Our Products
-                →</a>
             </div>
           </div>
         </div>
 
-        <!-- Specialty Equipment Card with Image -->
-        <div class="card scroll-reveal"
-          style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer; padding: 0; overflow: hidden;"
-          onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,255,255,0.5)'"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.2)'">
-          <div style="display: flex; align-items: stretch; height: 100%;">
-            <!-- Image on Left -->
+        <!-- Specialty Equipment Card -->
+        <div class="professional-card scroll-reveal"
+          style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; transition: all 0.3s ease; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);"
+          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 48px rgba(0, 0, 0, 0.4)'; this.style.borderColor='rgba(100, 150, 255, 0.4)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.15)'">
+
+          <div style="display: grid; grid-template-columns: 350px 1fr; align-items: center; min-height: 320px;">
             <div
-              style="flex: 0 0 45%; background: #F5F5F5; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
-              <img src="images/products/dtf-machine.png" alt="DTF Printing Machine"
-                style="width: 100%; height: auto; object-fit: contain; max-height: 300px;">
+              style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; display: flex; align-items: center; justify-content: center; height: 100%; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+              <img src="images/products/embroidery-machine.jpg" alt="Commercial Embroidery Machine"
+                style="width: 100%; height: auto; object-fit: contain; max-height: 260px; border-radius: 8px; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15)); transition: transform 0.3s ease;">
             </div>
-            <!-- Content on Right -->
-            <div
-              style="flex: 1; padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="color: white; margin-bottom: var(--space-4); font-size: var(--text-2xl);">Specialty Equipment
-                </h3>
-                <ul
-                  style="text-align: left; color: rgba(255,255,255,0.9); line-height: 2; margin-bottom: var(--space-4); list-style: none; padding: 0;">
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Flex
-                      Machines</strong> - Banner & signage printing</li>
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>DTF
-                      Machines</strong> - Direct-to-film printing</li>
-                  <li style="padding: 0.5rem 0;">✓ <strong>Heat Press</strong> - Transfer applications</li>
-                </ul>
-                <p
-                  style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin-bottom: var(--space-4); font-style: italic;">
-                  Perfect for custom apparel & merchandise
-                </p>
+
+            <div style="padding: 2.5rem 3rem;">
+              <h3 style="color: #ffffff; margin-bottom: 1.25rem; font-size: 1.75rem; font-weight: 700;">Specialty
+                Equipment</h3>
+              <ul
+                style="color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem; list-style: none; padding: 0;">
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Flex Machines</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- Banner & signage printing</span></div>
+                </li>
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">DTF Machines</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- Direct-to-film printing</span></div>
+                </li>
+                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Heat Press</strong> <span style="color: rgba(255,255,255,0.7);">-
+                      Transfer applications</span></div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 2rem;">
+                <a href="specialty-equipment.html" class="btn"
+                  style="background: linear-gradient(135deg, #6495ed, #4169e1); color: white; padding: 0.75rem 2rem; font-weight: 600; border: none; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; display: inline-block;">View
+                  Products →</a>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6); font-style: italic;">Perfect for custom
+                  apparel</span>
               </div>
-              <a href="products.html#specialty-equipment" class="btn btn-large"
-                style="background: white; color: var(--color-primary); width: 100%; font-weight: 700;">View Our Products
-                →</a>
             </div>
           </div>
         </div>
 
-        <!-- Consumables & Supplies Card with Image -->
-        <div class="card scroll-reveal"
-          style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: pointer; padding: 0; overflow: hidden;"
-          onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='rgba(255,255,255,0.5)'"
-          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.2)'">
-          <div style="display: flex; align-items: stretch; height: 100%;">
-            <!-- Image on Left -->
+        <!-- Consumables & Supplies Card -->
+        <div class="professional-card scroll-reveal"
+          style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; transition: all 0.3s ease; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);"
+          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 48px rgba(0, 0, 0, 0.4)'; this.style.borderColor='rgba(100, 150, 255, 0.4)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.15)'">
+
+          <div style="display: grid; grid-template-columns: 350px 1fr; align-items: center; min-height: 320px;">
             <div
-              style="flex: 0 0 45%; background: #F5F5F5; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+              style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; display: flex; align-items: center; justify-content: center; height: 100%; border-right: 1px solid rgba(255, 255, 255, 0.1);">
               <img src="images/products/toner-supplies.jpg" alt="Toner Cartridges and Supplies Inventory"
-                style="width: 100%; height: auto; object-fit: cover; max-height: 300px;">
+                style="width: 100%; height: auto; object-fit: cover; max-height: 260px; border-radius: 8px; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15)); transition: transform 0.3s ease;">
             </div>
-            <!-- Content on Right -->
-            <div
-              style="flex: 1; padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <h3 style="color: white; margin-bottom: var(--space-4); font-size: var(--text-2xl);">Consumables &
-                  Supplies</h3>
-                <ul
-                  style="text-align: left; color: rgba(255,255,255,0.9); line-height: 2; margin-bottom: var(--space-4); list-style: none; padding: 0;">
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Toners &
-                      Inks</strong> - OEM & compatible</li>
-                  <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">✓ <strong>Papers &
-                      Media</strong> - All sizes & weights</li>
-                  <li style="padding: 0.5rem 0;">✓ <strong>Maintenance Kits</strong> - Keep machines running</li>
-                </ul>
-                <p
-                  style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); margin-bottom: var(--space-4); font-style: italic;">
-                  Bulk discounts available for regular orders
-                </p>
+
+            <div style="padding: 2.5rem 3rem;">
+              <h3 style="color: #ffffff; margin-bottom: 1.25rem; font-size: 1.75rem; font-weight: 700;">Consumables &
+                Supplies</h3>
+              <ul
+                style="color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem; list-style: none; padding: 0;">
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Toners & Inks</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- OEM & compatible options</span></div>
+                </li>
+                <li
+                  style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Papers & Media</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- All sizes & weights</span></div>
+                </li>
+                <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                  <span style="color: #6495ed; margin-right: 12px; font-weight: bold; font-size: 1.1rem;">▸</span>
+                  <div><strong style="color: #a8b8d8;">Maintenance Kits</strong> <span
+                      style="color: rgba(255,255,255,0.7);">- Keep machines running</span></div>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 2rem;">
+                <a href="consumables-supplies.html" class="btn"
+                  style="background: linear-gradient(135deg, #6495ed, #4169e1); color: white; padding: 0.75rem 2rem; font-weight: 600; border: none; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; display: inline-block;">View
+                  Products →</a>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6); font-style: italic;">Bulk discounts
+                  available</span>
               </div>
-              <a href="products.html#consumables" class="btn btn-large"
-                style="background: white; color: var(--color-primary); width: 100%; font-weight: 700;">View Our Products
-                →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Equipment CTA -->
+      <!-- Professional CTA -->
       <div
-        style="text-align: center; margin-top: var(--space-16); padding: var(--space-10); background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: var(--radius-lg); border: 2px solid rgba(255,255,255,0.3);">
-        <h3 style="color: white; font-size: var(--text-3xl); margin-bottom: var(--space-4);">Need Expert Advice?</h3>
-        <p
-          style="color: rgba(255,255,255,0.95); font-size: var(--text-lg); max-width: 600px; margin: 0 auto var(--space-6);">
+        style="text-align: center; margin-top: 4rem; padding: 2.5rem; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem; font-weight: 700;">Need Expert Advice?</h3>
+        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 650px; margin: 0 auto 2rem;">
           Not sure which equipment is right for your business? Chat with our specialists on WhatsApp for personalized
           recommendations.
         </p>
         <a href="whatsapp://" data-message="Hi! I'm interested in purchasing printing equipment. Can you help me?"
           class="btn btn-large"
-          style="background: white; color: var(--color-primary); font-size: var(--text-lg); font-weight: 700;">
+          style="background: linear-gradient(135deg, #6495ed, #4169e1); color: white; font-size: 1.1rem; font-weight: 600; padding: 1rem 2.5rem; border: none; border-radius: 8px; text-decoration: none; display: inline-block; box-shadow: 0 4px 16px rgba(100, 149, 237, 0.3); transition: all 0.3s ease;">
           💬 Get Equipment Consultation on WhatsApp
         </a>
-        <p style="margin-top: var(--space-4); font-size: var(--text-sm); color: rgba(255,255,255,0.8);">✓ Free
-          consultation • ✓ Flexible
-          payment plans • ✓ Installation & training included</p>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.7);">
+          ✓ Free consultation • ✓ Flexible payment plans • ✓ Installation & training included
+        </p>
       </div>
     </div>
   </section>
+
+  <style>
+    .professional-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .professional-card .btn:hover {
+      background: linear-gradient(135deg, #4169e1, #3457d5);
+      box-shadow: 0 6px 20px rgba(100, 149, 237, 0.4);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 968px) {
+      .professional-card>div {
+        grid-template-columns: 1fr !important;
+      }
+
+      .professional-card img {
+        max-height: 200px !important;
+      }
+    }
+  </style>
 
   <!-- WHY CHOOSE US -->
   <section class="section section-dark">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Why 5,000+ Businesses Trust RAFAZ</h2>
+        <h2 class="section-title">Why 50,000+ Businesses Trust RAFAZ</h2>
         <p class="section-subtitle">We don't just print—we help your business make a lasting impression. Here's what
           sets us apart from the competition.</p>
       </div>
