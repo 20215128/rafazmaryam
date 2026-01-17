@@ -47,6 +47,22 @@ const consumables = [
     // Bizhub 225/C35 - Cleaning Blades
     { id: 15, type: 'blade', name: 'Drum Cleaning Blade', desc: 'Drum cleaning blade for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-blade', image: 'images/consumables/drum-blade.png' },
     { id: 16, type: 'blade', name: 'Transfer Belt Cleaning Blade', desc: 'Transfer belt cleaning blade for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-blade', image: 'images/consumables/belt-blade.png' },
+
+    // Kyocera - Color Toners
+    { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-tech-toner.png' },
+    { id: 18, type: 'toner', name: 'Rafaz Noble Crown Toners', desc: 'Premium Rafaz Noble Crown toners for Kyocera', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/rafaz-noble-crown.png' },
+    { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-original-toner.png' },
+
+    // Kyocera - Drums (Multiple Models)
+    { id: 20, type: 'drum', name: 'Kyocera Drum - 1128', desc: 'Original drum unit for Kyocera 1128', brand: 'kyocera', category: 'kyocera-drum', image: 'images/consumables/kyocera-drum-1128.png' },
+    { id: 21, type: 'drum', name: 'Kyocera Drum - 3140', desc: 'Original drum unit for Kyocera 3140', brand: 'kyocera', category: 'kyocera-drum', image: 'images/consumables/kyocera-drum-3140.png' },
+    { id: 22, type: 'drum', name: 'Kyocera Drum - 1620', desc: 'Original drum unit for Kyocera 1620', brand: 'kyocera', category: 'kyocera-drum', image: 'images/consumables/kyocera-drum-1620.png' },
+    { id: 23, type: 'drum', name: 'Kyocera Drum - 2030', desc: 'Original drum unit for Kyocera 2030', brand: 'kyocera', category: 'kyocera-drum', image: 'images/consumables/kyocera-drum-2030.png' },
+    { id: 24, type: 'drum', name: 'Kyocera Drum - 2530', desc: 'Original drum unit for Kyocera 2530', brand: 'kyocera', category: 'kyocera-drum', image: 'images/consumables/kyocera-drum-2530.png' },
+
+    // Kyocera - Cleaning Blades & Toners
+    { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/consumables/kyocera-bw-blade.png' },
+    { id: 26, type: 'toner', name: 'Katun White Bottle Toners', desc: 'Katun white bottle toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/katun-white-bottle.png' },
 ];
 
 // Product Card Creation
