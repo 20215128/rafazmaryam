@@ -42,7 +42,7 @@ const printers = [
 
     // Numeric Series - Medium Office
     { id: 18, brand: 'kyocera', name: 'Kyocera 3050', desc: 'Professional 30ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3050.png' },
-    { id: 19, brand: 'kyocera', name: 'Kyocera 3055', desc: 'Advanced 30ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 19, brand: 'kyocera', name: 'Kyocera 3055', desc: 'Advanced 30ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3055.png' },
     { id: 20, brand: 'kyocera', name: 'Kyocera 3060', desc: 'High-performance 30ppm system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3060.png' },
     { id: 21, brand: 'kyocera', name: 'Kyocera 3160', desc: 'Versatile 31ppm multifunction device', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
     { id: 22, brand: 'kyocera', name: 'Kyocera 3920', desc: 'Robust 39ppm office workhorse', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3920.png' },
