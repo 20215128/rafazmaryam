@@ -52,7 +52,7 @@ const printers = [
 
     // Numeric Series - Industrial
     { id: 26, brand: 'kyocera', name: 'Kyocera 6025', desc: 'Production-level 60ppm MFP', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6025.png' },
-    { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6030.png' },
 
     // Xerox AltaLink (4 models - arranged by size)
     { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
