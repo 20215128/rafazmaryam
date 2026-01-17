@@ -30,7 +30,7 @@ const printers = [
     { id: 8, brand: 'kyocera', name: 'Kyocera FS-1350', desc: 'Compact monochrome laser printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1350.png' },
     { id: 9, brand: 'kyocera', name: 'Kyocera FS-1370', desc: 'Fast monochrome office printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1370.png' },
     { id: 10, brand: 'kyocera', name: 'Kyocera FS-3140', desc: 'Professional monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3140.png' },
-    { id: 11, brand: 'kyocera', name: 'Kyocera FS-3640', desc: 'High-speed monochrome multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
+    { id: 11, brand: 'kyocera', name: 'Kyocera FS-3640', desc: 'High-speed monochrome multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3640.png' },
     { id: 12, brand: 'kyocera', name: 'Kyocera FS-4030i', desc: 'Enterprise monochrome printer with network', type: 'mono', size: 'medium', function: 'printer', image: 'images/printers/kyocera-hero-1.png' },
     { id: 13, brand: 'kyocera', name: 'Kyocera FS-4035i', desc: 'Advanced monochrome MFP solution', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
 
