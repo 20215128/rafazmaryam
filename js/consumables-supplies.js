@@ -71,6 +71,28 @@ const consumables = [
     { id: 30, type: 'roller', name: 'Kyocera Heater Roller - 3010', desc: 'Heater roller for Kyocera 3010', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-3010.png' },
     { id: 31, type: 'roller', name: 'Kyocera Heater Roller - 1128', desc: 'Heater roller for Kyocera 1128', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-1128.png' },
     { id: 32, type: 'roller', name: 'Kyocera Heater Roller - 1118', desc: 'Heater roller for Kyocera 1118', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-1118.png' },
+
+    // HP - Golden Crown Toners
+    { id: 33, type: 'toner', name: 'HP Golden Crown Black & White Toner', desc: 'Golden Crown B/W toner for HP printers', brand: 'hp', category: 'hp-toner', image: 'images/consumables/hp-golden-crown-bw.png' },
+    { id: 34, type: 'toner', name: 'HP Golden Crown Colour Toner', desc: 'Golden Crown color toner for HP printers', brand: 'hp', category: 'hp-toner', image: 'images/consumables/hp-golden-crown-color.png' },
+
+    // HP - Sensors
+    { id: 35, type: 'sensor', name: 'HP Colour Sensors', desc: 'Color sensors for HP printers', brand: 'hp', category: 'hp-sensor', image: 'images/consumables/hp-sensor-color.png' },
+    { id: 36, type: 'sensor', name: 'HP Black & White Sensors', desc: 'B/W sensors for HP printers', brand: 'hp', category: 'hp-sensor', image: 'images/consumables/hp-sensor-bw.png' },
+
+    // HP - Drums
+    { id: 37, type: 'drum', name: 'HP Colour Drums', desc: 'Color drum units for HP printers', brand: 'hp', category: 'hp-drum', image: 'images/consumables/hp-drum-color.png' },
+    { id: 38, type: 'drum', name: 'HP Black & White Drums', desc: 'B/W drum units for HP printers', brand: 'hp', category: 'hp-drum', image: 'images/consumables/hp-drum-bw.png' },
+
+    // Accessories - Cables
+    { id: 39, type: 'cable', name: 'Power Cables', desc: 'Universal power cables for printers', brand: 'universal', category: 'cable', image: 'images/consumables/power-cable.png' },
+    { id: 40, type: 'cable', name: 'Printer Cables', desc: 'USB and network printer cables', brand: 'universal', category: 'cable', image: 'images/consumables/printer-cable.png' },
+
+    // DTF & Flex Printing Consumables
+    { id: 41, type: 'ink', name: 'Flex Ink', desc: 'High-quality flex printing ink', brand: 'flex', category: 'flex-ink', image: 'images/consumables/flex-ink.png' },
+    { id: 42, type: 'ink', name: 'DTF Yinghe Inks', desc: 'Yinghe brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-yinghe-ink.png' },
+    { id: 43, type: 'ink', name: 'DTF MT Inks', desc: 'MT brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-mt-ink.png' },
+    { id: 44, type: 'powder', name: 'DTF Powder', desc: 'Hot melt adhesive powder for DTF printing', brand: 'dtf', category: 'dtf-powder', image: 'images/consumables/dtf-powder.png' },
 ];
 
 // Product Card Creation
@@ -92,7 +114,9 @@ function createProductCard(consumable) {
         'belt': 'Belt',
         'cartridge': 'Cartridge',
         'blade': 'Cleaning Blade',
-        'roller': 'Heater Roller'
+        'roller': 'Heater Roller',
+        'cable': 'Cable',
+        'powder': 'Powder'
     }[consumable.type] || consumable.type;
 
     card.innerHTML = `
