@@ -55,7 +55,7 @@ const printers = [
     { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6030.png' },
 
     // Xerox AltaLink (4 models - arranged by size)
-    { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
+    { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-c8035.png' },
     { id: 24, brand: 'xerox', name: 'AltaLink C8045', desc: 'Professional 45ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
     { id: 25, brand: 'xerox', name: 'AltaLink C8055', desc: 'High-performance 55ppm color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-1.png' },
     { id: 26, brand: 'xerox', name: 'AltaLink C8070', desc: 'Production-level 70ppm color powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-hero-2.png' },
