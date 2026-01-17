@@ -93,6 +93,20 @@ const consumables = [
     { id: 42, type: 'ink', name: 'DTF Yinghe Inks', desc: 'Yinghe brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-yinghe-ink.png' },
     { id: 43, type: 'ink', name: 'DTF MT Inks', desc: 'MT brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-mt-ink.png' },
     { id: 44, type: 'powder', name: 'DTF Powder', desc: 'Hot melt adhesive powder for DTF printing', brand: 'dtf', category: 'dtf-powder', image: 'images/consumables/dtf-powder.png' },
+
+    // Xerox - Consumables
+    { id: 45, type: 'toner', name: 'Xerox Colour Toners', desc: 'Original color toner cartridges for Xerox printers', brand: 'xerox', category: 'xerox-toner', image: 'images/consumables/xerox-color-toner.png' },
+    { id: 46, type: 'drum', name: 'Xerox Normal Drums', desc: 'Standard drum units for Xerox printers', brand: 'xerox', category: 'xerox-drum', image: 'images/consumables/xerox-normal-drum.png' },
+    { id: 47, type: 'drum', name: 'Xerox Original Drums', desc: 'Genuine original drum units for Xerox printers', brand: 'xerox', category: 'xerox-drum', image: 'images/consumables/xerox-original-drum.png' },
+    { id: 48, type: 'sensor', name: 'Xerox Sensors', desc: 'Various sensors for Xerox printers', brand: 'xerox', category: 'xerox-sensor', image: 'images/consumables/xerox-sensor.png' },
+    { id: 49, type: 'sensor', name: 'Xerox Developer Sensors', desc: 'Developer sensors for Xerox printers', brand: 'xerox', category: 'xerox-sensor', image: 'images/consumables/xerox-developer-sensor.png' },
+
+    // Additional Cables
+    { id: 50, type: 'cable', name: 'USB Cables', desc: 'USB cables for printer connectivity', brand: 'universal', category: 'cable', image: 'images/consumables/usb-cable.png' },
+
+    // DTF Materials
+    { id: 51, type: 'material', name: 'DTF Material A2', desc: 'A2 size DTF transfer material', brand: 'dtf', category: 'dtf-material', image: 'images/consumables/dtf-material-a2.png' },
+    { id: 52, type: 'material', name: 'DTF Material A3', desc: 'A3 size DTF transfer material', brand: 'dtf', category: 'dtf-material', image: 'images/consumables/dtf-material-a3.png' },
 ];
 
 // Product Card Creation
@@ -116,7 +130,8 @@ function createProductCard(consumable) {
         'blade': 'Cleaning Blade',
         'roller': 'Heater Roller',
         'cable': 'Cable',
-        'powder': 'Powder'
+        'powder': 'Powder',
+        'material': 'Material'
     }[consumable.type] || consumable.type;
 
     card.innerHTML = `
