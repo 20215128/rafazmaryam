@@ -35,7 +35,7 @@ const printers = [
     { id: 13, brand: 'kyocera', name: 'Kyocera FS-4035i', desc: 'Advanced monochrome MFP solution', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs4030.png' },
 
     // Numeric Series - Small Office
-    { id: 14, brand: 'kyocera', name: 'Kyocera 420i', desc: 'Compact multifunction copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-1.png' },
+    { id: 14, brand: 'kyocera', name: 'Kyocera 420i', desc: 'Compact multifunction copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-420i.png' },
     { id: 15, brand: 'kyocera', name: 'Kyocera 520i', desc: 'Versatile office MFP', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
     { id: 16, brand: 'kyocera', name: 'Kyocera 2040', desc: 'Reliable 20ppm monochrome copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-2040.png' },
     { id: 17, brand: 'kyocera', name: 'Kyocera 2140', desc: 'Efficient 21ppm office system', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-hero-2.png' },
