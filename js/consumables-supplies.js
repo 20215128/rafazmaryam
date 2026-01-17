@@ -63,6 +63,14 @@ const consumables = [
     // Kyocera - Cleaning Blades & Toners
     { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/consumables/kyocera-bw-blade.png' },
     { id: 26, type: 'toner', name: 'Katun White Bottle Toners', desc: 'Katun white bottle toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/katun-white-bottle.png' },
+
+    // Kyocera - Heater Rollers (Multiple Models)
+    { id: 27, type: 'roller', name: 'Kyocera Heater Roller - 3140', desc: 'Heater roller for Kyocera 3140', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-3140.png' },
+    { id: 28, type: 'roller', name: 'Kyocera Heater Roller - 2100', desc: 'Heater roller for Kyocera 2100', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-2100.png' },
+    { id: 29, type: 'roller', name: 'Kyocera Heater Roller - 4100', desc: 'Heater roller for Kyocera 4100', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-4100.png' },
+    { id: 30, type: 'roller', name: 'Kyocera Heater Roller - 3010', desc: 'Heater roller for Kyocera 3010', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-3010.png' },
+    { id: 31, type: 'roller', name: 'Kyocera Heater Roller - 1128', desc: 'Heater roller for Kyocera 1128', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-1128.png' },
+    { id: 32, type: 'roller', name: 'Kyocera Heater Roller - 1118', desc: 'Heater roller for Kyocera 1118', brand: 'kyocera', category: 'kyocera-roller', image: 'images/consumables/kyocera-roller-1118.png' },
 ];
 
 // Product Card Creation
@@ -83,7 +91,8 @@ function createProductCard(consumable) {
         'sensor': 'Sensor',
         'belt': 'Belt',
         'cartridge': 'Cartridge',
-        'blade': 'Cleaning Blade'
+        'blade': 'Cleaning Blade',
+        'roller': 'Heater Roller'
     }[consumable.type] || consumable.type;
 
     card.innerHTML = `
