@@ -61,47 +61,6 @@ const printers = [
     { id: 26, brand: 'xerox', name: 'AltaLink C8070', desc: 'Production-level 70ppm color powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-c8070.png' },
 ];
 
-// Horizontal Scroll Functionality with Performance Optimization
-function initHorizontalScroll() {
-    const section = document.getElementById('brandScrollSection');
-    const track = document.getElementById('brandScrollTrack');
-
-    if (!section || !track) return;
-
-    let ticking = false;
-    let lastScrollY = 0;
-
-    function updateHorizontalScroll() {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollY = lastScrollY;
-
-        // Calculate scroll progress within the section
-        const scrollProgress = (scrollY - sectionTop) / (sectionHeight - window.innerHeight);
-        const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
-
-        // Move horizontally based on scroll progress
-        // 3 panels = 200vw total movement to show all panels (0vw -> -100vw -> -200vw)
-        const translateX = clampedProgress * -200;
-
-        // Use translate3d for GPU acceleration
-        track.style.transform = `translate3d(${translateX}vw, 0, 0)`;
-
-        ticking = false;
-    }
-
-    function onScroll() {
-        lastScrollY = window.scrollY;
-
-        if (!ticking) {
-            requestAnimationFrame(updateHorizontalScroll);
-            ticking = true;
-        }
-    }
-
-    // Use passive listener for better scroll performance
-    window.addEventListener('scroll', onScroll, { passive: true });
-}
 
 // Product Card Creation
 function createProductCard(printer) {
@@ -235,7 +194,6 @@ function renderFeaturedStrips() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    initHorizontalScroll();
     renderProducts();
     initFilters();
 });
