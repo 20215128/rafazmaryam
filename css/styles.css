@@ -1918,6 +1918,11 @@ a:hover {
   animation-play-state: paused;
 }
 
+.marquee-logo-large {
+  height: 80px !important;
+}
+
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
