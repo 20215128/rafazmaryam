@@ -2185,6 +2185,65 @@ a:hover {
   margin-top: auto;
 }
 
+/* Color Variant Badges */
+.color-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.color-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+}
+
+.color-badge.color-black {
+  background: #1f2937;
+  color: white;
+  border-color: #111827;
+}
+
+.color-badge.color-cyan {
+  background: #06b6d4;
+  color: white;
+  border-color: #0891b2;
+}
+
+.color-badge.color-magenta {
+  background: #ec4899;
+  color: white;
+  border-color: #db2777;
+}
+
+.color-badge.color-yellow {
+  background: #fbbf24;
+  color: #1f2937;
+  border-color: #f59e0b;
+}
+
+/* General Variant Badges (for model numbers, sizes, etc.) */
+.variant-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #e5e7eb;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+
+
 /* Featured Strips */
 .featured-strip {
   padding: 4rem 0;
