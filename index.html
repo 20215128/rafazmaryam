@@ -114,7 +114,8 @@
         <div class="modern-dept-card scroll-reveal" data-color="cyan"
           style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 255, 255, 0.9)); border: 2px solid rgba(0, 212, 255, 0.2); border-radius: 20px; padding: 2.5rem; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);"
           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0, 212, 255, 0.25)'; this.style.borderColor='rgba(0, 212, 255, 0.6)'"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'">
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 212, 255, 0.1)'; this.style.borderColor='rgba(0, 212, 255, 0.2)'"
+          onclick="window.location.href='departments.html#digital'">
           <div
             style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent); pointer-events: none;">
           </div>
@@ -133,7 +134,8 @@
           <p style="color: #4a5568; line-height: 1.8; margin-bottom: 1.5rem;">State-of-the-art digital imaging
             technology for exceptional print quality with precision and consistency.</p>
           <a href="departments.html#digital"
-            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;">
+            style="display: inline-flex; align-items: center; color: #00d4ff; font-weight: 600; text-decoration: none; transition: all 0.3s;"
+            onclick="event.stopPropagation()">
             Explore D.I <span style="margin-left: 8px; transition: transform 0.3s;">→</span>
           </a>
         </div>
@@ -823,6 +825,26 @@
   <script>
     // Initialize WhatsApp with your number (format: country code + number, no spaces)
     // Example: initWhatsApp('1234567890');
+
+    // Make all department cards clickable
+    document.addEventListener('DOMContentLoaded', function () {
+      const deptCards = document.querySelectorAll('.modern-dept-card');
+      deptCards.forEach(card => {
+        // Get the link inside the card
+        const link = card.querySelector('a[href^="departments.html"]');
+        if (link) {
+          const href = link.getAttribute('href');
+          // Add click handler to the entire card
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function (e) {
+            // Don't navigate if clicking the link itself
+            if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+              window.location.href = href;
+            }
+          });
+        }
+      });
+    });
   </script>
 </body>
 
