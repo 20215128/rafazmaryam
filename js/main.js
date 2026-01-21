@@ -309,13 +309,33 @@ function closeLightbox(lightbox) {
 }
 
 // === WHATSAPP INTEGRATION ===
-// Configure your WhatsApp business number here (format: country code + number, no + or spaces)
-// Example: '1234567890' for USA number or '971501234567' for UAE number
-const WHATSAPP_NUMBER = '1234567890'; // REPLACE WITH YOUR ACTUAL WHATSAPP NUMBER
+// Configure your WhatsApp business numbers here (format: country code + number, no + or spaces)
+const WHATSAPP_PRINTING = '2349166860809'; // Printing services (quotes, general inquiries)
+const WHATSAPP_EQUIPMENT = '2348106066480'; // Equipment & supplies (consumables, machines, servicing)
+
+// Helper function to get the appropriate WhatsApp number based on page
+function getWhatsAppNumber() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  // Equipment & supplies pages use the equipment number
+  const equipmentPages = [
+    'commercial-printers.html',
+    'specialty-equipment.html',
+    'consumables-supplies.html'
+  ];
+
+  if (equipmentPages.includes(currentPage)) {
+    return WHATSAPP_EQUIPMENT;
+  }
+
+  // All other pages use the printing services number
+  return WHATSAPP_PRINTING;
+}
 
 // Helper function to generate WhatsApp URL with custom message
 function getWhatsAppURL(message = 'Hello! I would like to get a quote for printing services.') {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const number = getWhatsAppNumber();
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 // Initialize WhatsApp float button
@@ -324,9 +344,47 @@ function initWhatsApp() {
   if (whatsappBtn) {
     whatsappBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      const message = 'Hello! I would like to inquire about your printing services.';
-      window.open(getWhatsAppURL(message), '_blank');
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+      // On homepage, show modal to choose between printing or equipment
+      if (currentPage === 'index.html' || currentPage === '') {
+        showWhatsAppModal();
+        return;
+      }
+
+      let message = 'Hello! I would like to inquire about your printing services.';
+
+      // Customize message based on page
+      if (currentPage === 'commercial-printers.html') {
+        message = "Hi! I'm interested in commercial printers. Can you help me?";
+      } else if (currentPage === 'specialty-equipment.html') {
+        message = "Hi! I'm interested in specialty printing equipment. Can you help me?";
+      } else if (currentPage === 'consumables-supplies.html') {
+        message = "Hi! I'd like to inquire about printing consumables and supplies.";
+      }
+
+      // Use location.href for better mobile compatibility
+      const whatsappURL = getWhatsAppURL(message);
+      window.location.href = whatsappURL;
     });
+  }
+}
+
+// Show WhatsApp selection modal
+function showWhatsAppModal() {
+  const modal = document.getElementById('whatsappModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+// Hide WhatsApp selection modal
+function hideWhatsAppModal() {
+  const modal = document.getElementById('whatsappModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
   }
 }
 
@@ -337,19 +395,20 @@ function initWhatsAppCTAs() {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const customMessage = this.getAttribute('data-message') || 'Hello! I would like to get a quote for printing services.';
-      window.open(getWhatsAppURL(customMessage), '_blank');
+      const whatsappURL = getWhatsAppURL(customMessage);
+      window.location.href = whatsappURL;
     });
   });
 }
 
 // Auto-initialize WhatsApp on page load
-if (WHATSAPP_NUMBER && WHATSAPP_NUMBER !== '1234567890') {
+if (WHATSAPP_PRINTING && WHATSAPP_EQUIPMENT) {
   document.addEventListener('DOMContentLoaded', function () {
     initWhatsApp();
     initWhatsAppCTAs();
   });
 } else {
-  console.warn('⚠️ WhatsApp number not configured. Please update WHATSAPP_NUMBER in main.js');
+  console.warn('⚠️ WhatsApp numbers not configured. Please update WHATSAPP_PRINTING and WHATSAPP_EQUIPMENT in main.js');
 }
 
 // === COUNTER ANIMATION (for stats) ===
