@@ -322,18 +322,70 @@ a:hover {
   font-size: var(--text-sm);
 }
 
-/* === CINEMATIC HERO SECTION (2026 Style) === */
-.hero-cinematic {
+/* === HERO SECTION (Interactive Image) === */
+.hero-interactive {
   position: relative;
-  min-height: 90vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #0a2463 0%, #051640 100%);
+  padding-top: var(--header-height);
+  background: #0a2463;
+  /* Fallback color */
   overflow: hidden;
-  padding: 4rem 1rem;
-  z-index: 1;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img-full {
+  width: 100%;
+  height: auto;
+  min-height: 85vh;
+  /* Ensure it feels like a full "hero" section */
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  /* Focus on center content */
+}
+
+/* Invisible Overlay Button */
+.hero-overlay-btn {
+  position: absolute;
+  bottom: 12%;
+  /* Approximate position of the button in the image */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 80px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  /* Visual feedback on hover even though transparent */
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0);
+  /* Transparent by default */
+}
+
+.hero-overlay-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Subtle highlight on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-img-full {
+    min-height: 50vh;
+    /* Allow shorter image on mobile to fit content */
+  }
+
+  .hero-overlay-btn {
+    width: 60%;
+    height: 10%;
+    bottom: 15%;
+    /* Adjust for mobile aspect ratio */
+  }
 }
 
 /* Background Blobs */
