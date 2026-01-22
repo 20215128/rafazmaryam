@@ -12,6 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollAnimations();
 
   // === FORM VALIDATION ===
+  function initFormValidation() {
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach(form => {
+      form.addEventListener('submit', function (e) {
+        // If attributes 'action' contains 'formsubmit.co', we want to allow the default submission
+        // Check native validity first 
+        if (!this.checkValidity()) {
+          e.preventDefault();
+          // Simple visual feedback (browser default usually handles this, but just in case)
+          alert('Please fill in all required fields marked with *');
+        }
+        // If valid, we do NOTHING and let the form submit naturally to the action URL
+      });
+    });
+  }
   initFormValidation();
 
   // === SMOOTH SCROLLING ===

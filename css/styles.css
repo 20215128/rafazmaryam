@@ -371,12 +371,14 @@ a:hover {
 .hero-img-full {
   width: 100%;
   height: auto;
-  min-height: 85vh;
-  /* Ensure it feels like a full "hero" section */
+  min-height: 60vh;
+  /* Reduced height to crop the top */
+  max-height: 80vh;
+  /* Limit height to force cropping */
   display: block;
   object-fit: cover;
-  object-position: center;
-  /* Focus on center content */
+  object-position: bottom center;
+  /* Focus on the bottom (button area) */
 }
 
 /* Invisible Overlay Button */
