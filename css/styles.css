@@ -322,6 +322,36 @@ a:hover {
   font-size: var(--text-sm);
 }
 
+/* === HERO SECTION (Generic for Inner Pages) === */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--header-height);
+  background: var(--color-primary);
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.hero h1 {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-4);
+  position: relative;
+  z-index: 2;
+}
+
+.hero p {
+  font-size: var(--text-xl);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* === HERO SECTION (Interactive Image) === */
 .hero-interactive {
   position: relative;
