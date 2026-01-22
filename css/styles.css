@@ -322,56 +322,157 @@ a:hover {
   font-size: var(--text-sm);
 }
 
-/* === HERO SECTION === */
-.hero {
+/* === CINEMATIC HERO SECTION (2026 Style) === */
+.hero-cinematic {
   position: relative;
-  padding-top: var(--header-height);
+  min-height: 90vh;
   width: 100%;
-  background: #ffffff;
-  /* Clean background */
   display: flex;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle at center, #0a2463 0%, #051640 100%);
   overflow: hidden;
-  padding-bottom: 0;
+  padding: 4rem 1rem;
+  z-index: 1;
 }
 
-/* Hero with just the banner image */
-.hero-banner-only {
+/* Background Blobs */
+.hero-bg-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: floatBlobs 20s infinite ease-in-out;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: #3b82f6;
+  top: -10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 600px;
+  height: 600px;
+  background: #2563eb;
+  bottom: -20%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: #60a5fa;
+  top: 40%;
+  left: 40%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation-delay: -10s;
+}
+
+/* Content Wrapper */
+.hero-content-wrapper {
+  text-align: center;
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle at center, #ffffff 0%, #f8f9fa 100%);
-  /* Subtle vignetting */
+  justify-content: center;
 }
 
-.hero-banner-full {
-  width: 100%;
-  max-width: 1920px;
-  /* Allow full HD width */
-  height: auto;
-  display: block;
-  object-fit: cover;
-  /* Fill the area nicely */
-
-  /* Centralise & Sharpen */
-  margin: 0 auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
-  /* Subtle depth */
-  image-rendering: -webkit-optimize-contrast;
-
-  /* "Make it good" - Entry Animation */
-  animation: heroBannerReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
-  transform: scale(0.98);
+/* Typography styles */
+.hero-cursive {
+  font-family: 'Dancing Script', cursive, serif;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: -1rem;
+  z-index: 3;
+  position: relative;
+  transform: rotate(-5deg);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeSlideDown 1.5s ease-out forwards;
 }
 
-@keyframes heroBannerReveal {
+.hero-logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 15vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* The Magic Blend */
+  background: linear-gradient(135deg, #e0f2fe 0%, #3b82f6 50%, #1e40af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Cinematic Glow */
+  filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.4));
+
+  /* Levitation */
+  animation: levitateText 6s ease-in-out infinite, fadeZoomIn 1.2s ease-out forwards;
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2rem;
+  font-weight: 500;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes floatBlobs {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes levitateText {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeZoomIn {
   from {
     opacity: 0;
-    transform: scale(1.02);
-    /* Start slightly zoomed in */
+    transform: scale(0.9);
   }
 
   to {
@@ -379,6 +480,48 @@ a:hover {
     transform: scale(1);
   }
 }
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) rotate(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-cinematic {
+    min-height: 80vh;
+  }
+
+  .hero-cursive {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+/* Old hero styles removed */
 
 /* Unused hero text styles removed */
 
