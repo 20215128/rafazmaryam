@@ -16,14 +16,14 @@ cat > /Users/mac/Desktop/rafazmaryam/printing-press/products.html << 'HTMLEOF'
   <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">RAFAZ</a>
+      <a href="index" class="logo">RAFAZ</a>
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="departments.html" class="nav-link">Departments</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="quote.html" class="btn btn-primary btn-small">Get a Quote</a></li>
+        <li><a href="index" class="nav-link">Home</a></li>
+        <li><a href="about" class="nav-link">About</a></li>
+        <li><a href="departments" class="nav-link">Departments</a></li>
+        <li><a href="portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="contact" class="nav-link">Contact</a></li>
+        <li><a href="quote" class="btn btn-primary btn-small">Get a Quote</a></li>
       </ul>
       <button class="mobile-menu-toggle" aria-label="Toggle menu">
         <span></span>
@@ -51,7 +51,7 @@ cat > /Users/mac/Desktop/rafazmaryam/printing-press/products.html << 'HTMLEOF'
       </p>
       <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap;">
         <a href="whatsapp://" data-message="Hi! I'd like to inquire about your printing equipment and supplies." class="btn btn-primary btn-large">💬 Chat on WhatsApp</a>
-        <a href="contact.html" class="btn btn-secondary btn-large">Contact Us</a>
+        <a href="contact" class="btn btn-secondary btn-large">Contact Us</a>
       </div>
     </div>
   </section>
@@ -106,22 +106,22 @@ cat > /Users/mac/Desktop/rafazmaryam/printing-press/products.html << 'HTMLEOF'
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="departments.html">Departments</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="quote.html">Get a Quote</a></li>
+          <li><a href="index">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="departments">Departments</a></li>
+          <li><a href="portfolio">Portfolio</a></li>
+          <li><a href="quote">Get a Quote</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="departments.html#digital">Digital Printing</a></li>
-          <li><a href="departments.html#offset">Offset Printing</a></li>
-          <li><a href="departments.html#large-format">Large Format</a></li>
-          <li><a href="departments.html#binding">Binding & Finishing</a></li>
-          <li><a href="departments.html#packaging">Packaging & Labels</a></li>
+          <li><a href="departments#digital">Digital Printing</a></li>
+          <li><a href="departments#offset">Offset Printing</a></li>
+          <li><a href="departments#large-format">Large Format</a></li>
+          <li><a href="departments#binding">Binding & Finishing</a></li>
+          <li><a href="departments#packaging">Packaging & Labels</a></li>
         </ul>
       </div>
       

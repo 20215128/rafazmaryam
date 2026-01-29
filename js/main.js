@@ -86,10 +86,19 @@ function initNavigation() {
   });
 
   // Highlight active page in navigation
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index'; // Default to index if empty
+
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+    let linkPage = link.getAttribute('href');
+    // Normalize linkPage (remove ./ or / if present for comparison)
+    linkPage = linkPage.replace(/^(\.\/|\/)/, '');
+
+    // Normalize currentPage (handle index case)
+    let current = currentPage;
+    if (current === '' || current === 'index.html') current = 'index';
+
+    // Simple matching or match index
+    if (linkPage === current || (linkPage === './' && current === 'index')) {
       link.classList.add('active');
     }
   });
@@ -331,12 +340,15 @@ const WHATSAPP_EQUIPMENT = '2348106066480'; // Equipment & supplies (consumables
 
 // Helper function to get the appropriate WhatsApp number based on page
 function getWhatsAppNumber() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index';
 
   // Equipment & supplies pages use the equipment number
   const equipmentPages = [
-    'commercial-printers.html',
+    'commercial-printers',
+    'commercial-printers.html', // Keep just in case
+    'specialty-equipment',
     'specialty-equipment.html',
+    'consumables-supplies',
     'consumables-supplies.html'
   ];
 
@@ -360,10 +372,10 @@ function initWhatsApp() {
   if (whatsappBtn) {
     whatsappBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const currentPage = window.location.pathname.split('/').pop() || 'index';
 
       // On homepage, show modal to choose between printing or equipment
-      if (currentPage === 'index.html' || currentPage === '') {
+      if (currentPage === 'index.html' || currentPage === 'index' || currentPage === '') {
         showWhatsAppModal();
         return;
       }
@@ -371,11 +383,11 @@ function initWhatsApp() {
       let message = 'Hello! I would like to inquire about your printing services.';
 
       // Customize message based on page
-      if (currentPage === 'commercial-printers.html') {
+      if (currentPage === 'commercial-printers.html' || currentPage === 'commercial-printers') {
         message = "Hi! I'm interested in commercial printers. Can you help me?";
-      } else if (currentPage === 'specialty-equipment.html') {
+      } else if (currentPage === 'specialty-equipment.html' || currentPage === 'specialty-equipment') {
         message = "Hi! I'm interested in specialty printing equipment. Can you help me?";
-      } else if (currentPage === 'consumables-supplies.html') {
+      } else if (currentPage === 'consumables-supplies.html' || currentPage === 'consumables-supplies') {
         message = "Hi! I'd like to inquire about printing consumables and supplies.";
       }
 
