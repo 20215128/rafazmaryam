@@ -34,11 +34,17 @@ A premium, conversion-optimized website for a commercial printing press featurin
    - Replace with your WhatsApp business number (format: country code + number, no spaces)
    - Example: `971501234567` for UAE or `12025551234` for USA
 
-3. **Run Local Server**
+3. **Run Local Development Server**
+   
+   The site uses clean URLs (e.g., `/about` instead of `/about.html`). To test locally:
+   
    ```bash
-   python3 -m http.server 8000
+   node dev-server.js
    ```
+   
    Then open http://localhost:8000 in your browser
+   
+   **Note:** Python's simple server won't work with clean URLs. Use the Node.js dev server above.
 
 ## WhatsApp Integration
 

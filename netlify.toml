@@ -1,0 +1,12 @@
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 200
+  force = false
+  
+  # Don't apply to paths that already have extensions or are actual files
+  conditions = {Role = ["!file"]}
+
+# Clean URLs and pretty URLs enabled
+[build]
+  publish = "."
