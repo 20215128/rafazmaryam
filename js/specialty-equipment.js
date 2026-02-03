@@ -39,9 +39,7 @@ const specialtyEquipment = [
     { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop A3 UV flatbed printer for small items', size: 'small', function: 'promotional', image: 'images/products/uv-flatbed-a3.png' },
     { id: 17, type: 'uv', name: 'Yinghe A3 UV DTF Printer', desc: 'Professional A3 UV DTF printer for transfers and direct printing', size: 'small', function: 'apparel', image: 'images/products/a3-uv-dtf-yinghe.png' },
 
-    // Sublimation (3 models)
-    { id: 19, type: 'sublimation', name: 'Sublimation Pro A3', desc: 'Professional sublimation printer', size: 'small', function: 'apparel', image: 'images/equipment/sublimation-pro-a3.png' },
-    { id: 20, type: 'sublimation', name: 'Sublimation Wide A2', desc: 'Wide format sublimation system', size: 'medium', function: 'apparel', image: 'images/equipment/sublimation-wide-a2.png' },
+    // Sublimation (1 model)
     { id: 21, type: 'sublimation', name: 'Sublimation Industrial A1', desc: 'High-volume sublimation printer', size: 'industrial', function: 'apparel', image: 'images/products/sublimation-industrial-a1.png' },
 ];
 
