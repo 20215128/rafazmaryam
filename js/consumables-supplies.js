@@ -76,8 +76,8 @@ const consumables = [
     { id: 44, type: 'powder', name: 'DTF Powder', desc: 'Hot melt adhesive powder for DTF printing', brand: 'dtf', category: 'dtf-powder', image: 'images/consumables/dtf-powder.png' },
 
     // Xerox - Consumables
-    { id: 45, type: 'toner', name: 'Xerox Colour Toners', desc: 'Original color toner cartridges for Xerox printers', brand: 'xerox', category: 'xerox-toner', image: 'images/consumables/xerox-color-toner.png' },
-    { id: 46, type: 'drum', name: 'Xerox Drum Units', desc: 'Drum units for Xerox printers - Standard and Genuine Original', brand: 'xerox', category: 'xerox-drum', variants: ['Standard', 'Genuine Original'], image: 'images/consumables/xerox-normal-drum.png' },
+    { id: 45, type: 'toner', name: 'Xerox Colour Toners', desc: 'Original color toner cartridges for Xerox printers', brand: 'xerox', category: 'xerox-toner', image: 'images/products/xerox-colour-toners.png' },
+    { id: 46, type: 'drum', name: 'Xerox Drum Units', desc: 'Drum units for Xerox printers - Standard and Genuine Original', brand: 'xerox', category: 'xerox-drum', variants: ['Standard', 'Genuine Original'], image: 'images/products/xerox-drum-units.png' },
     { id: 48, type: 'sensor', name: 'Xerox Universal Sensor Chip', desc: 'Universal sensor chip for Xerox printers - Works for Toner, Drum, and Developer', brand: 'xerox', category: 'xerox-sensor', variants: ['Toner', 'Drum', 'Developer'], image: 'images/consumables/xerox-sensor.png' },
 
 
