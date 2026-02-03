@@ -64,7 +64,7 @@ const consumables = [
     { id: 35, type: 'sensor', name: 'HP Sensors', desc: 'Sensors for HP printers - Color and Black & White', brand: 'hp', category: 'hp-sensor', variants: ['Color', 'Black & White'], image: 'images/products/hp-sensor.png' },
 
     // HP - Drums
-    { id: 37, type: 'drum', name: 'HP Drum Units', desc: 'Drum units for HP printers - Color and Black & White', brand: 'hp', category: 'hp-drum', variants: ['Color', 'Black & White'], image: 'images/consumables/hp-drum-color.png' },
+    { id: 37, type: 'drum', name: 'HP Drum Units', desc: 'Drum units for HP printers - Color and Black & White', brand: 'hp', category: 'hp-drum', variants: ['Color', 'Black & White'], image: 'images/products/hp-drum-units.png' },
 
     // Accessories - Cables
     { id: 39, type: 'cable', name: 'Printer Cables', desc: 'Universal cables for printers - Power, USB, and Network', brand: 'universal', category: 'cable', variants: ['Power Cable', 'USB Cable', 'Network Cable'], image: 'images/consumables/power-cable.png' },
