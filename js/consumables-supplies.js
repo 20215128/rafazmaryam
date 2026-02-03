@@ -17,7 +17,7 @@ function toggleFilters() {
 // Product Data - Specific Consumables & Supplies
 const consumables = [
     // RZ Products
-    { id: 1, type: 'ink', name: 'RZ Ink', desc: 'High-quality RZ duplicator ink', brand: 'rz', category: 'rz-ink', image: 'images/consumables/rz-ink.png' },
+    { id: 1, type: 'ink', name: 'RZ Ink', desc: 'High-quality RZ duplicator ink', brand: 'rz', category: 'rz-ink', image: 'images/products/rz-ink.png' },
     { id: 2, type: 'master', name: 'RZ Master A4', desc: 'RZ Master A4 size for duplicators', brand: 'rz', category: 'rz-master', image: 'images/products/rz-master-a4.png' },
 
     // CPI Products
