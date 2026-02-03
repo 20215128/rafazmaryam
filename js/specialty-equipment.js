@@ -26,7 +26,7 @@ const specialtyEquipment = [
 
     // Flex Printers (2 models)
     { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/products/flex-banner-6ft.png' },
-    { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/equipment/flex-industrial.png' },
+    { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/products/flex-banner-10ft.png' },
 
     // Cutting Plotters (2 models)
     { id: 9, type: 'cutter', name: 'Cutting Plotter 2ft', desc: 'Compact 2-foot vinyl cutting plotter', size: 'small', function: 'signage', image: 'images/equipment/cutter-2ft.png' },
