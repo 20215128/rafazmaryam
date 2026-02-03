@@ -51,7 +51,7 @@ const consumables = [
     { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/products/kyocera-drum-units.png' },
 
     // Kyocera - Cleaning Blades & Toners
-    { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/consumables/kyocera-bw-blade.png' },
+    { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/products/kyocera-bw-cleaning-blade.png' },
     { id: 26, type: 'toner', name: 'Katun Performance Toners', desc: 'Katun Performance toners for Kyocera printers - Available in CMYK colors', brand: 'kyocera', category: 'kyocera-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/katun-white-bottle.png' },
 
     // Kyocera - Heater Rollers (Multiple Models)
