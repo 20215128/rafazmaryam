@@ -42,7 +42,7 @@ const specialtyEquipment = [
     // Sublimation (3 models)
     { id: 19, type: 'sublimation', name: 'Sublimation Pro A3', desc: 'Professional sublimation printer', size: 'small', function: 'apparel', image: 'images/equipment/sublimation-pro-a3.png' },
     { id: 20, type: 'sublimation', name: 'Sublimation Wide A2', desc: 'Wide format sublimation system', size: 'medium', function: 'apparel', image: 'images/equipment/sublimation-wide-a2.png' },
-    { id: 21, type: 'sublimation', name: 'Sublimation Industrial A1', desc: 'High-volume sublimation printer', size: 'industrial', function: 'apparel', image: 'images/equipment/sublimation-industrial-a1.png' },
+    { id: 21, type: 'sublimation', name: 'Sublimation Industrial A1', desc: 'High-volume sublimation printer', size: 'industrial', function: 'apparel', image: 'images/products/sublimation-industrial-a1.png' },
 ];
 
 // Horizontal Scroll Functionality with Performance Optimization
