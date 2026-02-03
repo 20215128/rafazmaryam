@@ -27,7 +27,7 @@ const consumables = [
     { id: 4, type: 'toner', name: 'Bizhub 225/C35 Toner Cartridges', desc: 'Original toner cartridges for Bizhub 225/C35 - Available in Black, Cyan, Magenta, Yellow', brand: 'bizhub', category: 'bizhub-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/bizhub-toner-black.png' },
 
     // Bizhub 225/C35 - Developers
-    { id: 8, type: 'developer', name: 'Developer Sachets', desc: 'Developer sachets for Bizhub 225/C35 - Available in Big and Small sizes', brand: 'bizhub', category: 'bizhub-developer', variants: ['Big Sachet', 'Small Sachet'], image: 'images/consumables/developer-big.png' },
+    { id: 8, type: 'developer', name: 'Developer Sachets', desc: 'Developer sachets for Bizhub 225/C35 - Available in Big and Small sizes', brand: 'bizhub', category: 'bizhub-developer', variants: ['Big Sachet', 'Small Sachet'], image: 'images/products/bizhub-developer-sachets.png' },
 
     // Bizhub 225/C35 - Drums
     { id: 10, type: 'drum', name: 'Original OPC Drum', desc: 'Genuine OPC drum unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-drum', image: 'images/products/bizhub-opc-drum.png' },
