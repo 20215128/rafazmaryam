@@ -21,7 +21,7 @@ const specialtyEquipment = [
     { id: 2, type: 'dtf', name: 'Yinghe 60cm DTF (XP600)', desc: 'A2 DTF printer with 2x Epson XP600 printheads', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-xp600.png' },
     { id: 3, type: 'dtf', name: 'Yinghe 60cm DTF (4720)', desc: 'Professional A2 DTF with 4720 printhead', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-4720.png' },
     { id: 4, type: 'dtf', name: 'Yinghe 60cm DTF (i3200)', desc: 'Advanced A2 DTF with i3200 printhead upgrade', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-i3200.png' },
-    { id: 5, type: 'dtf', name: 'Yinghe A2 DTF Machine', desc: 'High-speed 40m/h DTF system with powder shaker', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-enterprise-1600.png' },
+    { id: 5, type: 'dtf', name: 'Yinghe A2 DTF Machine', desc: 'High-speed 40m/h DTF system with powder shaker', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-a2-dtf.png' },
     { id: 6, type: 'dtf', name: 'Yinghe YH-700DTF', desc: 'Industrial 60cm DTF printer, 12sqm/h speed', size: 'industrial', function: 'apparel', image: 'images/equipment/dtf-studio-500.png' },
 
     // Flex Printers (2 models)
