@@ -33,7 +33,7 @@ const specialtyEquipment = [
     { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/products/cutting-plotter-4ft.png' },
 
     // Heat Press (1 model)
-    { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-industrial.png' },
+    { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/products/heat-press-60x80.png' },
 
     // UV Printer (2 models)
     { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop A3 UV flatbed printer for small items', size: 'small', function: 'promotional', image: 'images/equipment/uv-flatbed-a3.png' },
