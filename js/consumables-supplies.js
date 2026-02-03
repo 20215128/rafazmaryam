@@ -43,7 +43,7 @@ const consumables = [
     { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/products/bizhub-cleaning-blade.png' },
 
     // Kyocera - Color Toners
-    { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-tech-toner.png' },
+    { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-tech-color-toners.png' },
     { id: 18, type: 'toner', name: 'Rafaz Noble Crown Toners', desc: 'Premium Rafaz Noble Crown toners for Kyocera', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/rafaz-noble-crown.png' },
     { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-original-color-toners.png' },
 
