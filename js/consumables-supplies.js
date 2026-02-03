@@ -37,7 +37,7 @@ const consumables = [
 
     // Bizhub 225/C35 - Belts & Components
     { id: 13, type: 'belt', name: 'Transfer Belt', desc: 'Transfer belt unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-belt', image: 'images/consumables/transfer-belt.png' },
-    { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/consumables/direct-cartridge.png' },
+    { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/products/bizhub-direct-cartridges.png' },
 
     // Bizhub 225/C35 - Cleaning Blades
     { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/consumables/drum-blade.png' },
