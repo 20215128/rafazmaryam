@@ -55,7 +55,7 @@ const consumables = [
     { id: 26, type: 'toner', name: 'Katun Performance Toners', desc: 'Katun Performance toners for Kyocera printers - Available in CMYK colors', brand: 'kyocera', category: 'kyocera-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/katun-white-bottle.png' },
 
     // Kyocera - Heater Rollers (Multiple Models)
-    { id: 27, type: 'roller', name: 'Kyocera Heater Rollers', desc: 'Heater rollers for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-roller', variants: ['3140', '2100', '4100', '3010', '1128', '1118'], image: 'images/consumables/kyocera-roller-3140.png' },
+    { id: 27, type: 'roller', name: 'Kyocera Heater Rollers', desc: 'Heater rollers for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-roller', variants: ['3140', '2100', '4100', '3010', '1128', '1118'], image: 'images/products/kyocera-heater-roller.png' },
 
     // HP - Golden Crown Toners
     { id: 33, type: 'toner', name: 'HP Golden Crown Toners', desc: 'Golden Crown toners for HP printers - Available in CMYK colors', brand: 'hp', category: 'hp-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/hp-golden-crown-bw.png' },
