@@ -30,7 +30,7 @@ const specialtyEquipment = [
 
     // Cutting Plotters (2 models)
     { id: 9, type: 'cutter', name: 'Cutting Plotter 2ft', desc: 'Compact 2-foot vinyl cutting plotter', size: 'small', function: 'signage', image: 'images/equipment/cutter-2ft.png' },
-    { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/equipment/cutter-4ft.png' },
+    { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/products/cutting-plotter-4ft.png' },
 
     // Heat Press (1 model)
     { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/equipment/heat-press-industrial.png' },
