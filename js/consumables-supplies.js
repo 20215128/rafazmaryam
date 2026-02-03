@@ -40,7 +40,7 @@ const consumables = [
     { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/products/bizhub-direct-cartridges.png' },
 
     // Bizhub 225/C35 - Cleaning Blades
-    { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/consumables/drum-blade.png' },
+    { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/products/bizhub-cleaning-blade.png' },
 
     // Kyocera - Color Toners
     { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-tech-toner.png' },
