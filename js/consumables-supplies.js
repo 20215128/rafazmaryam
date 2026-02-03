@@ -61,7 +61,7 @@ const consumables = [
     { id: 33, type: 'toner', name: 'HP Golden Crown Toners', desc: 'Golden Crown toners for HP printers - Available in CMYK colors', brand: 'hp', category: 'hp-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/hp-golden-crown-bw.png' },
 
     // HP - Sensors
-    { id: 35, type: 'sensor', name: 'HP Sensors', desc: 'Sensors for HP printers - Color and Black & White', brand: 'hp', category: 'hp-sensor', variants: ['Color', 'Black & White'], image: 'images/consumables/hp-sensor-color.png' },
+    { id: 35, type: 'sensor', name: 'HP Sensors', desc: 'Sensors for HP printers - Color and Black & White', brand: 'hp', category: 'hp-sensor', variants: ['Color', 'Black & White'], image: 'images/products/hp-sensor.png' },
 
     // HP - Drums
     { id: 37, type: 'drum', name: 'HP Drum Units', desc: 'Drum units for HP printers - Color and Black & White', brand: 'hp', category: 'hp-drum', variants: ['Color', 'Black & White'], image: 'images/consumables/hp-drum-color.png' },
