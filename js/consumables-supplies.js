@@ -48,7 +48,7 @@ const consumables = [
     { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-original-color-toners.png' },
 
     // Kyocera - Drums (Multiple Models)
-    { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/consumables/kyocera-drum-1128.png' },
+    { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/products/kyocera-drum-units.png' },
 
     // Kyocera - Cleaning Blades & Toners
     { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/consumables/kyocera-bw-blade.png' },
