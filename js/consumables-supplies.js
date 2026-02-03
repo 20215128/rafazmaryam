@@ -30,7 +30,7 @@ const consumables = [
     { id: 8, type: 'developer', name: 'Developer Sachets', desc: 'Developer sachets for Bizhub 225/C35 - Available in Big and Small sizes', brand: 'bizhub', category: 'bizhub-developer', variants: ['Big Sachet', 'Small Sachet'], image: 'images/consumables/developer-big.png' },
 
     // Bizhub 225/C35 - Drums
-    { id: 10, type: 'drum', name: 'Original OPC Drum', desc: 'Genuine OPC drum unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-drum', image: 'images/consumables/opc-drum.png' },
+    { id: 10, type: 'drum', name: 'Original OPC Drum', desc: 'Genuine OPC drum unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-drum', image: 'images/products/bizhub-opc-drum.png' },
 
     // Bizhub 225/C35 - Sensors
     { id: 11, type: 'sensor', name: 'Bizhub Universal Sensor Chip', desc: 'Universal sensor chip for Bizhub 225/C35 - Works for both Drum and Toner', brand: 'bizhub', category: 'bizhub-sensor', variants: ['Drum', 'Toner'], image: 'images/consumables/drum-sensor.png' },
