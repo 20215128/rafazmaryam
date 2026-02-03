@@ -336,7 +336,7 @@ function closeLightbox(lightbox) {
 // === WHATSAPP INTEGRATION ===
 // Configure your WhatsApp business numbers here (format: country code + number, no + or spaces)
 const WHATSAPP_PRINTING = '2349166860809'; // Printing services (quotes, general inquiries)
-const WHATSAPP_EQUIPMENT = '2348106066480'; // Equipment & supplies (consumables, machines, servicing)
+const WHATSAPP_EQUIPMENT = '2348064060430'; // Equipment & supplies (consumables, machines, servicing)
 
 // Helper function to get the appropriate WhatsApp number based on page
 function getWhatsAppNumber() {
