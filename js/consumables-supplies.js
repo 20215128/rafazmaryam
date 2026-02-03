@@ -36,7 +36,7 @@ const consumables = [
     { id: 11, type: 'sensor', name: 'Bizhub Universal Sensor Chip', desc: 'Universal sensor chip for Bizhub 225/C35 - Works for both Drum and Toner', brand: 'bizhub', category: 'bizhub-sensor', variants: ['Drum', 'Toner'], image: 'images/consumables/drum-sensor.png' },
 
     // Bizhub 225/C35 - Belts & Components
-    { id: 13, type: 'belt', name: 'Transfer Belt', desc: 'Transfer belt unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-belt', image: 'images/consumables/transfer-belt.png' },
+    { id: 13, type: 'belt', name: 'Transfer Belt', desc: 'Transfer belt unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-belt', image: 'images/products/bizhub-transfer-belt.png' },
     { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/products/bizhub-direct-cartridges.png' },
 
     // Bizhub 225/C35 - Cleaning Blades
