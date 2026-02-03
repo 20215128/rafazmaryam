@@ -21,7 +21,7 @@ const consumables = [
     { id: 2, type: 'master', name: 'RZ Master A4', desc: 'RZ Master A4 size for duplicators', brand: 'rz', category: 'rz-master', image: 'images/consumables/rz-master-a4.png' },
 
     // CPI Products
-    { id: 3, type: 'ink', name: 'CPI Ink', desc: 'Premium CPI duplicator ink', brand: 'cpi', category: 'cpi-ink', image: 'images/consumables/cpi-ink.png' },
+    { id: 3, type: 'ink', name: 'CPI Ink', desc: 'Premium CPI duplicator ink', brand: 'cpi', category: 'cpi-ink', image: 'images/products/cpi-ink.png' },
 
     // Bizhub 225/C35 - Toners (All Colors)
     { id: 4, type: 'toner', name: 'Bizhub 225/C35 Toner Cartridges', desc: 'Original toner cartridges for Bizhub 225/C35 - Available in Black, Cyan, Magenta, Yellow', brand: 'bizhub', category: 'bizhub-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/bizhub-toner-black.png' },
