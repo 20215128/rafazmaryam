@@ -25,7 +25,7 @@ const specialtyEquipment = [
     { id: 6, type: 'dtf', name: 'Yinghe YH-700DTF', desc: 'Industrial 60cm DTF printer, 12sqm/h speed', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-yh-700dtf.png' },
 
     // Flex Printers (2 models)
-    { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/products/flex-banner-6ft.png' },
+    { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/equipment/flex-banner-pro.png' },
     { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/equipment/flex-industrial.png' },
 
     // Cutting Plotters (2 models)
