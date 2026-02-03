@@ -18,7 +18,7 @@ function toggleFilters() {
 const consumables = [
     // RZ Products
     { id: 1, type: 'ink', name: 'RZ Ink', desc: 'High-quality RZ duplicator ink', brand: 'rz', category: 'rz-ink', image: 'images/consumables/rz-ink.png' },
-    { id: 2, type: 'master', name: 'RZ Master A4', desc: 'RZ Master A4 size for duplicators', brand: 'rz', category: 'rz-master', image: 'images/consumables/rz-master-a4.png' },
+    { id: 2, type: 'master', name: 'RZ Master A4', desc: 'RZ Master A4 size for duplicators', brand: 'rz', category: 'rz-master', image: 'images/products/rz-master-a4.png' },
 
     // CPI Products
     { id: 3, type: 'ink', name: 'CPI Ink', desc: 'Premium CPI duplicator ink', brand: 'cpi', category: 'cpi-ink', image: 'images/products/cpi-ink.png' },
