@@ -45,7 +45,7 @@ const consumables = [
     // Kyocera - Color Toners
     { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-tech-toner.png' },
     { id: 18, type: 'toner', name: 'Rafaz Noble Crown Toners', desc: 'Premium Rafaz Noble Crown toners for Kyocera', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/rafaz-noble-crown.png' },
-    { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-original-toner.png' },
+    { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-original-color-toners.png' },
 
     // Kyocera - Drums (Multiple Models)
     { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/consumables/kyocera-drum-1128.png' },
