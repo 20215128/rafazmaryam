@@ -196,6 +196,10 @@ a:hover {
   color: var(--color-secondary);
 }
 
+.navbar.scrolled .logo img {
+  filter: brightness(0) invert(1);
+}
+
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
