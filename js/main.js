@@ -538,3 +538,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// === PERFORMANCE: LAZY LOADING OPTIMIZATION ===
+// Automatically add lazy loading to images below the fold
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('img:not([loading])');
+
+  images.forEach((img, index) => {
+    // Skip first 3 images (usually above fold - hero, logo, etc.)
+    if (index > 2) {
+      img.setAttribute('loading', 'lazy');
+    }
+  });
+});
