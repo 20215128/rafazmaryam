@@ -2693,3 +2693,308 @@ a:hover {
     grid-template-columns: 1fr !important;
   }
 }
+/* ============================================
+   RAFAZ HERO SECTION STYLES
+   ============================================ */
+
+.rafaz-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a3a6e 0%, #2563eb 45%, #60a5fa 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px 20px;
+}
+
+/* Organic Background Shapes - Ultra Sharp */
+.hero-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0px);
+    will-change: transform;
+}
+
+.hero-shape-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(96, 165, 250, 0.25) 50%,
+        rgba(37, 99, 235, 0.1) 100%
+    );
+    top: -180px;
+    left: -120px;
+    opacity: 0.4;
+}
+
+.hero-shape-2 {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(
+        circle at 70% 70%,
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(59, 130, 246, 0.2) 50%,
+        rgba(30, 58, 138, 0.1) 100%
+    );
+    bottom: -220px;
+    right: -180px;
+    opacity: 0.35;
+}
+
+.hero-shape-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(30, 58, 138, 0.6) 0%,
+        rgba(37, 99, 235, 0.3) 50%,
+        rgba(37, 99, 235, 0.05) 100%
+    );
+    top: -80px;
+    right: 120px;
+    opacity: 0.5;
+}
+
+.hero-shape-4 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+        circle at 40% 60%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(96, 165, 250, 0.18) 50%,
+        rgba(59, 130, 246, 0.05) 100%
+    );
+    bottom: -120px;
+    left: 80px;
+    opacity: 0.4;
+}
+
+/* Content Container - Crystal Clear */
+.rafaz-hero .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Logo Section - Razor Sharp */
+.rafaz-hero .hero-logo-section {
+    margin-bottom: 70px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.rafaz-hero .hero-logo {
+    font-size: 130px;
+    font-weight: 900;
+    color: #1e3a8a;
+    letter-spacing: 8px;
+    text-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.25),
+        0 2px 8px rgba(0, 0, 0, 0.15);
+    line-height: 1;
+    margin-bottom: 8px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: crisp-edges;
+}
+
+.rafaz-hero .hero-logo-subtitle {
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: #1e3a8a;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headline - Ultra Sharp Typography */
+.rafaz-hero .hero-headline {
+    font-size: 62px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    text-shadow: 
+        0 3px 12px rgba(0, 0, 0, 0.15),
+        0 1px 4px rgba(0, 0, 0, 0.1);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* CTA Button - Crystal Clear */
+.rafaz-hero .hero-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: #ffffff;
+    padding: 20px 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.rafaz-hero .hero-cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        0 6px 15px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+}
+
+.rafaz-hero .hero-cta-button:active {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design - Sharp on All Screens */
+@media (max-width: 1024px) {
+    .rafaz-hero {
+        min-height: 90vh;
+        padding: 60px 20px;
+    }
+
+    .rafaz-hero .hero-logo {
+        font-size: 100px;
+        letter-spacing: 6px;
+    }
+
+    .rafaz-hero .hero-logo-subtitle {
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+
+    .rafaz-hero .hero-headline {
+        font-size: 48px;
+    }
+
+    .rafaz-hero .hero-cta-button {
+        padding: 18px 45px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rafaz-hero {
+        min-height: 85vh;
+        padding: 50px 20px;
+    }
+
+    .rafaz-hero .hero-logo {
+        font-size: 80px;
+        letter-spacing: 4px;
+    }
+
+    .rafaz-hero .hero-logo-subtitle {
+        font-size: 14px;
+        letter-spacing: 6px;
+    }
+
+    .rafaz-hero .hero-headline {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+
+    .rafaz-hero .hero-cta-button {
+        padding: 16px 40px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .hero-shape-1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-shape-2 {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rafaz-hero {
+        min-height: 80vh;
+        padding: 40px 15px;
+    }
+
+    .rafaz-hero .hero-logo {
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+
+    .rafaz-hero .hero-logo-subtitle {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .rafaz-hero .hero-headline {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .rafaz-hero .hero-cta-button {
+        padding: 14px 35px;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-shape-1,
+    .hero-shape-2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-shape-3,
+    .hero-shape-4 {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* High DPI Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .rafaz-hero .hero-logo,
+    .rafaz-hero .hero-logo-subtitle,
+    .rafaz-hero .hero-headline,
+    .rafaz-hero .hero-cta-button {
+        text-rendering: geometricPrecision;
+    }
+}
+
+/* Print Optimization */
+@media print {
+    .rafaz-hero {
+        min-height: auto;
+        page-break-inside: avoid;
+    }
+    
+    .hero-shape {
+        display: none;
+    }
+}
