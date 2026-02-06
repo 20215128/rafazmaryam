@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f2ff;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a2a66;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Base gradient background -->
+  <rect width="1920" height="1080" fill="url(#grad1)"/>
+  
+  <!-- Flowing wave layers -->
+  <g opacity="0.3" filter="url(#glow)">
+    <!-- Wave 1 - Top right -->
+    <ellipse cx="1500" cy="200" rx="600" ry="500" fill="#60a5fa" opacity="0.4">
+      <animate attributeName="cx" values="1500;1550;1500" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;150;200" dur="25s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Wave 2 - Bottom left -->
+    <ellipse cx="300" cy="850" rx="700" ry="550" fill="#2563eb" opacity="0.5">
+      <animate attributeName="cx" values="300;250;300" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="850;900;850" dur="28s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Wave 3 - Center -->
+    <ellipse cx="960" cy="540" rx="500" ry="450" fill="#93c5fd" opacity="0.3">
+      <animate attributeName="cx" values="960;1000;960" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="540;580;540" dur="26s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Wave 4 - Top left accent -->
+    <ellipse cx="400" cy="300" rx="400" ry="350" fill="#1e40af" opacity="0.4">
+      <animate attributeName="cx" values="400;450;400" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="300;250;300" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Wave 5 - Bottom right accent -->
+    <ellipse cx="1600" cy="900" rx="450" ry="400" fill="#3b82f6" opacity="0.35">
+      <animate attributeName="cx" values="1600;1650;1600" dur="27s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="900;950;900" dur="23s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Subtle overlay gradients for depth -->
+  <g opacity="0.2">
+    <radialGradient id="radial1" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    <circle cx="576" cy="324" r="400" fill="url(#radial1)"/>
+    
+    <radialGradient id="radial2" cx="70%" cy="70%">
+      <stop offset="0%" style="stop-color:#0a2a66;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#0a2a66;stop-opacity:0" />
+    </radialGradient>
+    <circle cx="1344" cy="756" r="450" fill="url(#radial2)"/>
+  </g>
+</svg>
