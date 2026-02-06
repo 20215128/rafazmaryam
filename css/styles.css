@@ -374,6 +374,14 @@ a:hover {
   min-height: auto;
   display: block;
   object-fit: contain;
+
+  /* Sharpness improvements */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* Invisible Overlay Button */
