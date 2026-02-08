@@ -3177,25 +3177,26 @@ section[class*="hero"]:not(.hero-simple) {
   .hero-simple {
     padding-top: 0;
     margin-bottom: 0;
-    max-height: 50vh;
+    max-height: 60vh;
     position: relative;
     overflow: hidden;
   }
 
   .hero-banner-image {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
   }
 }
 
 @media (max-width: 480px) {
   .hero-simple {
-    max-height: 40vh;
+    max-height: 50vh;
   }
 
   .hero-banner-image {
-    height: 40vh;
+    height: 50vh;
+    object-position: top center;
   }
 }
