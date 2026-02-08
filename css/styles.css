@@ -3154,3 +3154,18 @@ section[class*="hero"] {
     font-size: 1.25rem;
   }
 }
+
+/* Simple Hero Banner */
+.hero-simple {
+  width: 100%;
+  padding-top: var(--header-height);
+  overflow: hidden;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
