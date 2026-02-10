@@ -3177,28 +3177,32 @@ section[class*="hero"]:not(.hero-simple) {
   .hero-simple {
     padding-top: 0;
     margin-bottom: 0;
-    height: 50vh;
+    height: auto;
+    max-height: 30vh;
     position: relative;
     overflow: hidden;
     background-color: #0a2463;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-banner-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    height: auto;
+    max-height: 30vh;
+    object-fit: contain;
+    object-position: center;
     display: block;
-    transition: opacity 0.3s ease-in-out;
   }
 }
 
 @media (max-width: 480px) {
   .hero-simple {
-    height: 45vh;
+    max-height: 25vh;
   }
 
   .hero-banner-image {
-    object-position: center top;
+    max-height: 25vh;
   }
 }
