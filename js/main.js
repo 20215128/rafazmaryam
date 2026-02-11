@@ -441,18 +441,28 @@ if (WHATSAPP_PRINTING && WHATSAPP_EQUIPMENT) {
 
 // === COUNTER ANIMATION (for stats) ===
 function animateCounter(element, target, duration = 2000) {
+  if (element.dataset.animated === 'true') return; // Prevent re-animation
+  element.dataset.animated = 'true';
+
   let start = 0;
   const increment = target / (duration / 16);
+  const startTime = performance.now();
 
-  const timer = setInterval(() => {
-    start += increment;
-    if (start >= target) {
-      element.textContent = target.toLocaleString();
-      clearInterval(timer);
-    } else {
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    start = progress * target;
+
+    if (progress < 1) {
       element.textContent = Math.floor(start).toLocaleString();
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = target.toLocaleString();
     }
-  }, 16);
+  }
+
+  requestAnimationFrame(update);
 }
 
 // Initialize counters when they come into view
