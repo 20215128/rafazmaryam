@@ -3162,6 +3162,8 @@ section[class*="hero"]:not(.hero-simple) {
   padding-top: var(--header-height);
   overflow: hidden;
   margin-bottom: 0;
+  position: relative;
+  /* Enable absolute positioning for button */
 }
 
 .hero-banner-image {
@@ -3170,6 +3172,38 @@ section[class*="hero"]:not(.hero-simple) {
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+.hero-banner-button {
+  position: absolute;
+  bottom: 8%;
+  /* Position at bottom where image button is */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 40px;
+  background: transparent;
+  /* Transparent to overlay image button */
+  color: transparent;
+  /* Hide text since image has it */
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 65%;
+  /* Match image button width */
+  max-width: 350px;
+  text-align: center;
+}
+
+.hero-banner-button:hover {
+  transform: translateX(-50%) scale(1.05);
+  background: rgba(10, 36, 99, 0.1);
+  /* Slight tint on hover */
 }
 
 /* Mobile Optimizations for Hero Banner */
