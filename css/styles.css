@@ -2024,7 +2024,7 @@ a:hover {
 
 /* Hero Commercial */
 .hero-commercial {
-  min-height: 45vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3235,6 +3235,7 @@ section[class*="hero"]:not(.hero-simple) {
     object-position: center top;
   }
 }
+
 /* CRITICAL: Mobile Viewport Overflow Fixes */
 html {
   overflow-x: hidden;
@@ -3248,15 +3249,19 @@ body {
 }
 
 @media (max-width: 768px) {
-  section, .container, .nav-container {
+
+  section,
+  .container,
+  .nav-container {
     max-width: 100vw !important;
     overflow-x: hidden;
   }
-  
-  .modern-dept-card, .product-card {
+
+  .modern-dept-card,
+  .product-card {
     max-width: 100% !important;
   }
-  
+
   .hero-simple {
     width: 100vw;
     max-width: 100vw;
@@ -3264,7 +3269,7 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+
   .hero-banner-image {
     width: 100vw;
     max-width: 100vw;
