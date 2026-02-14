@@ -551,8 +551,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // === PERFORMANCE: AGGRESSIVE IMAGE LOADING OPTIMIZATION ===
 document.addEventListener('DOMContentLoaded', function () {
-  // Add lazy loading to ALL images
-  const allImages = document.querySelectorAll('img');
+  // Add lazy loading to ALL images EXCEPT hero banner
+  const allImages = document.querySelectorAll('img:not(.hero-banner-image)');
 
   allImages.forEach((img) => {
     // Add native lazy loading
