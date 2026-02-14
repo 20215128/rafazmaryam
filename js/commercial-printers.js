@@ -17,48 +17,48 @@ function toggleFilters() {
 // Product Data - 30+ printer models
 const printers = [
     // Konica Minolta Bizhub (7 models - arranged by size)
-    { id: 1, brand: 'bizhub', name: 'Bizhub C224', desc: 'Compact 22ppm color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-c224.png' },
-    { id: 2, brand: 'bizhub', name: 'Bizhub C284', desc: 'Versatile 28ppm color multifunction printer', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-c284.png' },
-    { id: 3, brand: 'bizhub', name: 'Bizhub C364', desc: 'Professional 36ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c364.png' },
-    { id: 4, brand: 'bizhub', name: 'Bizhub C3351', desc: 'Advanced 33ppm color MFP with mobile printing', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c3351.png' },
-    { id: 5, brand: 'bizhub', name: 'Bizhub C454', desc: 'High-performance 45ppm color multifunction system', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c454.png' },
-    { id: 6, brand: 'bizhub', name: 'Bizhub C458', desc: 'Enterprise 45ppm color MFP with advanced features', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c458.png' },
-    { id: 7, brand: 'bizhub', name: 'Bizhub C558', desc: 'Production-level 55ppm color printing powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-c558.png' },
+    { id: 1, brand: 'bizhub', name: 'Bizhub C224', desc: 'Compact 22ppm color MFP for small offices', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-c224.jpg' },
+    { id: 2, brand: 'bizhub', name: 'Bizhub C284', desc: 'Versatile 28ppm color multifunction printer', type: 'color', size: 'small', function: 'mfp', image: 'images/printers/bizhub-c284.jpg' },
+    { id: 3, brand: 'bizhub', name: 'Bizhub C364', desc: 'Professional 36ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c364.jpg' },
+    { id: 4, brand: 'bizhub', name: 'Bizhub C3351', desc: 'Advanced 33ppm color MFP with mobile printing', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c3351.jpg' },
+    { id: 5, brand: 'bizhub', name: 'Bizhub C454', desc: 'High-performance 45ppm color multifunction system', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c454.jpg' },
+    { id: 6, brand: 'bizhub', name: 'Bizhub C458', desc: 'Enterprise 45ppm color MFP with advanced features', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/bizhub-c458.jpg' },
+    { id: 7, brand: 'bizhub', name: 'Bizhub C558', desc: 'Production-level 55ppm color printing powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/bizhub-c558.jpg' },
 
     // Kyocera (20 models - organized by series)
     // FS Series - Monochrome
-    { id: 8, brand: 'kyocera', name: 'Kyocera FS-1350', desc: 'Compact monochrome laser printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1350.png' },
-    { id: 9, brand: 'kyocera', name: 'Kyocera FS-1370', desc: 'Fast monochrome office printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1370.png' },
-    { id: 10, brand: 'kyocera', name: 'Kyocera FS-3140', desc: 'Professional monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3140.png' },
-    { id: 11, brand: 'kyocera', name: 'Kyocera FS-3640', desc: 'High-speed monochrome multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3640.png' },
-    { id: 12, brand: 'kyocera', name: 'Kyocera FS-4030i', desc: 'Enterprise monochrome printer with network', type: 'mono', size: 'medium', function: 'printer', image: 'images/printers/kyocera-fs4030.png' },
-    { id: 13, brand: 'kyocera', name: 'Kyocera FS-4035i', desc: 'Advanced monochrome MFP solution', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs4030.png' },
+    { id: 8, brand: 'kyocera', name: 'Kyocera FS-1350', desc: 'Compact monochrome laser printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1350.jpg' },
+    { id: 9, brand: 'kyocera', name: 'Kyocera FS-1370', desc: 'Fast monochrome office printer', type: 'mono', size: 'small', function: 'printer', image: 'images/printers/kyocera-fs1370.jpg' },
+    { id: 10, brand: 'kyocera', name: 'Kyocera FS-3140', desc: 'Professional monochrome MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3140.jpg' },
+    { id: 11, brand: 'kyocera', name: 'Kyocera FS-3640', desc: 'High-speed monochrome multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs3640.jpg' },
+    { id: 12, brand: 'kyocera', name: 'Kyocera FS-4030i', desc: 'Enterprise monochrome printer with network', type: 'mono', size: 'medium', function: 'printer', image: 'images/printers/kyocera-fs4030.jpg' },
+    { id: 13, brand: 'kyocera', name: 'Kyocera FS-4035i', desc: 'Advanced monochrome MFP solution', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-fs4030.jpg' },
 
     // Numeric Series - Small Office
-    { id: 14, brand: 'kyocera', name: 'Kyocera 420i', desc: 'Compact multifunction copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-420i.png' },
-    { id: 15, brand: 'kyocera', name: 'Kyocera 520i', desc: 'Versatile office MFP', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-520i.png' },
-    { id: 16, brand: 'kyocera', name: 'Kyocera 2040', desc: 'Reliable 20ppm monochrome copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-2040.png' },
-    { id: 17, brand: 'kyocera', name: 'Kyocera 2140', desc: 'Efficient 21ppm office system', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-2140.png' },
+    { id: 14, brand: 'kyocera', name: 'Kyocera 420i', desc: 'Compact multifunction copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-420i.jpg' },
+    { id: 15, brand: 'kyocera', name: 'Kyocera 520i', desc: 'Versatile office MFP', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-520i.jpg' },
+    { id: 16, brand: 'kyocera', name: 'Kyocera 2040', desc: 'Reliable 20ppm monochrome copier', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-2040.jpg' },
+    { id: 17, brand: 'kyocera', name: 'Kyocera 2140', desc: 'Efficient 21ppm office system', type: 'mono', size: 'small', function: 'mfp', image: 'images/printers/kyocera-2140.jpg' },
 
     // Numeric Series - Medium Office
-    { id: 18, brand: 'kyocera', name: 'Kyocera 3050', desc: 'Professional 30ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3050.png' },
-    { id: 19, brand: 'kyocera', name: 'Kyocera 3055', desc: 'Advanced 30ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3055.png' },
-    { id: 20, brand: 'kyocera', name: 'Kyocera 3060', desc: 'High-performance 30ppm system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3060.png' },
-    { id: 21, brand: 'kyocera', name: 'Kyocera 3160', desc: 'Versatile 31ppm multifunction device', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3160.png' },
-    { id: 22, brand: 'kyocera', name: 'Kyocera 3920', desc: 'Robust 39ppm office workhorse', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3920.png' },
-    { id: 23, brand: 'kyocera', name: 'Kyocera 4050', desc: 'Professional 40ppm multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4050.png' },
-    { id: 24, brand: 'kyocera', name: 'Kyocera 4200', desc: 'High-speed 42ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4200.png' },
-    { id: 25, brand: 'kyocera', name: 'Kyocera 4300', desc: 'Enterprise 43ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4300.png' },
+    { id: 18, brand: 'kyocera', name: 'Kyocera 3050', desc: 'Professional 30ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3050.jpg' },
+    { id: 19, brand: 'kyocera', name: 'Kyocera 3055', desc: 'Advanced 30ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3055.jpg' },
+    { id: 20, brand: 'kyocera', name: 'Kyocera 3060', desc: 'High-performance 30ppm system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3060.jpg' },
+    { id: 21, brand: 'kyocera', name: 'Kyocera 3160', desc: 'Versatile 31ppm multifunction device', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3160.jpg' },
+    { id: 22, brand: 'kyocera', name: 'Kyocera 3920', desc: 'Robust 39ppm office workhorse', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-3920.jpg' },
+    { id: 23, brand: 'kyocera', name: 'Kyocera 4050', desc: 'Professional 40ppm multifunction system', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4050.jpg' },
+    { id: 24, brand: 'kyocera', name: 'Kyocera 4200', desc: 'High-speed 42ppm office MFP', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4200.jpg' },
+    { id: 25, brand: 'kyocera', name: 'Kyocera 4300', desc: 'Enterprise 43ppm multifunction printer', type: 'mono', size: 'medium', function: 'mfp', image: 'images/printers/kyocera-4300.jpg' },
 
     // Numeric Series - Industrial
-    { id: 26, brand: 'kyocera', name: 'Kyocera 6025', desc: 'Production-level 60ppm MFP', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6025.png' },
-    { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6030.png' },
+    { id: 26, brand: 'kyocera', name: 'Kyocera 6025', desc: 'Production-level 60ppm MFP', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6025.jpg' },
+    { id: 27, brand: 'kyocera', name: 'Kyocera 6030', desc: 'High-volume 60ppm printing powerhouse', type: 'mono', size: 'industrial', function: 'mfp', image: 'images/printers/kyocera-6030.jpg' },
 
     // Xerox AltaLink (4 models - arranged by size)
-    { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-c8035.png' },
-    { id: 24, brand: 'xerox', name: 'AltaLink C8045', desc: 'Professional 45ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-c8045.png' },
-    { id: 25, brand: 'xerox', name: 'AltaLink C8055', desc: 'High-performance 55ppm color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-c8055.png' },
-    { id: 26, brand: 'xerox', name: 'AltaLink C8070', desc: 'Production-level 70ppm color powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-c8070.png' },
+    { id: 23, brand: 'xerox', name: 'AltaLink C8035', desc: 'Versatile 35ppm color multifunction printer', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-c8035.jpg' },
+    { id: 24, brand: 'xerox', name: 'AltaLink C8045', desc: 'Professional 45ppm color office solution', type: 'color', size: 'medium', function: 'mfp', image: 'images/printers/xerox-c8045.jpg' },
+    { id: 25, brand: 'xerox', name: 'AltaLink C8055', desc: 'High-performance 55ppm color MFP', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-c8055.jpg' },
+    { id: 26, brand: 'xerox', name: 'AltaLink C8070', desc: 'Production-level 70ppm color powerhouse', type: 'color', size: 'industrial', function: 'mfp', image: 'images/printers/xerox-c8070.jpg' },
 ];
 
 

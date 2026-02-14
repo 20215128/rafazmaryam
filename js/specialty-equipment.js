@@ -17,30 +17,30 @@ function toggleFilters() {
 // Product Data - 20+ specialty equipment items
 const specialtyEquipment = [
     // Yinghe DTF Machines (6 models)
-    { id: 1, type: 'dtf', name: 'Yinghe A3 DTF Printer', desc: 'Compact A3 DTF printer with XP600 printhead', size: 'small', function: 'apparel', image: 'images/equipment/dtf-pro-600.png' },
-    { id: 2, type: 'dtf', name: 'Yinghe 60cm DTF (XP600)', desc: 'A2 DTF printer with 2x Epson XP600 printheads', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-xp600.png' },
-    { id: 3, type: 'dtf', name: 'Yinghe 60cm DTF (4720)', desc: 'Professional A2 DTF with 4720 printhead', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-4720.png' },
-    { id: 4, type: 'dtf', name: 'Yinghe 60cm DTF (i3200)', desc: 'Advanced A2 DTF with i3200 printhead upgrade', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-i3200.png' },
-    { id: 5, type: 'dtf', name: 'Yinghe A2 DTF Machine', desc: 'High-speed 40m/h DTF system with powder shaker', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-a2-dtf.png' },
-    { id: 6, type: 'dtf', name: 'Yinghe YH-700DTF', desc: 'Industrial 60cm DTF printer, 12sqm/h speed', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-yh-700dtf.png' },
+    { id: 1, type: 'dtf', name: 'Yinghe A3 DTF Printer', desc: 'Compact A3 DTF printer with XP600 printhead', size: 'small', function: 'apparel', image: 'images/equipment/dtf-pro-600.jpg' },
+    { id: 2, type: 'dtf', name: 'Yinghe 60cm DTF (XP600)', desc: 'A2 DTF printer with 2x Epson XP600 printheads', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-xp600.jpg' },
+    { id: 3, type: 'dtf', name: 'Yinghe 60cm DTF (4720)', desc: 'Professional A2 DTF with 4720 printhead', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-4720.jpg' },
+    { id: 4, type: 'dtf', name: 'Yinghe 60cm DTF (i3200)', desc: 'Advanced A2 DTF with i3200 printhead upgrade', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-i3200.jpg' },
+    { id: 5, type: 'dtf', name: 'Yinghe A2 DTF Machine', desc: 'High-speed 40m/h DTF system with powder shaker', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-a2-dtf.jpg' },
+    { id: 6, type: 'dtf', name: 'Yinghe YH-700DTF', desc: 'Industrial 60cm DTF printer, 12sqm/h speed', size: 'industrial', function: 'apparel', image: 'images/products/yinghe-yh-700dtf.jpg' },
 
     // Flex Printers (2 models)
-    { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/products/flex-banner-6ft.png' },
-    { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/products/flex-banner-10ft.png' },
+    { id: 7, type: 'flex', name: 'Flex Banner 6ft', desc: '6-foot wide format flex printer for banners', size: 'medium', function: 'signage', image: 'images/products/flex-banner-6ft.jpg' },
+    { id: 8, type: 'flex', name: 'Flex Banner 10ft', desc: '10-foot large format flex printing system', size: 'industrial', function: 'signage', image: 'images/products/flex-banner-10ft.jpg' },
 
     // Cutting Plotters (2 models)
-    { id: 9, type: 'cutter', name: 'Cutting Plotter 2ft', desc: 'Compact 2-foot vinyl cutting plotter', size: 'small', function: 'signage', image: 'images/products/cutting-plotter-2ft.png' },
-    { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/products/cutting-plotter-4ft.png' },
+    { id: 9, type: 'cutter', name: 'Cutting Plotter 2ft', desc: 'Compact 2-foot vinyl cutting plotter', size: 'small', function: 'signage', image: 'images/products/cutting-plotter-2ft.jpg' },
+    { id: 10, type: 'cutter', name: 'Cutting Plotter 4ft', desc: 'Professional 4-foot cutting plotter', size: 'medium', function: 'signage', image: 'images/products/cutting-plotter-4ft.jpg' },
 
     // Heat Press (1 model)
-    { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/products/heat-press-60x80.png' },
+    { id: 12, type: 'heatpress', name: 'Heat Press 60x80', desc: 'Professional 60x80cm heat transfer press', size: 'medium', function: 'apparel', image: 'images/products/heat-press-60x80.jpg' },
 
     // UV Printer (2 models)
-    { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop A3 UV flatbed printer for small items', size: 'small', function: 'promotional', image: 'images/products/uv-flatbed-a3.png' },
-    { id: 17, type: 'uv', name: 'Yinghe A3 UV DTF Printer', desc: 'Professional A3 UV DTF printer for transfers and direct printing', size: 'small', function: 'apparel', image: 'images/products/a3-uv-dtf-yinghe.png' },
+    { id: 16, type: 'uv', name: 'UV Flatbed A3', desc: 'Desktop A3 UV flatbed printer for small items', size: 'small', function: 'promotional', image: 'images/products/uv-flatbed-a3.jpg' },
+    { id: 17, type: 'uv', name: 'Yinghe A3 UV DTF Printer', desc: 'Professional A3 UV DTF printer for transfers and direct printing', size: 'small', function: 'apparel', image: 'images/products/a3-uv-dtf-yinghe.jpg' },
 
     // Sublimation (1 model)
-    { id: 21, type: 'sublimation', name: 'Sublimation Industrial A1', desc: 'High-volume sublimation printer', size: 'industrial', function: 'apparel', image: 'images/products/sublimation-industrial-a1.png' },
+    { id: 21, type: 'sublimation', name: 'Sublimation Industrial A1', desc: 'High-volume sublimation printer', size: 'industrial', function: 'apparel', image: 'images/products/sublimation-industrial-a1.jpg' },
 ];
 
 // Horizontal Scroll Functionality with Performance Optimization
