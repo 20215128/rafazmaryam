@@ -562,17 +562,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add decode async for faster rendering
     img.setAttribute('decoding', 'async');
-
-    // Add blur-up placeholder effect
-    if (!img.classList.contains('loaded')) {
-      img.style.filter = 'blur(5px)';
-      img.style.transition = 'filter 0.3s ease';
-
-      img.addEventListener('load', function () {
-        this.style.filter = 'none';
-        this.classList.add('loaded');
-      }, { once: true });
-    }
   });
 
   // Intersection Observer for critical images
