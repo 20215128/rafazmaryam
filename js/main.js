@@ -549,15 +549,52 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// === PERFORMANCE: LAZY LOADING OPTIMIZATION ===
-// Automatically add lazy loading to images below the fold
+// === PERFORMANCE: AGGRESSIVE IMAGE LOADING OPTIMIZATION ===
 document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('img:not([loading])');
+  // Add lazy loading to ALL images
+  const allImages = document.querySelectorAll('img');
 
-  images.forEach((img, index) => {
-    // Skip first 3 images (usually above fold - hero, logo, etc.)
-    if (index > 2) {
+  allImages.forEach((img) => {
+    // Add native lazy loading
+    if (!img.hasAttribute('loading')) {
       img.setAttribute('loading', 'lazy');
     }
+
+    // Add decode async for faster rendering
+    img.setAttribute('decoding', 'async');
+
+    // Add blur-up placeholder effect
+    if (!img.classList.contains('loaded')) {
+      img.style.filter = 'blur(5px)';
+      img.style.transition = 'filter 0.3s ease';
+
+      img.addEventListener('load', function () {
+        this.style.filter = 'none';
+        this.classList.add('loaded');
+      }, { once: true });
+    }
   });
+
+  // Intersection Observer for critical images
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+          imageObserver.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px' // Start loading 50px before entering viewport
+    });
+
+    // Observe all images with data-src
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
 });
