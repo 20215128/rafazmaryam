@@ -108,7 +108,7 @@ function createProductCard(equipment) {
       <span class="brand-badge ${equipment.type}">${typeName}</span>
       <h3>${equipment.name}</h3>
       <p class="product-card-desc">${equipment.desc}</p>
-      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      <a href="quote.html" class="btn btn-primary" style="text-align: center; display: block;">Get a Quote</a>
     </div>
   `;
 

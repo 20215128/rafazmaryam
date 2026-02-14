@@ -3235,3 +3235,39 @@ section[class*="hero"]:not(.hero-simple) {
     object-position: center top;
   }
 }
+/* CRITICAL: Mobile Viewport Overflow Fixes */
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section, .container, .nav-container {
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+  
+  .modern-dept-card, .product-card {
+    max-width: 100% !important;
+  }
+  
+  .hero-simple {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero-banner-image {
+    width: 100vw;
+    max-width: 100vw;
+    object-fit: cover;
+  }
+}

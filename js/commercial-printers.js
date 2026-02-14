@@ -77,7 +77,7 @@ function createProductCard(printer) {
       <span class="brand-badge ${printer.brand}">${printer.brand === 'bizhub' ? 'Bizhub' : printer.brand.charAt(0).toUpperCase() + printer.brand.slice(1)}</span>
       <h3>${printer.name}</h3>
       <p class="product-card-desc">${printer.desc}</p>
-      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      <a href="quote.html" class="btn btn-primary" style="text-align: center; display: block;">Get a Quote</a>
     </div>
   `;
 
