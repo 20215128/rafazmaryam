@@ -180,9 +180,6 @@ function initFormValidation() {
         // Form is valid - show success message
         showSuccessMessage(form);
 
-        // Log form data (in production, this would be sent to a server)
-        console.log('Form submitted:', formData);
-
         // Reset form after 2 seconds
         setTimeout(() => {
           form.reset();
