@@ -436,96 +436,70 @@ if (WHATSAPP_PRINTING && WHATSAPP_EQUIPMENT) {
   console.warn('⚠️ WhatsApp numbers not configured. Please update WHATSAPP_PRINTING and WHATSAPP_EQUIPMENT in main.js');
 }
 
-// === COUNTER ANIMATION (for stats) ===
+// === UNIFIED COUNTER ANIMATION ===
 function animateCounter(element, target, duration = 2000) {
-  if (element.dataset.animated === 'true') return; // Prevent re-animation
+  if (element.dataset.animated === 'true') return;
   element.dataset.animated = 'true';
 
-  let start = 0;
-  const increment = target / (duration / 16);
-  const startTime = performance.now();
+  // Determine if we need to handle decimals
+  const isDecimal = target % 1 !== 0;
+  const startTimestamp = performance.now();
 
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
+  function step(currentTimestamp) {
+    const elapsed = currentTimestamp - startTimestamp;
     const progress = Math.min(elapsed / duration, 1);
 
-    start = progress * target;
+    // Easing function for smoother effect (easeOutExpo)
+    const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+    const current = easeProgress * target;
+
+    if (isDecimal) {
+      element.textContent = current.toFixed(1);
+    } else {
+      element.textContent = Math.floor(current).toLocaleString();
+    }
 
     if (progress < 1) {
-      element.textContent = Math.floor(start).toLocaleString();
-      requestAnimationFrame(update);
+      requestAnimationFrame(step);
     } else {
-      element.textContent = target.toLocaleString();
+      // Ensure final value is exact
+      element.textContent = isDecimal ? target.toFixed(1) : target.toLocaleString();
     }
   }
 
-  requestAnimationFrame(update);
+  requestAnimationFrame(step);
 }
 
-// Initialize counters when they come into view
-const counters = document.querySelectorAll('.counter');
-if (counters.length > 0) {
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        const target = parseInt(entry.target.getAttribute('data-target'));
-        animateCounter(entry.target, target);
-        entry.target.classList.add('counted');
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(counter => counterObserver.observe(counter));
-}
-
-// === EXPANDABLE SECTIONS ===
-function toggleExpand(trigger) {
-  const content = trigger.nextElementSibling;
-  const icon = trigger.querySelector('.expand-icon');
-
-  trigger.classList.toggle('active');
-  content.classList.toggle('active');
-
-  if (content.classList.contains('active')) {
-    content.style.maxHeight = content.scrollHeight + 'px';
-  } else {
-    content.style.maxHeight = '0';
-  }
-}
-
-// === STAT COUNTER ANIMATION ===
+// Initialize counters (unified observer for both class types)
 document.addEventListener('DOMContentLoaded', function () {
-  const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+  const counterElements = document.querySelectorAll('.counter, .stat-number');
 
-  const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        const target = parseFloat(entry.target.getAttribute('data-count'));
-        const isDecimal = target % 1 !== 0;
-        animateStatCounter(entry.target, target, isDecimal);
-        entry.target.classList.add('counted');
-      }
-    });
-  }, { threshold: 0.5 });
+  if (counterElements.length > 0) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          const element = entry.target;
+          // Get target from data-target OR data-count
+          const targetValue = element.getAttribute('data-target') || element.getAttribute('data-count');
 
-  statNumbers.forEach(stat => statObserver.observe(stat));
+          if (targetValue) {
+            // Clean the string (remove commas if present in the HTML attribute) and parse
+            const target = parseFloat(targetValue.replace(/,/g, ''));
+            if (!isNaN(target)) {
+              animateCounter(element, target);
+              element.classList.add('counted');
+              // Stop observing once started
+              counterObserver.unobserve(element);
+            }
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterElements.forEach(counter => counterObserver.observe(counter));
+  }
 });
-
-function animateStatCounter(element, target, isDecimal = false) {
-  let start = 0;
-  const duration = 2000;
-  const increment = target / (duration / 16);
-
-  const timer = setInterval(() => {
-    start += increment;
-    if (start >= target) {
-      element.textContent = isDecimal ? target.toFixed(1) : Math.floor(target).toLocaleString();
-      clearInterval(timer);
-    } else {
-      element.textContent = isDecimal ? start.toFixed(1) : Math.floor(start).toLocaleString();
-    }
-  }, 16);
-}
 
 // === SMOOTH SCROLL FOR DEPT PILLS ===
 document.addEventListener('DOMContentLoaded', function () {
