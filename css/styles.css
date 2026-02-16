@@ -439,6 +439,7 @@ a:hover {
   border-radius: 50%;
   filter: blur(80px);
   opacity: 0.5;
+  will-change: transform;
   animation: floatBlobs 20s infinite ease-in-out;
 }
 
