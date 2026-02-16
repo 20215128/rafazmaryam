@@ -46,14 +46,21 @@ function initNavigation() {
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Sticky navigation on scroll
+  // Sticky navigation on scroll (Optimized)
+  let isScrolled = false;
   window.addEventListener('scroll', function () {
     if (window.scrollY > 100) {
-      navbar.classList.add('scrolled');
+      if (!isScrolled) {
+        navbar.classList.add('scrolled');
+        isScrolled = true;
+      }
     } else {
-      navbar.classList.remove('scrolled');
+      if (isScrolled) {
+        navbar.classList.remove('scrolled');
+        isScrolled = false;
+      }
     }
-  });
+  }, { passive: true }); // Passive listener for better scroll performance
 
   // Mobile menu toggle
   if (mobileToggle) {
@@ -102,6 +109,26 @@ function initNavigation() {
       link.classList.add('active');
     }
   });
+
+  // Make department cards clickable (Consolidated from inline script)
+  const deptCards = document.querySelectorAll('.modern-dept-card');
+  if (deptCards.length > 0) {
+    deptCards.forEach(card => {
+      // Get the link inside the card
+      const link = card.querySelector('a[href^="departments.html"]');
+      if (link) {
+        const href = link.getAttribute('href');
+        // Add click handler to the entire card
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', function (e) {
+          // Don't navigate if clicking the link itself
+          if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+            window.location.href = href;
+          }
+        });
+      }
+    });
+  }
 }
 
 // === SCROLL ANIMATIONS ===
