@@ -254,6 +254,19 @@ a:hover {
   color: var(--color-primary);
 }
 
+.nav-link.active::after {
+  width: 80%;
+  background-color: var(--color-primary);
+}
+
+.navbar.scrolled .nav-link.active {
+  color: #60a5fa;
+}
+
+.navbar.scrolled .nav-link.active::after {
+  background-color: #60a5fa;
+}
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;

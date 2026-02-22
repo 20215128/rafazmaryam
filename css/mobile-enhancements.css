@@ -3,16 +3,71 @@
    Optimized for touch and mobile UX
    =================================== */
 
+/* === iOS ZOOM PREVENTION ===
+   Inputs below 16px trigger auto-zoom on iOS Safari.
+   This ensures all form elements are at least 16px. */
+@media (max-width: 768px) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="url"],
+    input[type="search"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* === SAFE AREA INSETS FOR NOTCHED DEVICES ===
+   Handles iPhone X/11/12/13/14/15/16 notch and home indicator */
+@supports (padding: env(safe-area-inset-bottom)) {
+    body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .navbar {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+    }
+
+    .whatsapp-float {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+}
+
 /* === SMOOTH TOUCH INTERACTIONS === */
 * {
     -webkit-tap-highlight-color: rgba(10, 36, 99, 0.1);
     -webkit-touch-callout: none;
 }
 
+/* === BETTER TEXT RENDERING ON MOBILE === */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* === SMOOTH MOMENTUM SCROLLING === */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
 button,
 a,
 .btn {
     -webkit-tap-highlight-color: rgba(10, 36, 99, 0.2);
+    touch-action: manipulation;
+    /* Removes 300ms tap delay */
 }
 
 /* === ENHANCED MOBILE STYLES === */
@@ -484,6 +539,82 @@ a,
 
     .portfolio-item:active img {
         transform: scale(0.98);
+    }
+
+    /* ===================================
+       EQUIPMENT SALES CARD MOBILE FIXES
+       Override inline grid-template-columns: 350px 1fr
+       =================================== */
+
+    /* Force equipment cards to stack vertically on mobile */
+    .professional-card>div {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+    }
+
+    /* Image section — reduce padding, remove border-right */
+    .professional-card>div>div:first-child {
+        padding: 1.5rem !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Content section — tighter padding on mobile */
+    .professional-card>div>div:last-child {
+        padding: 1.5rem !important;
+    }
+
+    /* Equipment card headings — smaller on mobile */
+    .professional-card h3 {
+        font-size: 1.375rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Equipment CTA row — stack button and text */
+    .professional-card div[style*="display: flex"][style*="gap"] {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        align-items: flex-start !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Equipment images — constrain height on mobile */
+    .professional-card img {
+        max-height: 200px !important;
+    }
+
+    /* "Need Expert Advice" CTA box — responsive padding */
+    .section-dark>div[style*="text-align: center"][style*="margin-top"] {
+        padding: 1.5rem 1.25rem !important;
+    }
+
+    .section-dark>div[style*="text-align: center"] h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .section-dark>div[style*="text-align: center"] p {
+        font-size: 1rem !important;
+    }
+
+    /* Trust indicators / stats section — stack on mobile */
+    div[style*="display: grid"][style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Counter numbers — smaller on mobile */
+    .counter {
+        font-size: 2.25rem !important;
+    }
+
+    /* Modern department cards — ensure proper sizing */
+    .modern-dept-card {
+        min-height: auto !important;
+    }
+
+    .modern-dept-card img {
+        height: 160px !important;
+        object-fit: cover !important;
     }
 }
 

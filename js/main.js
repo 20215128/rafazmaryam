@@ -93,19 +93,21 @@ function initNavigation() {
   });
 
   // Highlight active page in navigation
-  const currentPage = window.location.pathname.split('/').pop() || 'index'; // Default to index if empty
+  const path = window.location.pathname;
+  // Get the last segment, stripping trailing slash and .html extension
+  let currentPage = path.split('/').filter(Boolean).pop() || '';
+  currentPage = currentPage.replace(/\.html$/, '');
 
   navLinks.forEach(link => {
     let linkPage = link.getAttribute('href');
-    // Normalize linkPage (remove ./ or / if present for comparison)
-    linkPage = linkPage.replace(/^(\.\/|\/)/, '');
+    // Strip ./, /, .html, and trailing slashes
+    linkPage = linkPage.replace(/^(\.\/|\/)/, '').replace(/\.html$/, '').replace(/\/$/, '');
 
-    // Normalize currentPage (handle index case)
-    let current = currentPage;
-    if (current === '' || current === 'index.html') current = 'index';
+    // Match: both empty = homepage, or exact page name match
+    const isHome = (linkPage === '' || linkPage === '.') && (currentPage === '' || currentPage === 'index');
+    const isMatch = linkPage !== '' && linkPage !== '.' && linkPage === currentPage;
 
-    // Simple matching or match index
-    if (linkPage === current || (linkPage === './' && current === 'index')) {
+    if (isHome || isMatch) {
       link.classList.add('active');
     }
   });
