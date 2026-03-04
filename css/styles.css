@@ -169,6 +169,45 @@ a:hover {
   color: var(--color-primary-light);
 }
 
+/* === ACCESSIBILITY: KEYBOARD FOCUS STYLES === */
+/* Only show focus ring for keyboard navigation, not mouse clicks */
+:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Ensure buttons and form elements have visible focus */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* Skip to content link for screen readers */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-weight: 600;
+  z-index: 10000;
+  transition: top 0.2s;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 /* === NAVIGATION === */
 .navbar {
   position: fixed;
@@ -3288,5 +3327,84 @@ body {
     width: 100vw;
     max-width: 100vw;
     object-fit: cover;
+  }
+}
+
+/* === MODERN DEPT CARDS (moved from index.html inline style) === */
+.modern-dept-card {
+  padding: 1.5rem !important;
+  border-radius: 12px !important;
+}
+
+.modern-dept-card>div:first-child {
+  display: none !important;
+  /* Hide background gradient overlay */
+}
+
+.modern-dept-card>div:nth-child(2) {
+  width: 50px !important;
+  height: 50px !important;
+  margin-bottom: 1rem !important;
+  border-radius: 12px !important;
+}
+
+.modern-dept-card>div:nth-child(2) svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.modern-dept-card h3 {
+  font-size: 1.125rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.modern-dept-card p {
+  display: none !important;
+  /* Hide descriptions on mobile */
+}
+
+@media (min-width: 768px) {
+  .modern-dept-card p {
+    display: block !important;
+    /* Show descriptions on desktop */
+    font-size: 0.9rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+.modern-dept-card a {
+  font-size: 0.875rem !important;
+}
+
+.modern-dept-card a:hover span {
+  transform: translateX(5px);
+}
+
+/* === PROFESSIONAL CARDS (moved from index.html inline style) === */
+.professional-card:hover img {
+  transform: scale(1.05);
+}
+
+.professional-card .btn:hover {
+  background: linear-gradient(135deg, #4169e1, #3457d5);
+  box-shadow: 0 6px 20px rgba(100, 149, 237, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .professional-card>div {
+    grid-template-columns: 1fr !important;
+  }
+
+  .professional-card img {
+    max-height: 200px !important;
+  }
+
+  /* Switch right border to bottom border when cards stack vertically */
+  .professional-card>div>div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

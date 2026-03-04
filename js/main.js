@@ -11,20 +11,48 @@ document.addEventListener('DOMContentLoaded', function () {
   // === SCROLL ANIMATIONS ===
   initScrollAnimations();
 
+  // === SUCCESS BANNER (FormSubmit.co redirect) ===
+  initSuccessBanner();
+
   // === FORM VALIDATION ===
   function initFormValidation() {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
       form.addEventListener('submit', function (e) {
-        // If attributes 'action' contains 'formsubmit.co', we want to allow the default submission
-        // Check native validity first 
+        // Remove any existing inline error banner
+        const existingError = form.querySelector('.form-submit-error');
+        if (existingError) existingError.remove();
+
         if (!this.checkValidity()) {
           e.preventDefault();
-          // Simple visual feedback (browser default usually handles this, but just in case)
-          alert('Please fill in all required fields marked with *');
+          // Show inline error banner above the submit button instead of alert()
+          const submitBtn = form.querySelector('[type="submit"]');
+          const errorBanner = document.createElement('div');
+          errorBanner.className = 'form-submit-error';
+          errorBanner.setAttribute('role', 'alert');
+          errorBanner.innerHTML = `
+            <span>⚠️ Please fill in all required fields marked with *</span>
+            <button type="button" onclick="this.parentElement.remove()" aria-label="Dismiss">&times;</button>
+          `;
+          errorBanner.style.cssText = `
+            display: flex; align-items: center; justify-content: space-between;
+            background: #FEF2F2; border: 1px solid #FECACA; color: #991B1B;
+            padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1rem;
+            font-weight: 600; font-size: 0.9rem;
+          `;
+          errorBanner.querySelector('button').style.cssText = `
+            background: none; border: none; cursor: pointer;
+            color: #991B1B; font-size: 1.2rem; line-height: 1; padding: 0 0.25rem;
+          `;
+          if (submitBtn) {
+            submitBtn.parentNode.insertBefore(errorBanner, submitBtn);
+          } else {
+            form.appendChild(errorBanner);
+          }
+          errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        // If valid, we do NOTHING and let the form submit naturally to the action URL
+        // If valid, let the form submit naturally to the action URL
       });
     });
   }
@@ -38,6 +66,63 @@ document.addEventListener('DOMContentLoaded', function () {
     initPortfolioLightbox();
   }
 });
+
+// === SUCCESS BANNER ===
+function initSuccessBanner() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('success') === 'true') {
+    // Create banner
+    const banner = document.createElement('div');
+    banner.id = 'success-banner';
+    banner.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: linear-gradient(135deg, #10B981, #059669);
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 4px 16px rgba(16,185,129,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        animation: slideDown 0.4s ease-out;
+      ">
+        <span style="font-size: 1.4rem;">✅</span>
+        <span>Your message was sent successfully! We'll get back to you within 24 hours.</span>
+        <button onclick="document.getElementById('success-banner').remove()" style="
+          background: rgba(255,255,255,0.25);
+          border: none;
+          color: white;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 1.1rem;
+          line-height: 1;
+          margin-left: 0.5rem;
+        ">×</button>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    // Clean the URL so refreshing doesn't re-show it
+    const cleanUrl = window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+
+    // Auto-dismiss after 8 seconds
+    setTimeout(() => {
+      const b = document.getElementById('success-banner');
+      if (b) b.remove();
+    }, 8000);
+  }
+}
 
 // === NAVIGATION FUNCTIONALITY ===
 function initNavigation() {
