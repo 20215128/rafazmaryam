@@ -17,7 +17,7 @@ function toggleFilters() {
 // Product Data - 20+ specialty equipment items
 const specialtyEquipment = [
     // Yinghe DTF Machines (6 models)
-    { id: 1, type: 'dtf', name: 'Yinghe A3 DTF Printer', desc: 'Compact A3 DTF printer with XP600 printhead', size: 'small', function: 'apparel', image: 'images/equipment/dtf-pro-600.jpg' },
+    { id: 1, type: 'dtf', name: 'Yinghe A3 DTF Printer', desc: 'Compact A3 DTF printer with XP600 printhead', size: 'small', function: 'apparel', image: 'images/products/dtf-machine.jpg' },
     { id: 2, type: 'dtf', name: 'Yinghe 60cm DTF (XP600)', desc: 'A2 DTF printer with 2x Epson XP600 printheads', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-xp600.jpg' },
     { id: 3, type: 'dtf', name: 'Yinghe 60cm DTF (4720)', desc: 'Professional A2 DTF with 4720 printhead', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-4720.jpg' },
     { id: 4, type: 'dtf', name: 'Yinghe 60cm DTF (i3200)', desc: 'Advanced A2 DTF with i3200 printhead upgrade', size: 'medium', function: 'apparel', image: 'images/products/yinghe-60cm-dtf-i3200.jpg' },

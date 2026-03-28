@@ -24,66 +24,66 @@ const consumables = [
     { id: 3, type: 'ink', name: 'CPI Ink', desc: 'Premium CPI duplicator ink', brand: 'cpi', category: 'cpi-ink', image: 'images/products/cpi-ink.jpg' },
 
     // Bizhub 225/C35 - Toners (All Colors)
-    { id: 4, type: 'toner', name: 'Bizhub 225/C35 Toner Cartridges', desc: 'Original toner cartridges for Bizhub 225/C35 - Available in Black, Cyan, Magenta, Yellow', brand: 'bizhub', category: 'bizhub-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/bizhub-toner-black.jpg' },
+    { id: 4, type: 'toner', name: 'Bizhub 225/C35 Toner Cartridges', desc: 'Original toner cartridges for Bizhub 225/C35 - Available in Black, Cyan, Magenta, Yellow', brand: 'bizhub', category: 'bizhub-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/bizhub-toner-black.png' },
 
     // Bizhub 225/C35 - Developers
-    { id: 8, type: 'developer', name: 'Developer Sachets', desc: 'Developer sachets for Bizhub 225/C35 - Available in Big and Small sizes', brand: 'bizhub', category: 'bizhub-developer', variants: ['Big Sachet', 'Small Sachet'], image: 'images/products/bizhub-developer-sachets.jpg' },
+    { id: 8, type: 'developer', name: 'Developer Sachets', desc: 'Developer sachets for Bizhub 225/C35 - Available in Big and Small sizes', brand: 'bizhub', category: 'bizhub-developer', variants: ['Big Sachet', 'Small Sachet'], image: 'images/consumables/developer-big.png' },
 
     // Bizhub 225/C35 - Drums
-    { id: 10, type: 'drum', name: 'Original OPC Drum', desc: 'Genuine OPC drum unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-drum', image: 'images/products/bizhub-opc-drum.jpg' },
+    { id: 10, type: 'drum', name: 'Original OPC Drum', desc: 'Genuine OPC drum unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-drum', image: 'images/consumables/opc-drum.png' },
 
     // Bizhub 225/C35 - Sensors
-    { id: 11, type: 'sensor', name: 'Bizhub Universal Sensor Chip', desc: 'Universal sensor chip for Bizhub 225/C35 - Works for both Drum and Toner', brand: 'bizhub', category: 'bizhub-sensor', variants: ['Drum', 'Toner'], image: 'images/consumables/drum-sensor.jpg' },
+    { id: 11, type: 'sensor', name: 'Bizhub Universal Sensor Chip', desc: 'Universal sensor chip for Bizhub 225/C35 - Works for both Drum and Toner', brand: 'bizhub', category: 'bizhub-sensor', variants: ['Drum', 'Toner'], image: 'images/consumables/drum-sensor.png' },
 
     // Bizhub 225/C35 - Belts & Components
-    { id: 13, type: 'belt', name: 'Transfer Belt', desc: 'Transfer belt unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-belt', image: 'images/products/bizhub-transfer-belt.jpg' },
-    { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/products/bizhub-direct-cartridges.jpg' },
+    { id: 13, type: 'belt', name: 'Transfer Belt', desc: 'Transfer belt unit for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-belt', image: 'images/consumables/transfer-belt.png' },
+    { id: 14, type: 'cartridge', name: 'Direct Cartridges', desc: 'Direct imaging cartridges for Bizhub 225/C35', brand: 'bizhub', category: 'bizhub-cartridge', image: 'images/consumables/direct-cartridge.png' },
 
     // Bizhub 225/C35 - Cleaning Blades
-    { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/products/bizhub-cleaning-blade.jpg' },
+    { id: 15, type: 'blade', name: 'Cleaning Blades', desc: 'Cleaning blades for Bizhub 225/C35 - Drum and Transfer Belt', brand: 'bizhub', category: 'bizhub-blade', variants: ['Drum Blade', 'Transfer Belt Blade'], image: 'images/consumables/drum-blade.png' },
 
     // Kyocera - Color Toners
-    { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-tech-color-toners.jpg' },
-    { id: 18, type: 'toner', name: 'Rafaz Noble Crown Toners', desc: 'Premium Rafaz Noble Crown toners for Kyocera', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/rafaz-noble-crown-toners.jpg' },
-    { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/products/kyocera-original-color-toners.jpg' },
+    { id: 17, type: 'toner', name: 'Kyocera Tech Color Toners', desc: 'High-quality tech color toners for Kyocera printers', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-tech-toner.png' },
+    { id: 18, type: 'toner', name: 'Rafaz Noble Crown Toners', desc: 'Premium Rafaz Noble Crown toners for Kyocera', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/rafaz-noble-crown.png' },
+    { id: 19, type: 'toner', name: 'Kyocera Original Color Toners', desc: 'Genuine Kyocera original color toner cartridges', brand: 'kyocera', category: 'kyocera-toner', image: 'images/consumables/kyocera-original-toner.png' },
 
     // Kyocera - Drums (Multiple Models)
-    { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/products/kyocera-drum-units.jpg' },
+    { id: 20, type: 'drum', name: 'Kyocera Drum Units', desc: 'Original drum units for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-drum', variants: ['1128', '3140', '1620', '2030', '2530'], image: 'images/consumables/kyocera-drum-1128.png' },
 
     // Kyocera - Cleaning Blades & Toners
-    { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/products/kyocera-bw-cleaning-blade.jpg' },
-    { id: 26, type: 'toner', name: 'Katun Performance Toners', desc: 'Katun Performance toners for Kyocera printers - Available in CMYK colors', brand: 'kyocera', category: 'kyocera-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/katun-white-bottle.jpg' },
+    { id: 25, type: 'blade', name: 'Kyocera B/W Cleaning Blades', desc: 'Black & white cleaning blades for Kyocera printers', brand: 'kyocera', category: 'kyocera-blade', image: 'images/consumables/kyocera-bw-blade.png' },
+    { id: 26, type: 'toner', name: 'Katun Performance Toners', desc: 'Katun Performance toners for Kyocera printers - Available in CMYK colors', brand: 'kyocera', category: 'kyocera-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/katun-white-bottle.png' },
 
     // Kyocera - Heater Rollers (Multiple Models)
-    { id: 27, type: 'roller', name: 'Kyocera Heater Rollers', desc: 'Heater rollers for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-roller', variants: ['3140', '2100', '4100', '3010', '1128', '1118'], image: 'images/products/kyocera-heater-roller.jpg' },
+    { id: 27, type: 'roller', name: 'Kyocera Heater Rollers', desc: 'Heater rollers for Kyocera printers - Multiple models available', brand: 'kyocera', category: 'kyocera-roller', variants: ['3140', '2100', '4100', '3010', '1128', '1118'], image: 'images/consumables/kyocera-roller-3140.png' },
 
     // HP - Golden Crown Toners
-    { id: 33, type: 'toner', name: 'HP Golden Crown Toners', desc: 'Golden Crown toners for HP printers - Available in CMYK colors', brand: 'hp', category: 'hp-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/hp-golden-crown-bw.jpg' },
+    { id: 33, type: 'toner', name: 'HP Golden Crown Toners', desc: 'Golden Crown toners for HP printers - Available in CMYK colors', brand: 'hp', category: 'hp-toner', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/hp-golden-crown-bw.png' },
 
     // HP - Sensors
-    { id: 35, type: 'sensor', name: 'HP Sensors', desc: 'Sensors for HP printers - Color and Black & White', brand: 'hp', category: 'hp-sensor', variants: ['Color', 'Black & White'], image: 'images/products/hp-sensor.jpg' },
+    { id: 35, type: 'sensor', name: 'HP Sensors', desc: 'Sensors for HP printers - Color and Black & White', brand: 'hp', category: 'hp-sensor', variants: ['Color', 'Black & White'], image: 'images/consumables/hp-sensor-color.png' },
 
     // HP - Drums
-    { id: 37, type: 'drum', name: 'HP Drum Units', desc: 'Drum units for HP printers - Color and Black & White', brand: 'hp', category: 'hp-drum', variants: ['Color', 'Black & White'], image: 'images/products/hp-drum-units.jpg' },
+    { id: 37, type: 'drum', name: 'HP Drum Units', desc: 'Drum units for HP printers - Color and Black & White', brand: 'hp', category: 'hp-drum', variants: ['Color', 'Black & White'], image: 'images/consumables/hp-drum-color.png' },
 
     // Accessories - Cables
-    { id: 39, type: 'cable', name: 'Printer Cables', desc: 'Universal cables for printers - Power, USB, and Network', brand: 'universal', category: 'cable', variants: ['Power Cable', 'USB Cable', 'Network Cable'], image: 'images/consumables/power-cable.jpg' },
+    { id: 39, type: 'cable', name: 'Printer Cables', desc: 'Universal cables for printers - Power, USB, and Network', brand: 'universal', category: 'cable', variants: ['Power Cable', 'USB Cable', 'Network Cable'], image: 'images/consumables/power-cable.png' },
 
     // DTF & Flex Printing Consumables
-    { id: 41, type: 'ink', name: 'Flex Printing Ink', desc: 'High-quality flex printing ink - Available in multiple colors', brand: 'flex', category: 'flex-ink', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/flex-ink.jpg' },
-    { id: 42, type: 'ink', name: 'DTF Yinghe Inks', desc: 'Yinghe brand DTF printing inks - Available in CMYK colors', brand: 'dtf', category: 'dtf-ink', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/dtf-yinghe-ink.jpg' },
-    { id: 43, type: 'ink', name: 'DTF MT Inks', desc: 'MT brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-mt-ink.jpg' },
-    { id: 44, type: 'powder', name: 'DTF Powder', desc: 'Hot melt adhesive powder for DTF printing', brand: 'dtf', category: 'dtf-powder', image: 'images/consumables/dtf-powder.jpg' },
+    { id: 41, type: 'ink', name: 'Flex Printing Ink', desc: 'High-quality flex printing ink - Available in multiple colors', brand: 'flex', category: 'flex-ink', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/flex-ink.png' },
+    { id: 42, type: 'ink', name: 'DTF Yinghe Inks', desc: 'Yinghe brand DTF printing inks - Available in CMYK colors', brand: 'dtf', category: 'dtf-ink', colors: ['Black', 'Cyan', 'Magenta', 'Yellow'], image: 'images/consumables/dtf-yinghe-ink.png' },
+    { id: 43, type: 'ink', name: 'DTF MT Inks', desc: 'MT brand DTF printing inks', brand: 'dtf', category: 'dtf-ink', image: 'images/consumables/dtf-mt-ink.png' },
+    { id: 44, type: 'powder', name: 'DTF Powder', desc: 'Hot melt adhesive powder for DTF printing', brand: 'dtf', category: 'dtf-powder', image: 'images/consumables/dtf-powder.png' },
 
     // Xerox - Consumables
-    { id: 45, type: 'toner', name: 'Xerox Colour Toners', desc: 'Original color toner cartridges for Xerox printers', brand: 'xerox', category: 'xerox-toner', image: 'images/products/xerox-colour-toners.jpg' },
-    { id: 46, type: 'drum', name: 'Xerox Drum Units', desc: 'Drum units for Xerox printers - Standard and Genuine Original', brand: 'xerox', category: 'xerox-drum', variants: ['Standard', 'Genuine Original'], image: 'images/products/xerox-drum-units.jpg' },
-    { id: 48, type: 'sensor', name: 'Xerox Universal Sensor Chip', desc: 'Universal sensor chip for Xerox printers - Works for Toner, Drum, and Developer', brand: 'xerox', category: 'xerox-sensor', variants: ['Toner', 'Drum', 'Developer'], image: 'images/consumables/xerox-sensor.jpg' },
+    { id: 45, type: 'toner', name: 'Xerox Colour Toners', desc: 'Original color toner cartridges for Xerox printers', brand: 'xerox', category: 'xerox-toner', image: 'images/consumables/xerox-color-toner.png' },
+    { id: 46, type: 'drum', name: 'Xerox Drum Units', desc: 'Drum units for Xerox printers - Standard and Genuine Original', brand: 'xerox', category: 'xerox-drum', variants: ['Standard', 'Genuine Original'], image: 'images/consumables/xerox-normal-drum.png' },
+    { id: 48, type: 'sensor', name: 'Xerox Universal Sensor Chip', desc: 'Universal sensor chip for Xerox printers - Works for Toner, Drum, and Developer', brand: 'xerox', category: 'xerox-sensor', variants: ['Toner', 'Drum', 'Developer'], image: 'images/consumables/xerox-sensor.png' },
 
 
 
     // DTF Materials
-    { id: 51, type: 'material', name: 'DTF Film', desc: 'DTF transfer film - Available in A2 and A3 sizes', brand: 'dtf', category: 'dtf-material', variants: ['A2', 'A3'], image: 'images/consumables/dtf-material-a2.jpg' },
+    { id: 51, type: 'material', name: 'DTF Film', desc: 'DTF transfer film - Available in A2 and A3 sizes', brand: 'dtf', category: 'dtf-material', variants: ['A2', 'A3'], image: 'images/consumables/dtf-material-a2.png' },
 ];
 
 // Product Card Creation
