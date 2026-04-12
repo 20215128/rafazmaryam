@@ -3330,56 +3330,49 @@ body {
   }
 }
 
-/* === MODERN DEPT CARDS (moved from index.html inline style) === */
+/* === MODERN DEPT CARDS (shared base styles) === */
 .modern-dept-card {
-  padding: 1.5rem !important;
-  border-radius: 12px !important;
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
-.modern-dept-card>div:first-child {
+/* Hide decorative bg gradient orb — always */
+.modern-dept-card > div:first-child {
   display: none !important;
-  /* Hide background gradient overlay */
 }
 
-.modern-dept-card>div:nth-child(2) {
-  width: 50px !important;
-  height: 50px !important;
-  margin-bottom: 1rem !important;
-  border-radius: 12px !important;
+.modern-dept-card > div:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.25rem;
+  border-radius: 14px;
 }
 
-.modern-dept-card>div:nth-child(2) svg {
-  width: 24px !important;
-  height: 24px !important;
+.modern-dept-card > div:nth-child(2) svg {
+  width: 30px;
+  height: 30px;
 }
 
 .modern-dept-card h3 {
-  font-size: 1.125rem !important;
-  margin-bottom: 0.75rem !important;
+  font-size: 1.25rem;
+  margin-bottom: 0.875rem;
 }
 
+/* Descriptions visible on all screen sizes */
 .modern-dept-card p {
-  display: none !important;
-  /* Hide descriptions on mobile */
-}
-
-@media (min-width: 768px) {
-  .modern-dept-card p {
-    display: block !important;
-    /* Show descriptions on desktop */
-    font-size: 0.9rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
+  font-size: 0.9375rem;
+  color: #4a5568;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
 }
 
 .modern-dept-card a {
-  font-size: 0.875rem !important;
+  font-size: 0.9375rem;
 }
 
 .modern-dept-card a:hover span {
   transform: translateX(5px);
+  transition: transform 0.2s ease;
 }
 
 /* === PROFESSIONAL CARDS (moved from index.html inline style) === */
