@@ -557,9 +557,15 @@ function animateCounter(element, target, duration = 2000) {
 
   // Determine if we need to handle decimals
   const isDecimal = target % 1 !== 0;
-  const startTimestamp = performance.now();
+
+  // Capture startTimestamp inside the first rAF callback so elapsed always
+  // starts from 0 — avoids the number-jumping glitch on slow mobile CPUs
+  // where the gap between animateCounter() and the first frame is non-zero.
+  let startTimestamp = null;
 
   function step(currentTimestamp) {
+    if (startTimestamp === null) startTimestamp = currentTimestamp;
+
     const elapsed = currentTimestamp - startTimestamp;
     const progress = Math.min(elapsed / duration, 1);
 
@@ -609,7 +615,14 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       });
-    }, { threshold: 0.5 });
+    }, {
+      // Lower threshold so counters fire as soon as 10% is visible —
+      // critical on mobile where the full element may never hit 50% visibility
+      // due to the dynamic browser chrome (address bar) resizing the viewport.
+      threshold: 0.1,
+      // Trigger slightly before the element enters the viewport on mobile
+      rootMargin: '0px 0px -30px 0px'
+    });
 
     counterElements.forEach(counter => counterObserver.observe(counter));
   }
