@@ -108,10 +108,9 @@ function renderProducts(filteredPrinters = printers) {
 
         filteredPrinters.forEach((printer, index) => {
             const card = createProductCard(printer);
-            // Stagger animation
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s forwards`;
+            // Stagger animation — do NOT set inline opacity/transform as they
+            // override the animation's fill-mode and cause cards to disappear
+            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.05}s both`;
             fragment.appendChild(card);
         });
 
