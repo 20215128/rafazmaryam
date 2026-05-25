@@ -21,17 +21,18 @@
     <meta property="og:title" content="Get a Free Printing Quote - RAFAZ">
     <meta property="og:description"
         content="Request a free quote for your printing project. Fast turnaround, competitive pricing, and exceptional quality guaranteed. 11 specialized departments to serve you.">
-    <meta property="og:image" content="https://www.rafazmultibusiness.com/images/rafaz-logo-transparent.png">
+    <meta property="og:image" content="https://www.rafazmultibusiness.com/images/rafaz-social-preview.png">
     <meta property="og:site_name" content="RAFAZ">
 
     <!-- SEO: Twitter Card Tags -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Get a Free Printing Quote - RAFAZ">
     <meta name="twitter:description"
         content="Request a free quote for your printing project. Fast turnaround, competitive pricing, exceptional quality guaranteed.">
-    <meta name="twitter:image" content="https://www.rafazmultibusiness.com/images/rafaz-logo-transparent.png">
+    <meta name="twitter:image" content="https://www.rafazmultibusiness.com/images/rafaz-social-preview.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mobile-enhancements.css">
+  <link rel="stylesheet" href="css/whatsapp-modal.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4R8FFHPMB"></script>
@@ -50,7 +51,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="./" class="logo" style="display: flex; align-items: center; gap: 12px;">
+            <a href="./" class="logo">
                 <img src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height: 40px; width: auto;">
                 <span>RAFAZ</span>
             </a>
@@ -71,7 +72,7 @@
     </nav>
 
     <!-- PAGE HEADER -->
-    <section id="main-content" class="hero" style="min-height: 40vh;">
+    <section id="main-content" class="hero hero-compact">
         <div class="hero-content">
             <h1>Get Your Quote in Minutes, Not Hours</h1>
             <p>💬 Chat with us on WhatsApp for instant quotes • Or fill the form below for detailed estimates • Same-day
@@ -81,22 +82,17 @@
 
     <!-- WHATSAPP PRIORITY SECTION -->
     <section class="section section-light">
-        <div class="container" style="max-width: 900px;">
-            <div class="card"
-                style="padding: var(--space-12); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); color: white; text-align: center;">
-                <h2 style="font-size: var(--text-4xl); margin-bottom: var(--space-4); color: white;">⚡ Fastest Way: Get
-                    Instant Quote on WhatsApp</h2>
-                <p style="font-size: var(--text-xl); margin-bottom: var(--space-8); color: white;">
-                    Skip the form! Chat with our team now and get your quote in minutes. Share photos, ask questions,
-                    and get personalized recommendations instantly.
-                </p>
+        <div class="container container-sm">
+            <div class="card whatsapp-cta-card">
+                <h2>⚡ Fastest Way: Get Instant Quote on WhatsApp</h2>
+                <p>Skip the form! Chat with our team now and get your quote in minutes. Share photos, ask questions,
+                    and get personalized recommendations instantly.</p>
                 <a href="https://wa.me/2349166860809?text=Hi!%20I%20need%20a%20quote%20for%20a%20printing%20project.%20Can%20you%20help%20me?"
                     class="btn btn-large"
                     style="background: white; color: var(--color-primary); font-size: var(--text-xl); padding: 1.25rem 3rem; margin-bottom: var(--space-6);">
                     💬 Start WhatsApp Chat Now
                 </a>
-                <div
-                    style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: var(--space-6); font-size: var(--text-sm);">
+                <div class="wa-benefits-list">
                     <span>✓ Instant Response</span>
                     <span>✓ Share Photos Easily</span>
                     <span>✓ Real-Time Answers</span>
@@ -108,15 +104,14 @@
 
     <!-- QUOTE FORM -->
     <section class="section">
-        <div class="container" style="max-width: 800px;">
-            <div style="text-align: center; margin-bottom: var(--space-10);">
-                <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);">Or Fill Out Our Detailed Quote
-                    Form</h2>
-                <p style="color: var(--color-gray-600);">Prefer a form? No problem! Fill this out and we'll email you a
+        <div class="container container-xs">
+            <div class="quote-form-header">
+                <h2 class="card-title-primary mb-4">Or Fill Out Our Detailed Quote Form</h2>
+                <p class="text-muted">Prefer a form? No problem! Fill this out and we'll email you a
                     detailed quote within 24 hours.</p>
             </div>
 
-            <div class="card" style="padding: var(--space-12);">
+            <div class="card card-padded-lg">
                 <form id="quoteForm" action="https://formsubmit.co/rafazmultibnigltd@gmail.com" method="POST"
                     enctype="multipart/form-data">
                     <input type="hidden" name="_captcha" value="false">
@@ -124,9 +119,9 @@
                     <input type="hidden" name="_subject" value="New Detailed Quote Request">
 
                     <!-- Contact Information -->
-                    <h3 style="margin-bottom: var(--space-6); color: var(--color-accent);">Contact Information</h3>
+                    <h3 class="form-section-title">Contact Information</h3>
 
-                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                    <div class="grid grid-2 grid-gap-6 mb-6">
                         <div class="form-group">
                             <label for="firstName" class="form-label">First Name *</label>
                             <input type="text" id="firstName" name="firstName" class="form-input" required>
@@ -138,7 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                    <div class="grid grid-2 grid-gap-6 mb-6">
                         <div class="form-group">
                             <label for="email" class="form-label">Email Address *</label>
                             <input type="email" id="email" name="email" class="form-input" required>
@@ -156,8 +151,7 @@
                     </div>
 
                     <!-- Project Details -->
-                    <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-6); color: var(--color-accent);">
-                        Project Details</h3>
+                    <h3 class="form-section-title-spaced">Project Details</h3>
 
                     <div class="form-group">
                         <label for="jobType" class="form-label">Type of Printing Job *</label>
@@ -173,7 +167,7 @@
                         </select>
                     </div>
 
-                    <div class="grid grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                    <div class="grid grid-2 grid-gap-6 mb-6">
                         <div class="form-group">
                             <label for="quantity" class="form-label">Quantity *</label>
                             <input type="number" id="quantity" name="quantity" class="form-input" min="1"
@@ -199,11 +193,9 @@
                     </div>
 
                     <!-- File Upload Note -->
-                    <div
-                        style="background-color: var(--color-gray-100); padding: var(--space-6); border-radius: var(--radius-md); margin-bottom: var(--space-8);">
-                        <h4 style="margin-bottom: var(--space-3); color: var(--color-primary);">📎 Have Files to Share?
-                        </h4>
-                        <p style="margin: 0; color: var(--color-gray-700);">
+                    <div class="file-upload-note">
+                        <h4 class="card-title-sm">📎 Have Files to Share?</h4>
+                        <p class="m-0" style="color: var(--color-gray-700);">
                             After submitting this form, you can email your design files to
                             <strong>rafazmultibnigltd@gmail.com</strong> with your name in the subject line. We accept
                             PDF, AI, EPS, and other common formats. <strong>Or send them directly via WhatsApp for
@@ -216,10 +208,7 @@
                         Submit Quote Request
                     </button>
 
-                    <p
-                        style="text-align: center; margin-top: var(--space-6); color: var(--color-gray-600); font-size: var(--text-sm);">
-                        * Required fields. We'll respond to your quote request within 24 hours.
-                    </p>
+                    <p class="form-note">* Required fields. We'll respond to your quote request within 24 hours.</p>
                 </form>
             </div>
         </div>
@@ -234,28 +223,28 @@
             </div>
 
             <div class="grid grid-4">
-                <div class="card scroll-reveal" style="text-align: center;">
-                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">⚡</div>
-                    <h4 style="margin-bottom: var(--space-3);">Lightning Fast</h4>
-                    <p style="margin: 0;">WhatsApp quotes in minutes, email quotes within 24 hours</p>
+                <div class="card scroll-reveal text-center">
+                    <div class="contact-icon">⚡</div>
+                    <h4 class="mb-3">Lightning Fast</h4>
+                    <p class="m-0">WhatsApp quotes in minutes, email quotes within 24 hours</p>
                 </div>
 
-                <div class="card scroll-reveal" style="text-align: center;">
-                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">💰</div>
-                    <h4 style="margin-bottom: var(--space-3);">Best Prices Guaranteed</h4>
-                    <p style="margin: 0;">Premium quality at competitive rates with volume discounts</p>
+                <div class="card scroll-reveal text-center">
+                    <div class="contact-icon">💰</div>
+                    <h4 class="mb-3">Best Prices Guaranteed</h4>
+                    <p class="m-0">Premium quality at competitive rates with volume discounts</p>
                 </div>
 
-                <div class="card scroll-reveal" style="text-align: center;">
-                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🎯</div>
-                    <h4 style="margin-bottom: var(--space-3);">Zero Obligation</h4>
-                    <p style="margin: 0;">Free quotes with no pressure to commit or hidden fees</p>
+                <div class="card scroll-reveal text-center">
+                    <div class="contact-icon">🎯</div>
+                    <h4 class="mb-3">Zero Obligation</h4>
+                    <p class="m-0">Free quotes with no pressure to commit or hidden fees</p>
                 </div>
 
-                <div class="card scroll-reveal" style="text-align: center;">
-                    <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🤝</div>
-                    <h4 style="margin-bottom: var(--space-3);">Expert Consultation</h4>
-                    <p style="margin: 0;">Professional advice to optimize quality and reduce costs</p>
+                <div class="card scroll-reveal text-center">
+                    <div class="contact-icon">🤝</div>
+                    <h4 class="mb-3">Expert Consultation</h4>
+                    <p class="m-0">Professional advice to optimize quality and reduce costs</p>
                 </div>
             </div>
         </div>
@@ -263,13 +252,12 @@
 
     <!-- ALTERNATIVE CONTACT -->
     <section class="section">
-        <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: var(--space-6);">Still Have Questions?</h2>
-            <p
-                style="font-size: var(--text-lg); max-width: 600px; margin: 0 auto var(--space-8); color: var(--color-gray-700);">
+        <div class="container text-center">
+            <h2 class="section-title">Still Have Questions?</h2>
+            <p class="lead-text" style="color: var(--color-gray-700);">
                 Our team is standing by to discuss your project, answer questions, and provide expert recommendations.
             </p>
-            <div style="display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap;">
+            <div class="btn-row">
                 <a href="https://wa.me/2349166860809?text=Hi!%20I%20have%20questions%20about%20printing%20services.%20Can%20we%20chat?"
                     class="btn btn-primary btn-large">💬 Chat on WhatsApp</a>
                 <a href="tel:+2348064060430" class="btn btn-secondary btn-large">📞 Call: +234 806 406 0430</a>
