@@ -202,7 +202,7 @@ function initNavigation() {
   if (deptCards.length > 0) {
     deptCards.forEach(card => {
       // Get the link inside the card
-      const link = card.querySelector('a[href^="departments.html"]');
+      const link = card.querySelector('a[href*="departments"]');
       if (link) {
         const href = link.getAttribute('href');
         // Add click handler to the entire card
@@ -258,95 +258,6 @@ function initSmoothScrolling() {
   });
 }
 
-// === FORM VALIDATION ===
-function initFormValidation() {
-  const forms = document.querySelectorAll('form');
-
-  forms.forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      let isValid = true;
-      const formData = {};
-
-      // Clear previous errors
-      form.querySelectorAll('.form-error').forEach(error => error.remove());
-
-      // Validate each required field
-      const requiredFields = form.querySelectorAll('[required]');
-      requiredFields.forEach(field => {
-        const value = field.value.trim();
-        formData[field.name] = value;
-
-        if (!value) {
-          isValid = false;
-          showError(field, 'This field is required');
-        } else if (field.type === 'email' && !isValidEmail(value)) {
-          isValid = false;
-          showError(field, 'Please enter a valid email address');
-        } else if (field.type === 'tel' && !isValidPhone(value)) {
-          isValid = false;
-          showError(field, 'Please enter a valid phone number');
-        }
-      });
-
-      if (isValid) {
-        // Form is valid - show success message
-        showSuccessMessage(form);
-
-        // Reset form after 2 seconds
-        setTimeout(() => {
-          form.reset();
-        }, 2000);
-      }
-    });
-  });
-}
-
-function showError(field, message) {
-  field.style.borderColor = 'var(--color-error)';
-  const errorDiv = document.createElement('div');
-  errorDiv.className = 'form-error';
-  errorDiv.textContent = message;
-  field.parentNode.appendChild(errorDiv);
-
-  // Remove error styling when user starts typing
-  field.addEventListener('input', function () {
-    this.style.borderColor = '';
-    const error = this.parentNode.querySelector('.form-error');
-    if (error) error.remove();
-  }, { once: true });
-}
-
-function showSuccessMessage(form) {
-  const successDiv = document.createElement('div');
-  successDiv.style.cssText = `
-    background-color: var(--color-success);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-md);
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: 600;
-    animation: fadeIn 0.3s ease-out;
-  `;
-  successDiv.textContent = '✓ Thank you! We will contact you shortly.';
-  form.appendChild(successDiv);
-
-  setTimeout(() => {
-    successDiv.remove();
-  }, 5000);
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-function isValidPhone(phone) {
-  const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
-  return phoneRegex.test(phone);
-}
 
 // === PORTFOLIO LIGHTBOX ===
 function initPortfolioLightbox() {
@@ -477,34 +388,13 @@ function getWhatsAppURL(message = 'Hello! I would like to get a quote for printi
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
-// Initialize WhatsApp float button
+// Initialize WhatsApp float button — always shows the modal so users reach the right team
 function initWhatsApp() {
   const whatsappBtn = document.querySelector('.whatsapp-float');
   if (whatsappBtn) {
     whatsappBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      const currentPage = window.location.pathname.split('/').pop() || 'index';
-
-      // On homepage, show modal to choose between printing or equipment
-      if (currentPage === 'index.html' || currentPage === 'index' || currentPage === '') {
-        showWhatsAppModal();
-        return;
-      }
-
-      let message = 'Hello! I would like to inquire about your printing services.';
-
-      // Customize message based on page
-      if (currentPage === 'commercial-printers.html' || currentPage === 'commercial-printers') {
-        message = "Hi! I'm interested in commercial printers. Can you help me?";
-      } else if (currentPage === 'specialty-equipment.html' || currentPage === 'specialty-equipment') {
-        message = "Hi! I'm interested in specialty printing equipment. Can you help me?";
-      } else if (currentPage === 'consumables-supplies.html' || currentPage === 'consumables-supplies') {
-        message = "Hi! I'd like to inquire about printing consumables and supplies.";
-      }
-
-      // Use location.href for better mobile compatibility
-      const whatsappURL = getWhatsAppURL(message);
-      window.location.href = whatsappURL;
+      showWhatsAppModal();
     });
   }
 }
@@ -536,6 +426,21 @@ function initWhatsAppCTAs() {
       const customMessage = this.getAttribute('data-message') || 'Hello! I would like to get a quote for printing services.';
       const whatsappURL = getWhatsAppURL(customMessage);
       window.location.href = whatsappURL;
+    });
+  });
+
+  // .whatsapp-trigger links: show the modal if present, else open WhatsApp directly
+  const triggerLinks = document.querySelectorAll('a.whatsapp-trigger');
+  triggerLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById('whatsappModal');
+      if (modal) {
+        showWhatsAppModal();
+      } else {
+        const customMessage = this.getAttribute('data-message') || 'Hello! I would like to get a quote for printing services.';
+        window.location.href = getWhatsAppURL(customMessage);
+      }
     });
   });
 }
