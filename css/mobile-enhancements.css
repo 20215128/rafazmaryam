@@ -829,3 +829,99 @@ textarea {
         animation: none !important;
     }
 }
+/* ===================================
+   INNER PAGES — MOBILE ADDITIONS
+   =================================== */
+
+@media (max-width: 768px) {
+  /* Hero inner grid → single col */
+  .ip-hero-inner {
+    grid-template-columns: 1fr !important;
+    padding: 1.75rem 1.25rem 1.5rem !important;
+  }
+  .ip-hero-stat { display: none !important; }
+
+  /* Section padding tighter on mobile */
+  .ip-section { padding: 3.5rem 1.25rem !important; }
+
+  /* Stats row → 2 col */
+  .ip-stats-row { grid-template-columns: repeat(2, 1fr) !important; }
+  .ip-stat-cell { padding: 1.5rem 1.25rem !important; }
+  .ip-stat-cell-num { font-size: 2rem !important; }
+
+  /* Dept row → stack */
+  .ip-dept-row { grid-template-columns: 1fr !important; gap: 1.5rem !important; direction: ltr !important; }
+  .ip-dept-row.reverse { direction: ltr !important; }
+  .ip-dept-img-wrap { aspect-ratio: 16/9 !important; }
+
+  /* Feature grid → 1 col */
+  .ip-feature-grid { grid-template-columns: 1fr !important; }
+  .ip-value-grid { grid-template-columns: 1fr !important; }
+  .ip-contact-grid { grid-template-columns: 1fr !important; }
+  .ip-faq-grid { grid-template-columns: 1fr !important; }
+  .ip-testi-grid { grid-template-columns: 1fr !important; }
+  .ip-port-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+  /* Story grid → stack */
+  .ip-story-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+
+  /* Section headers */
+  .ip-section-hd h2 { font-size: clamp(1.625rem, 6vw, 2.25rem) !important; }
+
+  /* Contact card location 2-col → stack */
+  .ip-contact-card[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Form row → 1 col */
+  .ip-form-row { grid-template-columns: 1fr !important; }
+  .ip-form-card { padding: 1.5rem 1.25rem !important; }
+
+  /* CTA buttons wrap */
+  .ip-cta-btns { flex-direction: column !important; align-items: stretch !important; }
+  .ip-cta-btns a { text-align: center !important; justify-content: center !important; }
+
+  /* Nav strip hide address on small */
+  .ns-hide-sm { display: none !important; }
+
+  /* Dept pills scrollable */
+  .ip-dept-nav-list { padding-right: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  /* Hero text tighter */
+  .ip-hero-text h1 { font-size: 1.75rem !important; }
+  .ip-hero-inner { padding: 1.5rem 1rem 1.25rem !important; }
+  .ip-section { padding: 3rem 1rem !important; }
+
+  /* Stats 2-col always */
+  .ip-stats-row { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Whatsapp float button bigger tap target */
+  .whatsapp-float { width: 56px !important; height: 56px !important; }
+}
+
+/* ===================================
+   HOME PAGE — MOBILE ADDITIONS
+   =================================== */
+@media (max-width: 768px) {
+  .hp-hero-btns { flex-direction: column !important; align-items: flex-start !important; gap: 0.625rem !important; }
+  .hp-trustbar-inner { grid-template-columns: repeat(2, 1fr) !important; gap: 0.875rem !important; padding: 1rem 1.25rem !important; }
+  .hp-trust-item { font-size: 12px !important; }
+  .hp-dept-grid { grid-template-columns: 1fr 1fr !important; gap: 0.875rem !important; }
+  .hp-equip-grid { grid-template-columns: 1fr !important; }
+  .hp-why-grid { grid-template-columns: 1fr !important; }
+  .hp-testi-grid { grid-template-columns: 1fr !important; }
+  .hp-equip-cta { flex-direction: column !important; }
+  .hp-stats { gap: 1rem !important; }
+  .hp-stat-num { font-size: 2rem !important; }
+  .hp-section-hd h2 { font-size: clamp(1.75rem, 6vw, 2.5rem) !important; }
+  .hp-hero h1 { font-size: clamp(2rem, 8vw, 3rem) !important; }
+}
+
+@media (max-width: 480px) {
+  .hp-dept-grid { grid-template-columns: 1fr !important; }
+  .hp-cta-btns { flex-direction: column !important; align-items: stretch !important; }
+  .hp-cta-btns a { text-align: center !important; justify-content: center !important; }
+  .hp-why-hd { flex-direction: column !important; align-items: flex-start !important; }
+}

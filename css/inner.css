@@ -1,0 +1,1025 @@
+/* ===================================
+   INNER PAGES — SHARED DESIGN SYSTEM
+   Applies to: about, departments,
+   portfolio, contact, quote
+   =================================== */
+
+/* Font smoothing */
+body { -webkit-font-smoothing: antialiased; }
+::selection { background: #0066FF; color: #fff; }
+
+/* ── TOP INFO BAR ── */
+.ip-topbar {
+  background: #06101F;
+  color: rgba(248,250,252,0.82);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+.ip-topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ip-topbar-left,
+.ip-topbar-right { display: flex; align-items: center; gap: 1.25rem; }
+.ip-topbar a { color: inherit; transition: color 0.2s; }
+.ip-topbar a:hover { color: #fff; }
+.ip-topbar-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+@media (max-width: 640px) { .ip-hide-sm { display: none !important; } }
+
+/* ── INNER PAGE HERO — LIGHT & CLEAN ── */
+.ip-hero {
+  position: relative;
+  padding-top: var(--header-height);
+  overflow: hidden;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Subtle dot grid for texture */
+.ip-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(10,36,99,0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle blue accent — top-right corner only */
+.ip-hero::before {
+  content: '';
+  position: absolute;
+  top: -60%; right: -8%;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,102,255,0.07) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─ 2-column layout: content left, stat right ─ */
+.ip-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2.25rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .ip-hero-inner { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* Left: text content */
+.ip-hero-text { text-align: left; }
+
+/* Badge — blue on white */
+.ip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.875rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,82,204,0.18);
+  background: rgba(0,82,204,0.06);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #0052CC;
+  margin-bottom: 0.875rem;
+}
+.ip-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #0052CC; flex-shrink: 0; }
+
+/* Hero headings — dark navy on white */
+.ip-hero-text h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3.125rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #0A1428;
+  margin: 0 0 0.625rem;
+}
+.ip-hero-text p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: #4B5563;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* Right: stat card — white with blue accent */
+.ip-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 1.5rem 2.25rem;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 24px -8px rgba(10,36,99,0.12);
+  min-width: 148px;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.ip-hero-stat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0052CC, #0066FF);
+}
+.ip-hero-stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #0A1428;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.ip-hero-stat-num span { color: #0052CC; }
+.ip-hero-stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9AA3B2;
+  line-height: 1.4;
+  margin-top: 0.375rem;
+}
+@media (max-width: 768px) { .ip-hero-stat { display: none; } }
+
+/* Legacy single-content support */
+.ip-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem 1.5rem 2.25rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+}
+.ip-hero-content .ip-badge { margin-bottom: 0.875rem; }
+.ip-hero-content h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3.125rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #0A1428;
+  margin: 0 0 0.625rem;
+}
+.ip-hero-content p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: #4B5563;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* Dept nav pills (departments page) — stays solid dark */
+.ip-dept-nav {
+  position: relative;
+  z-index: 3;
+  padding: 0.75rem 1.5rem;
+  border-top: none;
+  background: #0A1428;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.ip-dept-nav::-webkit-scrollbar { display: none; }
+.ip-dept-nav-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: max-content;
+}
+.ip-dept-pill {
+  white-space: nowrap;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.ip-dept-pill:hover {
+  background: #0052CC;
+  border-color: #0052CC;
+  color: white;
+}
+
+/* ── SHARED SECTION UTILITIES ── */
+.ip-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0,102,255,0.08);
+  color: #0052CC;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.875rem;
+}
+.ip-section-label-dot { width: 5px; height: 5px; border-radius: 50%; background: #0052CC; }
+.ip-section-label-light {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.9);
+}
+.ip-section-label-light .ip-section-label-dot { background: #60a5fa; }
+
+/* Section heading block */
+.ip-section-hd { margin-bottom: 3.5rem; }
+.ip-section-hd h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: #0A1428;
+  margin: 0 0 0.625rem;
+}
+.ip-section-hd p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.0625rem;
+  color: #4B5563;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0;
+}
+.ip-section-hd.centered { text-align: center; }
+.ip-section-hd.centered p { margin-inline: auto; }
+.ip-section-hd.dark h2 { color: white; }
+.ip-section-hd.dark p  { color: rgba(255,255,255,0.68); }
+
+/* ── SCROLL REVEAL ── */
+.ip-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+.ip-reveal.in { opacity: 1; transform: none; }
+
+/* ── STATS ROW ── */
+.ip-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: #06101F;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+@media (max-width: 768px) {
+  .ip-stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+.ip-stat-cell {
+  padding: 2.25rem 2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ip-stat-cell:last-child { border-right: none; }
+.ip-stat-cell-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+.ip-stat-cell-num span { color: #0066FF; }
+.ip-stat-cell-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.375rem;
+}
+
+/* ── FEATURE CARD (2-col grid) ── */
+.ip-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 768px) { .ip-feature-grid { grid-template-columns: 1fr; } }
+
+.ip-feature-card {
+  padding: 2rem;
+  background: #F8FAFC;
+  border-radius: 18px;
+  border: 1px solid #EEF2F7;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ip-feature-card:hover {
+  box-shadow: 0 8px 32px -8px rgba(15,32,66,0.12);
+  transform: translateY(-3px);
+}
+/* Dark card → now white with navy border accent */
+.ip-feature-card-dark {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-left: 3px solid #0052CC;
+}
+.ip-feature-card-dark:hover {
+  box-shadow: 0 8px 32px -8px rgba(10,36,99,0.14);
+  border-color: rgba(0,82,204,0.25);
+  border-left-color: #0052CC;
+}
+.ip-feature-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 1rem;
+  letter-spacing: -0.015em;
+}
+.ip-feature-card-dark h3 { color: #0A1428; }
+.ip-feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ip-feature-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #F1F5F9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #4B5563;
+  display: flex;
+  gap: 0.5rem;
+}
+.ip-feature-card-dark ul li {
+  border-color: #F1F5F9;
+  color: #4B5563;
+}
+.ip-feature-card ul li:last-child { border-bottom: none; }
+.ip-feature-card ul li strong { color: #0A1428; font-weight: 700; }
+.ip-feature-card-dark ul li strong { color: #0A1428; }
+
+/* ── VALUE CARDS (3-col grid) ── */
+.ip-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1024px) { .ip-value-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .ip-value-grid { grid-template-columns: 1fr; } }
+
+.ip-value-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 1px 3px rgba(15,32,66,0.04), 0 4px 16px -8px rgba(15,32,66,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ip-value-card:hover {
+  box-shadow: 0 8px 32px -8px rgba(15,32,66,0.14);
+  transform: translateY(-3px);
+}
+.ip-value-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(0,102,255,0.08);
+  display: grid;
+  place-items: center;
+  color: #0052CC;
+  margin-bottom: 1.125rem;
+  font-size: 1.375rem;
+}
+.ip-value-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+}
+.ip-value-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #4B5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── DEPT SECTION LAYOUT ── */
+.ip-dept-section {
+  padding: 5rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.ip-dept-section-alt { background: #F8FAFC; }
+.ip-dept-row {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+.ip-dept-row.reverse { direction: rtl; }
+.ip-dept-row.reverse > * { direction: ltr; }
+@media (max-width: 1024px) {
+  .ip-dept-row { grid-template-columns: 1fr; gap: 2rem; }
+  .ip-dept-row.reverse { direction: ltr; }
+}
+.ip-dept-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #EEF2F7;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 40px -12px rgba(15,32,66,0.2);
+}
+.ip-dept-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.ip-dept-img-wrap:hover img { transform: scale(1.04); }
+
+.ip-dept-num-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #0052CC;
+  margin-bottom: 0.375rem;
+}
+.ip-dept-content h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 0.875rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.ip-dept-content > p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: #4B5563;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+}
+.ip-cap-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9AA3B2;
+  margin: 0 0 0.75rem;
+}
+.ip-cap-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.ip-cap-pill {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0,102,255,0.07);
+  border: 1px solid rgba(0,102,255,0.12);
+  color: #0052CC;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── PORTFOLIO GRID ── */
+.ip-port-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1024px) { .ip-port-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .ip-port-grid { grid-template-columns: 1fr; } }
+
+.ip-port-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 1px 3px rgba(15,32,66,0.04), 0 4px 16px -8px rgba(15,32,66,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ip-port-card:hover {
+  box-shadow: 0 8px 32px -8px rgba(15,32,66,0.16);
+  transform: translateY(-4px);
+}
+.ip-port-thumb {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #EEF2F7;
+}
+.ip-port-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.ip-port-card:hover .ip-port-thumb img { transform: scale(1.06); }
+.ip-port-thumb-dark { background: rgba(255,255,255,0.04); }
+.ip-port-body { padding: 1.25rem 1.5rem 1.5rem; }
+.ip-port-body h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 0.375rem;
+  letter-spacing: -0.015em;
+}
+.ip-port-body h3.light { color: white; }
+.ip-port-body p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #6B7280;
+  line-height: 1.65;
+  margin: 0;
+}
+.ip-port-body p.light { color: rgba(255,255,255,0.65); }
+
+/* ── CONTACT CARDS ── */
+.ip-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 1024px) { .ip-contact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .ip-contact-grid { grid-template-columns: 1fr; } }
+
+.ip-contact-card {
+  padding: 1.75rem;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 1px 3px rgba(15,32,66,0.04), 0 4px 16px -8px rgba(15,32,66,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ip-contact-card:hover {
+  box-shadow: 0 8px 32px -8px rgba(15,32,66,0.14);
+  transform: translateY(-3px);
+}
+.ip-contact-card.featured {
+  border-color: rgba(34,197,94,0.25);
+  box-shadow: 0 1px 3px rgba(34,197,94,0.06), 0 4px 16px -8px rgba(34,197,94,0.15);
+}
+.ip-contact-icon-wrap {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: rgba(0,102,255,0.08);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.125rem;
+}
+.ip-contact-icon-wrap.green { background: rgba(34,197,94,0.1); }
+.ip-contact-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+}
+.ip-contact-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #4B5563;
+  line-height: 1.65;
+  margin: 0 0 0.875rem;
+}
+.ip-contact-card p:last-child { margin-bottom: 0; }
+.ip-contact-card a {
+  color: #0052CC;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.ip-contact-card a:hover { color: #003FA3; }
+.ip-contact-card a.green-link { color: #16a34a; }
+.ip-contact-card a.green-link:hover { color: #15803d; }
+
+/* ── FAQ CARDS ── */
+.ip-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 768px) { .ip-faq-grid { grid-template-columns: 1fr; } }
+
+.ip-faq-item {
+  padding: 1.5rem 1.75rem;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+.ip-faq-item:hover {
+  box-shadow: 0 4px 20px -8px rgba(10,36,99,0.12);
+  border-color: rgba(0,82,204,0.2);
+}
+.ip-faq-item h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #0A1428;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+.ip-faq-item p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #4B5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── FORM STYLES (quote page) ── */
+.ip-form-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #EEF2F7;
+  padding: 2.5rem;
+  box-shadow: 0 1px 3px rgba(15,32,66,0.04), 0 8px 32px -12px rgba(15,32,66,0.10);
+}
+.ip-form-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9AA3B2;
+  margin: 0 0 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid #EEF2F7;
+}
+.ip-form-section-title:first-child { padding-top: 0; border-top: none; }
+.ip-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 600px) { .ip-form-row { grid-template-columns: 1fr; } }
+.ip-form-group { margin-bottom: 1.25rem; }
+.ip-form-label {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+}
+.ip-form-input,
+.ip-form-select,
+.ip-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2937;
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.ip-form-input:focus,
+.ip-form-select:focus,
+.ip-form-textarea:focus {
+  border-color: #0052CC;
+  box-shadow: 0 0 0 3px rgba(0,82,204,0.1);
+}
+.ip-form-textarea { min-height: 120px; resize: vertical; }
+.ip-file-note {
+  background: #F8FAFC;
+  border: 1px solid #EEF2F7;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.ip-file-note h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0A1428;
+  margin: 0 0 0.375rem;
+}
+.ip-file-note p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #4B5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── WA CTA CARD ── */
+.ip-wa-card {
+  background: linear-gradient(135deg, #0A1428 0%, #13305E 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+.ip-wa-card h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.625rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  color: white;
+  margin: 0.75rem 0 0.875rem;
+  letter-spacing: -0.025em;
+}
+.ip-wa-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+.ip-wa-benefits {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+.ip-wa-benefits span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── CTA SECTION ── */
+.ip-cta-section {
+  padding: 5rem 1.5rem;
+  background: #0A1428;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ip-cta-section::before {
+  content: '';
+  position: absolute;
+  top: -8rem; left: -5rem;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(0,102,255,0.2);
+  filter: blur(80px);
+  pointer-events: none;
+}
+.ip-cta-section::after {
+  content: '';
+  position: absolute;
+  bottom: -8rem; right: -5rem;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(0,102,255,0.12);
+  filter: blur(80px);
+  pointer-events: none;
+}
+.ip-cta-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+.ip-cta-inner h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 500;
+  color: white;
+  margin: 0.75rem 0 1rem;
+  letter-spacing: -0.025em;
+}
+.ip-cta-inner p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+.ip-cta-btns {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── SHARED BUTTON STYLES ── */
+.ip-btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #0052CC; color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 0.875rem 1.625rem; border-radius: 999px;
+  box-shadow: 0 6px 20px -6px rgba(0,82,204,0.5);
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  text-decoration: none; border: none; cursor: pointer;
+}
+.ip-btn-primary:hover { background: #003FA3; transform: translateY(-2px); box-shadow: 0 8px 24px -6px rgba(0,82,204,0.6); color: white; }
+.ip-btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px;
+  padding: 0.875rem 1.625rem; border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  transition: background 0.25s, transform 0.25s;
+  text-decoration: none;
+}
+.ip-btn-secondary:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); color: white; }
+.ip-btn-wa {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #22c55e; color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 0.875rem 1.625rem; border-radius: 999px;
+  box-shadow: 0 8px 24px -8px rgba(34,197,94,0.55);
+  transition: background 0.25s, transform 0.25s;
+  text-decoration: none;
+}
+.ip-btn-wa:hover { background: #16a34a; transform: translateY(-2px); color: white; }
+.ip-btn-light {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: white; color: #0A1428;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 0.875rem 1.625rem; border-radius: 999px;
+  transition: background 0.25s, transform 0.25s;
+  text-decoration: none;
+}
+.ip-btn-light:hover { background: #EEF2F7; transform: translateY(-2px); color: #0A1428; }
+.ip-btn-submit {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #0052CC, #1E3A8A);
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px -6px rgba(0,82,204,0.5);
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+.ip-btn-submit:hover { opacity: 0.92; transform: translateY(-1px); }
+
+/* ── MAP CONTAINER ── */
+.ip-map-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 280px;
+  background: #EEF2F7;
+  margin-bottom: 1.5rem;
+}
+.ip-map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* ── TESTIMONIAL CARDS (inner pages) ── */
+.ip-testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1024px) { .ip-testi-grid { grid-template-columns: 1fr; max-width: 560px; } }
+.ip-testi-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 1px 3px rgba(15,32,66,0.04), 0 4px 16px -8px rgba(15,32,66,0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ip-testi-card:hover { box-shadow: 0 8px 32px -8px rgba(15,32,66,0.15); transform: translateY(-3px); }
+.ip-testi-stars { display: flex; gap: 3px; color: #0052CC; margin-bottom: 1.125rem; }
+.ip-testi-quote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: #0A1428;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+.ip-testi-footer {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding-top: 1.125rem;
+  border-top: 1px solid #EEF2F7;
+}
+.ip-testi-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: #0A1428; color: white;
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 12px; flex-shrink: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.ip-testi-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 12.5px; color: #0A1428; }
+.ip-testi-role { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: #9AA3B2; margin-top: 2px; }
+
+/* ── SECTION WRAPPER ── */
+.ip-section { padding: 5.5rem 1.5rem; }
+.ip-section-light { background: #F8FAFC; }
+.ip-section-white { background: white; }
+/* Dark sections converted to light gray with left-rule accented headings */
+.ip-section-dark { background: #F8FAFC; }
+.ip-section-navy { background: #F1F5F9; }
+/* Override heading/text colors that were set for dark bg */
+.ip-section-dark .ip-section-hd h2,
+.ip-section-navy .ip-section-hd h2 { color: #0A1428; }
+.ip-section-dark .ip-section-hd p,
+.ip-section-navy .ip-section-hd p  { color: #4B5563; }
+.ip-section-dark .ip-section-label,
+.ip-section-navy .ip-section-label {
+  background: rgba(0,82,204,0.07);
+  color: #0052CC;
+}
+.ip-inner-wrap { max-width: 1280px; margin: 0 auto; }
+.ip-inner-wrap-sm { max-width: 960px; margin: 0 auto; }
+.ip-inner-wrap-xs { max-width: 800px; margin: 0 auto; }
+
+/* ── QUALITY LIST ── */
+.ip-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ip-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.5rem 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #374151;
+  border-bottom: 1px solid #F3F4F6;
+  line-height: 1.5;
+}
+.ip-check-list li:last-child { border-bottom: none; }
+.ip-check-list li::before {
+  content: '✓';
+  color: #0052CC;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+/* ── STORY 2-COL ── */
+.ip-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 5rem;
+  align-items: center;
+}
+@media (max-width: 1024px) { .ip-story-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+.ip-story-img {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px -16px rgba(15,32,66,0.22);
+}
+.ip-story-img img { width: 100%; height: auto; display: block; }
+.ip-body-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: #4B5563;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.ip-body-text:last-child { margin-bottom: 0; }

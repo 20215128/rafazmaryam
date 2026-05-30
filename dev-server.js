@@ -37,6 +37,22 @@ function getMimeType(filePath) {
     return MIME_TYPES[ext] || 'application/octet-stream';
 }
 
+// Cache durations
+const CACHE_RULES = {
+    '.html': 'no-cache',            // always fresh
+    '.css':  'public, max-age=86400',   // 1 day
+    '.js':   'public, max-age=86400',
+    '.png':  'public, max-age=604800',  // 7 days
+    '.jpg':  'public, max-age=604800',
+    '.jpeg': 'public, max-age=604800',
+    '.webp': 'public, max-age=604800',
+    '.svg':  'public, max-age=604800',
+    '.woff2':'public, max-age=2592000', // 30 days
+    '.ico':  'public, max-age=2592000',
+    '.xml':  'public, max-age=3600',
+    '.txt':  'public, max-age=3600',
+};
+
 function serveFile(res, filePath) {
     fs.readFile(filePath, (err, data) => {
         if (err) {
@@ -45,8 +61,16 @@ function serveFile(res, filePath) {
             return;
         }
 
-        const mimeType = getMimeType(filePath);
-        res.writeHead(200, { 'Content-Type': mimeType });
+        const ext   = require('path').extname(filePath).toLowerCase();
+        const mime  = getMimeType(filePath);
+        const cache = CACHE_RULES[ext] || 'public, max-age=3600';
+
+        res.writeHead(200, {
+            'Content-Type': mime,
+            'Cache-Control': cache,
+            'X-Content-Type-Options': 'nosniff',
+            'Vary': 'Accept-Encoding',
+        });
         res.end(data);
     });
 }
