@@ -1023,3 +1023,83 @@ body { -webkit-font-smoothing: antialiased; }
   margin-bottom: 1rem;
 }
 .ip-body-text:last-child { margin-bottom: 0; }
+
+/* ===================================
+   FONT READABILITY IMPROVEMENTS
+   Darker text, better contrast throughout
+   =================================== */
+
+/* Body paragraphs — darker, easier to read */
+.ip-body-text,
+.ip-section-hd p,
+.ip-value-card p,
+.ip-feature-card ul li,
+.ip-dept-content > p,
+.ip-check-list li,
+.ip-contact-card p,
+.ip-faq-item p,
+.ip-testi-quote,
+.ip-port-body p,
+.ip-hero-text p,
+.ip-hero-content p,
+.ip-wa-card p,
+.ip-cta-inner p {
+  color: #1F2937 !important;
+}
+
+/* Subtext / meta info — still muted but readable */
+.ip-testi-role,
+.ip-stat-cell-label,
+.ip-dept-num-tag,
+.ip-cap-title,
+.ip-equip-list span:last-child,
+.ip-hero-stat-label {
+  color: #6B7280 !important;
+}
+
+/* Section labels — slightly larger + bolder */
+.ip-section-label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+/* Card headings — darker */
+.ip-value-card h3,
+.ip-feature-card h3,
+.ip-contact-card h3,
+.ip-port-body h3,
+.ip-dept-content h2,
+.ip-section-hd h2 {
+  color: #0A1428 !important;
+}
+
+/* Capability pills — darker text */
+.ip-cap-pill {
+  color: #0A1428 !important;
+  background: rgba(10,36,99,0.07) !important;
+  border-color: rgba(10,36,99,0.14) !important;
+}
+
+/* Hero badge text — darker */
+.ip-badge {
+  color: #0A1428 !important;
+  background: rgba(0,82,204,0.08) !important;
+  border-color: rgba(0,82,204,0.2) !important;
+}
+
+/* Dept number tag */
+.ip-dept-num-tag { color: #0052CC !important; }
+
+/* Dept list items */
+.ip-dept-list,
+.ip-dept-list li { color: #1F2937 !important; }
+
+/* Quality check list */
+.ip-check-list li { color: #1F2937 !important; }
+.ip-check-list li::before { color: #0052CC !important; }
+
+/* Form labels */
+.ip-form-label { color: #0A1428 !important; font-weight: 600 !important; }
+
+/* Equip list row text */
+.hp-equip-list li { color: #1F2937 !important; }
