@@ -29,7 +29,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/inner.css">
   <link rel="stylesheet" href="css/mobile-enhancements.css">
-  <link rel="stylesheet" href="css/whatsapp-modal.css">
+  <link rel="preload" as="style" href="css/whatsapp-modal.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/whatsapp-modal.css"></noscript>
   <link rel="stylesheet" href="css/mobile.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4R8FFHPMB"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4R8FFHPMB');</script>
@@ -65,7 +66,7 @@
     </div>
   <div class="nav-container">
     <a href="./" class="logo">
-      <img src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height:40px;width:auto;">
+      <img fetchpriority="high" decoding="async" src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height:40px;width:auto;">
       <span>RAFAZ</span>
     </a>
     <ul class="nav-menu">

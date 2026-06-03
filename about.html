@@ -29,7 +29,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/inner.css">
   <link rel="stylesheet" href="css/mobile-enhancements.css">
-  <link rel="stylesheet" href="css/whatsapp-modal.css">
+  <link rel="preload" as="style" href="css/whatsapp-modal.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/whatsapp-modal.css"></noscript>
   <link rel="stylesheet" href="css/mobile.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"RAFAZ","url":"https://www.rafazmultibusiness.com","foundingDate":"1988","address":{"@type":"PostalAddress","streetAddress":"No 3 Old Bukuru Park","addressLocality":"Jos","addressRegion":"Plateau State","addressCountry":"NG"},"telephone":"+2349166860809"}
@@ -68,7 +69,7 @@
     </div>
   <div class="nav-container">
     <a href="./" class="logo">
-      <img src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height:40px;width:auto;">
+      <img fetchpriority="high" decoding="async" src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height:40px;width:auto;">
       <span>RAFAZ</span>
     </a>
     <ul class="nav-menu">

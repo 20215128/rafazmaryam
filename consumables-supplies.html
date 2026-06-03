@@ -30,7 +30,8 @@
     <meta name="twitter:image" content="https://www.rafazmultibusiness.com/images/rafaz-social-preview.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mobile-enhancements.css">
-  <link rel="stylesheet" href="css/whatsapp-modal.css">
+  <link rel="preload" as="style" href="css/whatsapp-modal.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/whatsapp-modal.css"></noscript>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4R8FFHPMB"></script>
@@ -49,7 +50,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="./" class="logo" style="display: flex; align-items: center; gap: 12px;">
-                <img src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height: 40px; width: auto;">
+                <img fetchpriority="high" decoding="async" src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height: 40px; width: auto;">
                 <span>RAFAZ</span>
             </a>
             <ul class="nav-menu">

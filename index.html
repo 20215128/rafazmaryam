@@ -41,7 +41,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/mobile-enhancements.css">
-  <link rel="stylesheet" href="css/whatsapp-modal.css">
+  <link rel="preload" as="style" href="css/whatsapp-modal.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/whatsapp-modal.css"></noscript>
   <link rel="stylesheet" href="css/mobile.css">
 
   <script type="application/ld+json">
@@ -78,6 +79,7 @@
     gtag('js', new Date());
     gtag('config', 'G-Y4R8FFHPMB');
   </script>
+  <link rel="preload" as="image" href="images/LARGE-BANNER-PRINTING.jpeg" fetchpriority="high">
 </head>
 
 <body class="home-page">
@@ -111,7 +113,7 @@
     </div>
     <div class="nav-container">
       <a href="./" class="logo">
-        <img src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height: 40px; width: auto;">
+        <img fetchpriority="high" decoding="async" src="images/rafaz-logo-transparent.png" alt="RAFAZ Logo" style="height: 40px; width: auto;">
         <span>RAFAZ</span>
       </a>
       <ul class="nav-menu">
@@ -188,22 +190,22 @@
       <div class="hp-marquee-track-wrap">
         <div class="hp-marquee-track">
           <span style="display:flex;align-items:center;gap:3rem;">
-            <img src="images/logos/konica-minolta-logo.png" alt="Konica Minolta">
-            <img src="images/logos/kyocera-logo.png" alt="Kyocera">
-            <img src="images/logos/xerox-logo.png" alt="Xerox">
-            <img src="images/logos/hp-logo.png" alt="HP">
-            <img src="images/logos/sharp-logo.png" alt="Sharp">
-            <img src="images/logos/utax-logo.png" alt="UTAX">
-            <img src="images/logos/triumph-adler-logo.png" alt="Triumph Adler">
+            <img loading="lazy" decoding="async" src="images/logos/konica-minolta-logo.png" alt="Konica Minolta">
+            <img loading="lazy" decoding="async" src="images/logos/kyocera-logo.png" alt="Kyocera">
+            <img loading="lazy" decoding="async" src="images/logos/xerox-logo.png" alt="Xerox">
+            <img loading="lazy" decoding="async" src="images/logos/hp-logo.png" alt="HP">
+            <img loading="lazy" decoding="async" src="images/logos/sharp-logo.png" alt="Sharp">
+            <img loading="lazy" decoding="async" src="images/logos/utax-logo.png" alt="UTAX">
+            <img loading="lazy" decoding="async" src="images/logos/triumph-adler-logo.png" alt="Triumph Adler">
           </span>
           <span aria-hidden="true" style="display:flex;align-items:center;gap:3rem;">
-            <img src="images/logos/konica-minolta-logo.png" alt="">
-            <img src="images/logos/kyocera-logo.png" alt="">
-            <img src="images/logos/xerox-logo.png" alt="">
-            <img src="images/logos/hp-logo.png" alt="">
-            <img src="images/logos/sharp-logo.png" alt="">
-            <img src="images/logos/utax-logo.png" alt="">
-            <img src="images/logos/triumph-adler-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/konica-minolta-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/kyocera-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/xerox-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/hp-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/sharp-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/utax-logo.png" alt="">
+            <img loading="lazy" decoding="async" src="images/logos/triumph-adler-logo.png" alt="">
           </span>
         </div>
       </div>
